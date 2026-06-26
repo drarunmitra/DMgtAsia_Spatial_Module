@@ -4,15 +4,15 @@ title: "About"
 
 ## The module
 
-**Spatial Epidemiology and Applied Data Science** is the spatial module of the **DMgtAsia**
-course. It consolidates and adapts material refined across **multiple spatial data science
-trainings and workshops delivered across India**, packaged here as a self-paced / intensive
-workshop with hands-on R exercises and auto-graded quizzes.
+**Spatial Epidemiology and Applied Data Science** is the **Second Module (Intermediate level)**
+of the **DMgtAsia** course. It consolidates and adapts material refined across **multiple
+spatial data science trainings and workshops delivered across India**, packaged here as a
+self-paced / intensive workshop with hands-on R exercises and auto-graded quizzes.
 
 ## Authors
 
 - **Prof. (Dr.) Biju Soman** — Achutha Menon Centre for Health Science Studies, SCTIMST, Trivandrum
-- **Dr. Arun Mitra** — AIIMS Bibinagar
+- **Dr. Arun Mitra** — All India Institute of Medical Sciences (AIIMS) — Bibinagar, Hyderabad, Telangana
 
 ## Source & licence
 
@@ -22,6 +22,9 @@ Teaching materials are released under **CC-BY-SA**; code under **MIT**, unless n
 Datasets remain under their original licences (NMC, NFHS, WHO, SEDAC GPWv4, `HistData`).
 
 ## Acknowledgements
+
+With thanks to **Dr. Gurpreet Singh**, Associate Professor, Armed Forces Medical College
+(AFMC), Pune, Maharashtra.
 
 Built on the open-source `sf`, `spdep`, `rgeoda`, `exactextractr`, `tidygeocoder`,
 `ggspatial` and `tidyverse` ecosystems, and on the cartographic guidance of the CDC GeoSWG.

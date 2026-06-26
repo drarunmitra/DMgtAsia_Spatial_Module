@@ -40,7 +40,7 @@ copy ships, so any exercise also runs standalone):
 1. `exercises/hands_on_exercise_1.R` — load India shapefile, CRS 4326↔32643, plot
 2. `hands_on_exercise_2.R` — medical-college choropleth, joins → writes `state_med_colleges_sf.rds`
 3. `hands_on_exercise_3.R` — raster (`gpw_v4_…tif`) extraction → per-million choropleth
-4. `hands_on_exercise_4.R` — geocoding (⚠ hits OSM/Google APIs; Google needs a key)
+4. `hands_on_exercise_4.R` — geocoding via keyless **osm** + **arcgis** (no Google API key; reproducible)
 5. `hands_on_exercise_6.R` / `choropleth_malnutrition_exercise.R` — NFHS-4 vs 5 stunting maps
 6. `hands_on_exercise_7.R` — Moran's I (`spdep`) + LISA (`rgeoda`)
 7. `john_snow_map_excercise.qmd` — `HistData` (no external file)

@@ -6,7 +6,8 @@ library(tidygeocoder)
 library(tidyverse)
 library(sf)
 library(here)
-library(ggmap)
+# NOTE: We deliberately use the 'osm' (Nominatim) and 'arcgis' geocoders only.
+# Both are keyless and reproducible — no Google Geocoding API key required.
 
 
 # Load Data (non-spatial)
@@ -45,22 +46,20 @@ med_1 <- med_colleges_df |>
   filter(state == 'Maharashtra') |> 
   tidygeocoder::geocode(address = address)
 
-# Geocode medical colleges in Maharashtra using ggmap package with the default 'google' method
-med_2 <- med_colleges_df |> 
-  filter(state == 'Maharashtra') |> 
-  ggmap::mutate_geocode(location = address)
-
-# Geocode medical colleges in Maharashtra using tidygeocoder package, explicitly specifying the 'google' method
-med_3 <- med_colleges_df |> 
-  filter(state == 'Maharashtra') |> 
+# Geocode the same colleges with the keyless 'arcgis' method (useful to cross-check osm)
+med_2 <- med_colleges_df |>
+  filter(state == 'Maharashtra') |>
   tidygeocoder::geocode(address = address,
-                        method = 'google')
+                        method = 'arcgis')
 
-# Perform reverse geocoding on the geocoded medical colleges from med_3
-rev_med_3 <- med_3 |> 
-  tidygeocoder::reverse_geocode(lat = lat, 
-                                long = lon, 
-                                method = 'osm', 
+# Use the arcgis result downstream (osm in med_1 is a good alternative to compare against)
+med_3 <- med_2
+
+# Perform reverse geocoding on the geocoded medical colleges from med_3 (osm / Nominatim)
+rev_med_3 <- med_3 |>
+  tidygeocoder::reverse_geocode(lat = lat,
+                                long = long,
+                                method = 'osm',
                                 address = 'reverse_address')
 
 # Convert the geocoded medical colleges into sf format

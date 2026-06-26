@@ -24,21 +24,21 @@ website:
       - href: index.qmd
         text: Home
 
-      - text: "Unit A · Foundations"
+      - text: "I — Foundations"
         menu:
           - text: "Introduction to GIS for Public Health"
             href: session1a-intro-gis-public-health_v2.qmd
           - text: "Concepts in Spatial Data Science"
             href: session1b-concepts-spatial-data-science.qmd
 
-      - text: "Unit B · EDA & Cartography"
+      - text: "II — ESDA"
         menu:
           - text: "Exploring Data with R"
             href: session2a-exploring-data-with-r.qmd
           - text: "Principles of Spatial Data Visualization"
             href: session2b-spatial-data-vis.qmd
 
-      - text: "Unit C · Spatial data with sf"
+      - text: "III — Intro to sf"
         menu:
           - text: "Introduction to the sf package"
             href: session2c-intro-sf-package.qmd
@@ -54,7 +54,7 @@ website:
           - text: "Exercise 4 — Geocoding"
             href: exercises/hands_on_exercise_4.R
 
-      - text: "Unit D · Analysis & Clustering"
+      - text: "IV — Spatial Data Analysis & Clustering"
         menu:
           - text: "Exercise 6 — NFHS malnutrition maps"
             href: exercises/hands_on_exercise_6.R

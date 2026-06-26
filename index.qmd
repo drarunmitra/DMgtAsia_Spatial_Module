@@ -1,6 +1,6 @@
 ---
 title: "Spatial Epidemiology and Applied Data Science"
-subtitle: "A module of the DMgtAsia course"
+subtitle: "DMgtAsia · Second Module (Intermediate level)"
 author:
   - name: "Prof. (Dr.) Biju Soman"
     affiliation: "AMCHSS, SCTIMST, Trivandrum"
@@ -13,10 +13,10 @@ date: last-modified
 
 ## Welcome
 
-This module introduces **spatial epidemiology and applied spatial data science** using
-R and the tidyverse. It is the spatial component of the **DMgtAsia** course and progresses
-from foundational GIS concepts to hands-on disease-cluster detection on real Indian public
-health datasets.
+This is the **Second Module (Intermediate level)** of the **DMgtAsia** course. It introduces
+**spatial epidemiology and applied spatial data science** using R and the tidyverse,
+progressing from foundational GIS concepts to hands-on disease-cluster detection on real
+Indian public health datasets.
 
 The material distils experience from **multiple spatial data science trainings and workshops
 delivered across India**, consolidated and adapted for the DMgtAsia training framework.
@@ -37,12 +37,12 @@ delivered across India**, consolidated and adapted for the DMgtAsia training fra
 The module is a four-unit arc. Each unit pairs a short lecture with hands-on R exercises and
 a knowledge-check quiz.
 
-| Unit | Theme | Sessions | Hands-on |
+| Session | Theme | Lectures | Hands-on |
 |------|-------|----------|----------|
-| **A** | Foundations of spatial thinking | Intro to GIS · Concepts in SDS | Reflection |
-| **B** | Spatial EDA & cartography | Exploring data with R · Visualization principles | EDA on WHO TB data |
-| **C** | Building spatial datasets with `sf` | Intro to the `sf` package | Exercises 1–4 |
-| **D** | Spatial analysis & clustering | (lab-led) | Exercises 6–7 · John Snow · SIR/SMR · Capstone |
+| **I** | Foundations of spatial thinking | Intro to GIS · Concepts in SDS | Reflection |
+| **II** | Exploratory Spatial Data Analysis (ESDA) | Exploring data with R · Visualization principles | EDA on WHO TB data |
+| **III** | Introduction to `sf` | The `sf` package | Exercises 1–4 |
+| **IV** | Spatial Data Analysis & Clustering | (lab-led) | Exercises 6–7 · John Snow · SIR/SMR · Capstone |
 
 See the full session list and run order in the navigation bar, or jump to **[Setup](setup.qmd)**
 to prepare your machine first.
