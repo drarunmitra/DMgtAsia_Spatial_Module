@@ -22,10 +22,6 @@ format:
     incremental: false
     embed-resources: false
 engine: knitr
-webr:
-  show-startup-message: false
-filters:
-  - webr
 other-links:
   - text: "View as slides"
     href: slides-session2-spatial-viz-esda.html
@@ -248,10 +244,11 @@ These lead to one question: *is there spatial pattern at all?*
 
 ## Global autocorrelation, by hand
 
-Change the values and re-run. Watch Moran's I move from independence (near 0) toward
+Run this in R and change the values: watch Moran's I move from independence (near 0) toward
 clustering (toward +1).
 
-```{webr-r}
+```{r}
+#| echo: true
 # Four regions in a row: 1-2-3-4
 y <- c(2, 3, 8, 9)                       # try c(2, 9, 3, 8) for a "checkerboard"
 
@@ -270,7 +267,8 @@ moran_I                                  # global Moran's I
 ```
 
 ::: aside
-Live in the browser via webR. No install, no server. The same cell embeds in Moodle as an iframe.
+We introduce live, in-browser **webR** cells (runnable here, embeddable in Moodle as iframes)
+in Session-III.
 :::
 
 ---
