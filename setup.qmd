@@ -3,14 +3,14 @@ title: "Setup & Prerequisites"
 toc: true
 ---
 
-Complete this **before** the workshop. Allow ~30–45 minutes, plus download time for the
-spatial data bundle.
+Complete this before the workshop. Allow about 30–45 minutes, plus download time for the
+spatial data.
 
 ## 1. Software
 
-- **R** ≥ 4.3 — <https://cran.rstudio.com/>
-- **RStudio** (latest) — <https://posit.co/downloads/>
-- Hardware: ≥ 8 GB RAM (16 GB preferred), stable internet.
+- **R** ≥ 4.3: <https://cran.rstudio.com/>
+- **RStudio** (latest): <https://posit.co/downloads/>
+- Hardware: 8 GB RAM or more (16 GB preferred), stable internet.
 
 ## 2. R packages
 
@@ -21,30 +21,30 @@ source("resources/install_required_packages.R")
 ```
 
 It installs: `tidyverse`, `here`, `patchwork`, `janitor`, `rio`, `sf`, `ggspatial`,
-`raster`, `exactextractr`, `tidygeocoder`, `ggmap`, `leaflet`, `mapview`, `spdep`,
-`rgeoda`, `HistData`.
+`raster`, `exactextractr`, `tidygeocoder`, `leaflet`, `mapview`, `spdep`, `rgeoda`,
+`HistData`.
 
 ::: {.callout-warning}
 ## System dependencies for `sf`
 `sf`, `rgeoda` and `exactextractr` need GDAL, GEOS and PROJ. On macOS:
 `brew install gdal geos proj`. On Ubuntu: `apt install libgdal-dev libgeos-dev libproj-dev`.
-On Windows the CRAN binaries bundle these — no extra steps.
+On Windows the CRAN binaries include these, so no extra steps.
 :::
 
 ## 3. Project & data
 
-1. Open **`Module2_SpatialEpi.Rproj`** in RStudio — this sets the working directory so every
+1. Open `Module2_SpatialEpi.Rproj` in RStudio. This sets the working directory so every
    `here()` path resolves.
-2. The spatial data lives in `spatial_files/` and `data/` (already in the repo). If you cloned
-   without large files, re-extract `spatial_files.zip` into the project root.
+2. The spatial data is in `spatial_files/` and `data/` (already in the repo). If you cloned
+   without the large files, re-extract `spatial_files.zip` into the project root.
 
 ## 4. Pre-flight check
 
 ```r
 library(sf); library(tidyverse); library(here)
-# should print the India state layer without error:
+# prints the number of India state polygons:
 sf::st_read(here("spatial_files", "India_State_Boundary.shp")) |> nrow()
 ```
 
-A non-zero row count means you're ready. See **[GIS-basics.pdf](resources/GIS-basics.pdf)** for
-a conceptual primer, and the more detailed `resources/prerequisites.qmd`.
+A non-zero row count means you are ready. See [GIS-basics.pdf](resources/GIS-basics.pdf) for a
+primer, and `resources/prerequisites.qmd` for more detail.

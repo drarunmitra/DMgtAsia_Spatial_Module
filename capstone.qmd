@@ -1,40 +1,39 @@
 ---
-title: "Capstone — Reproducible Spatial Pipeline"
+title: "Capstone: Reproducible Spatial Pipeline"
 toc: true
 ---
 
-The capstone ties the whole module together: take a district-level health indicator from raw
-data all the way to a clustered, mapped, interpreted result — as a **reproducible pipeline**,
-not a one-off script.
+The capstone takes a district-level health indicator from raw data to a clustered, mapped, and
+interpreted result, as a reproducible pipeline rather than a one-off script.
 
 ## What you build
 
-A full pipeline on district-level health data (the bundled AHS/NFHS example, or an indicator
-of your choice):
+A pipeline on district-level health data (the bundled AHS/NFHS example, or an indicator of your
+choice):
 
-1. **Profile** the raw data — `capstone/R/02-profile-document.R`
-2. **Clean & validate** — `capstone/R/03-clean-validate.R`
-3. **Tidy & reshape** — `capstone/R/04-tidy-reshape.R`
-4. **Transform** (derive indicators) — `capstone/R/05-transform.R`
-5. **EDA & plot** — `capstone/R/06-eda-plot.R`
-6. **Analyse** (model + spatial clustering) — `capstone/R/07-analyse.R`
+1. **Profile** the raw data: `capstone/R/02-profile-document.R`
+2. **Clean & validate**: `capstone/R/03-clean-validate.R`
+3. **Tidy & reshape**: `capstone/R/04-tidy-reshape.R`
+4. **Transform** (derive indicators): `capstone/R/05-transform.R`
+5. **EDA & plot**: `capstone/R/06-eda-plot.R`
+6. **Analyse** (model and spatial clustering): `capstone/R/07-analyse.R`
 
-Run the whole chain with **`capstone/run-all.R`**, which produces the figures and tables that
-`capstone/report.qmd` knits into a final report.
+Run the chain with `capstone/run-all.R`. It produces the figures and tables that
+`capstone/report.qmd` knits into a report.
 
-For the clustering step on its own (Queen contiguity → spatial weights → Moran's I → LISA),
-see **`capstone/ahs_clustering_exercise.r`**.
+For the clustering step on its own (Queen contiguity, spatial weights, Moran's I, LISA), see
+`capstone/ahs_clustering_exercise.r`.
 
 ## Deliverable
 
-Pick a public-health indicator (stunting, wasting, underweight, anaemia, IMR, …) and submit:
+Pick a public health indicator (stunting, wasting, underweight, anaemia, IMR) and submit:
 
-- the reproducible script(s) / Quarto document,
-- a global + local clustering analysis (Moran's I + LISA cluster map),
-- a **500-word interpretation** aimed at a public-health decision-maker.
+- the reproducible script(s) or Quarto document,
+- a global and local clustering analysis (Moran's I and a LISA cluster map),
+- a 500-word interpretation written for a public health decision-maker.
 
 ::: {.callout-note}
 ## Running the capstone
-The capstone scripts generate their own `outputs/` (data, figures) when you run
+The capstone scripts write their own `outputs/` (data, figures) when you run
 `capstone/run-all.R`. Run it once before knitting `capstone/report.qmd`.
 :::

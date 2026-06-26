@@ -13,47 +13,45 @@ date: last-modified
 
 ## Welcome
 
-This is the **Second Module (Intermediate level)** of the **DMgtAsia** course. It introduces
-**spatial epidemiology and applied spatial data science** using R and the tidyverse,
-progressing from foundational GIS concepts to hands-on disease-cluster detection on real
-Indian public health datasets.
+This is the Second Module (Intermediate level) of the DMgtAsia course. It covers spatial
+epidemiology and spatial data science in R, from GIS concepts through to disease-cluster
+detection on Indian public health datasets.
 
-The material distils experience from **multiple spatial data science trainings and workshops
-delivered across India**, consolidated and adapted for the DMgtAsia training framework.
+The material draws on spatial data science trainings and workshops run across India, adapted
+for the DMgtAsia course.
 
 ## What you will be able to do
 
-- Explain core GIS concepts — CRS/projections, spatial dependence, spatial autocorrelation,
-  Tobler's First Law — and why they matter for public health.
-- Perform spatial exploratory data analysis and apply CDC cartographic guidelines to design
-  defensible public-health maps.
+- Explain GIS concepts (CRS and projections, spatial dependence, spatial autocorrelation,
+  Tobler's First Law) and how they apply to public health.
+- Run spatial exploratory data analysis and apply CDC cartographic guidelines to public health
+  maps.
 - Read, transform and join spatial data with `sf`; extract raster values; geocode addresses;
-  and build publication-quality choropleths.
-- Conduct and interpret global and local spatial autocorrelation (Moran's I, LISA) and map
-  SIR/SMR to identify and communicate disease clustering.
+  and build choropleths.
+- Run and interpret global and local spatial autocorrelation (Moran's I, LISA), and map
+  SIR/SMR to find disease clusters.
 
 ## How the module is organised
 
-The module is a four-unit arc. Each unit pairs a short lecture with hands-on R exercises and
-a knowledge-check quiz.
+The module has four sessions. Each pairs a lecture with hands-on R exercises and a quiz.
 
 | Session | Theme | Lectures | Hands-on |
 |------|-------|----------|----------|
-| **I** | Foundations of spatial thinking | Intro to GIS · Concepts in SDS | Reflection |
-| **II** | Exploratory Spatial Data Analysis (ESDA) | Exploring data with R · Visualization principles | EDA on WHO TB data |
-| **III** | Introduction to `sf` | The `sf` package | Exercises 1–4 |
-| **IV** | Spatial Data Analysis & Clustering | (lab-led) | Exercises 6–7 · John Snow · SIR/SMR · Capstone |
+| **Session-I** | Foundations of spatial thinking | Intro to GIS · Concepts in SDS | Reflection |
+| **Session-II** | Exploratory Spatial Data Analysis (ESDA) | Exploring data with R · Visualization principles | EDA on WHO TB data |
+| **Session-III** | Introduction to `sf` | The `sf` package | Exercises 1–4 |
+| **Session-IV** | Spatial Data Analysis & Clustering | (lab-led) | Exercises 6–7 · John Snow · SIR/SMR · Capstone |
 
-See the full session list and run order in the navigation bar, or jump to **[Setup](setup.qmd)**
-to prepare your machine first.
+For the full session list and run order, see the navigation bar, or go to
+**[Setup](setup.qmd)** to prepare your machine.
 
 ## Delivery
 
-- **Self-paced:** 4 weeks, one unit per week.
-- **Intensive workshop:** 2 days — Day 1 Units A–B, Day 2 Units C–D.
+- **Self-paced:** 4 weeks, one session per week.
+- **Intensive workshop:** 2 days. Day 1 covers Sessions I–II, Day 2 covers Sessions III–IV.
 
 ## Acknowledgements
 
-Developed at the **Achutha Menon Centre for Health Science Studies, SCTIMST** and
-**AIIMS Bibinagar**. Built on the open `sf`, `spdep`, `rgeoda`, `ggspatial` and `tidyverse`
-ecosystems. Data: NMC, NFHS, WHO, SEDAC GPWv4, and `HistData`.
+Developed at the Achutha Menon Centre for Health Science Studies, SCTIMST, and AIIMS Bibinagar.
+Built on the `sf`, `spdep`, `rgeoda`, `ggspatial` and `tidyverse` packages. Data: NMC, NFHS,
+WHO, SEDAC GPWv4, and `HistData`.

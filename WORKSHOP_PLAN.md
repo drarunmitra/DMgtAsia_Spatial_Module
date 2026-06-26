@@ -1,8 +1,8 @@
-# Plan — DMgtAsia Spatial Epidemiology Workshop Website
+# Plan: DMgtAsia Spatial Epidemiology Workshop Website
 
-How to take the current consolidated repo and turn it into a polished, DMgtAsia-branded
-workshop website. The module **consolidates and adapts material refined across multiple
-spatial data science trainings and workshops delivered across India**.
+How to take the current consolidated repo and turn it into a DMgtAsia-branded
+workshop website. The module draws on spatial data science trainings and workshops run
+across India.
 
 Repo: <https://github.com/drarunmitra/DMgtAsia_Spatial_Module>
 
@@ -13,21 +13,21 @@ Repo: <https://github.com/drarunmitra/DMgtAsia_Spatial_Module>
 - ✅ Consolidated, **runnable** module (all 20 exercise data paths resolve; verified statically).
 - ✅ Quarto **website** (`_quarto.yml`, `type: website`, `output-dir: docs`), navbar organised by Unit A–D, DMgtAsia logo + footer.
 - ✅ Landing (`index.qmd`), `setup.qmd`, `about.qmd`, `capstone.qmd`.
-- ✅ Slides (Units A–C), exercises (Ex 1–4, 6, 7, John Snow, SIR/SMR), capstone pipeline, datasets, readings, and 4 Moodle quiz banks — all committed.
+- ✅ Slides (Units A–C), exercises (Ex 1–4, 6, 7, John Snow, SIR/SMR), capstone pipeline, datasets, readings, and 4 Moodle quiz banks, all committed.
 - ✅ GitHub repo created + pushed; CI publish workflow added (`.github/workflows/publish.yml`).
 
-## 2. Publishing — two-repo setup (done)
+## 2. Publishing: two-repo setup (done)
 
 The website is **separated from the runnable R Project** across two repos:
 
 | Repo | Role | Pages |
 |------|------|-------|
-| **`DMgtAsia_Spatial_Module`** (this one) | clone-and-run **R Project**: source `.qmd`, exercises, `spatial_files/`, data — no rendered HTML | off |
+| **`DMgtAsia_Spatial_Module`** (this one) | clone-and-run **R Project**: source `.qmd`, exercises, `spatial_files/`, data, no rendered HTML | off |
 | **`DMgtAsia_Spatial_Module_site`** | rendered static site (`docs/`) | on → live |
 
 **Live site:** <https://drarunmitra.github.io/DMgtAsia_Spatial_Module_site/>
 
-The site is **rendered locally** (no CI, no source-compiling `sf` on GitHub — pushes are
+The site is **rendered locally** (no CI, no source-compiling `sf` on GitHub, so pushes are
 instant) and `docs/` is its own git checkout of the website repo.
 
 **To update the site after editing content:**
@@ -49,9 +49,9 @@ slides are static once built, so GitHub never needs to run R.
 
 ## 4. Content to complete
 
-- **Unit B hands-on**: an explicit EDA lab `.qmd` (WHO TB) — currently only the lecture deck. *(brief calls for a submitted EDA lab)*
+- **Unit B hands-on**: an explicit EDA lab `.qmd` (WHO TB), currently only the lecture deck. *(brief calls for a submitted EDA lab)*
 - **Capstone outputs**: ship a pre-run `capstone/outputs/` (or a `freeze`d render) so `report.qmd` knits on a clean clone without running `run-all.R` first.
-- **Accessibility analysis** lesson (service coverage / travel time) — gap noted in the content map; source bits exist (`demo_travel_est.r`, yellow-fever centres) but no finished lab.
+- **Accessibility analysis** lesson (service coverage / travel time), gap noted in the content map; source bits exist (`demo_travel_est.r`, yellow-fever centres) but no finished lab.
 - **Solution toggles**: wrap each exercise's answer in `callout-tip collapse="true"`; ship instructor vs participant builds via a `show_solutions` param.
 - **Speaker notes** (⏱ time / 🎯 goal / 📋 check) on each deck for the intensive format.
 
