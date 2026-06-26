@@ -1,0 +1,206 @@
+---
+title: "Introduction to the sf Package"
+subtitle: "DMgtAsia · Session-III"
+format:
+  live-html:
+    toc: true
+  live-revealjs:
+    output-file: slides-session3-intro-sf.html
+    theme: [default, dmgt.scss]
+    logo: dmgt_asia_logo.png
+    footer: "DMgtAsia · Spatial Epidemiology"
+    width: 1280
+    height: 720
+    slide-number: c/t
+    show-slide-number: all
+    progress: true
+    transition: fade
+    scrollable: true
+    incremental: false
+webr:
+  packages:
+    - sf
+    - ggplot2
+engine: knitr
+other-links:
+  - text: "View as slides"
+    href: slides-session3-intro-sf.html
+    icon: easel2
+---
+
+```{webr}
+#| edit: false
+#| output: false
+#| autorun: true
+#| define:
+#|   - check_q1
+#|   - check_q2
+# Quiz feedback helpers (base R; run on load)
+check_q1 <- function(ans) {
+  if (identical(ans, "st_as_sf()")) {
+    "<strong>Correct.</strong> <code>st_as_sf()</code> turns a data frame with coordinate columns into an sf object."
+  } else {
+    "<em>Not quite.</em> Which function turns lon/lat columns into geometry?"
+  }
+}
+check_q2 <- function(ans) {
+  if (identical(ans, "Geodetic, in degrees")) {
+    "<strong>Correct.</strong> EPSG:4326 (WGS 84) is geodetic: longitude/latitude in degrees."
+  } else {
+    "<em>Try again.</em> 4326 is the familiar lon/lat system."
+  }
+}
+```
+
+## The Simple Features standard
+
+-   `sf` implements **Simple Features**, the ISO standard for representing geometry.
+-   An `sf` object is a data frame with a special **geometry** column.
+-   So spatial data is just tidy data with a place attached: one row per feature, columns of
+    attributes, plus geometry.
+
+::: aside
+Live R cells on this page run in your browser via **webR**. The first cell takes a few seconds
+while `sf` loads; after that they are quick.
+:::
+
+---
+
+## Geometry types
+
+-   **POINT** a single location (a clinic, a case).
+-   **LINESTRING** a path (a road, a river).
+-   **POLYGON** an area (a district, a PHC catchment).
+-   Each has a **MULTI** form (`MULTIPOLYGON` for a state made of many parts).
+
+---
+
+## Build an sf object (live)
+
+Press **Run**. We make points for four cities, then attach geometry.
+
+```{webr}
+library(sf)
+
+cities <- data.frame(
+  name = c("Trivandrum", "Bibinagar", "Mumbai", "Kolkata"),
+  lon  = c(76.95, 78.83, 72.88, 88.36),
+  lat  = c(8.52, 17.45, 19.08, 22.57)
+)
+
+cities_sf <- st_as_sf(cities, coords = c("lon", "lat"), crs = 4326)
+cities_sf
+```
+
+Note the `geometry` column and the printed CRS header.
+
+---
+
+## Quiz: making an sf object
+
+```{ojs}
+//| echo: false
+viewof q1 = Inputs.radio(
+  ["st_read()", "st_as_sf()", "st_transform()", "st_crs()"],
+  { label: "Which function converts a data frame with lon/lat columns into an sf object?" }
+);
+html`${await check_q1(q1)}`
+```
+
+---
+
+## Coordinate reference systems
+
+-   A CRS tells R what the coordinates mean.
+-   **Geodetic** (EPSG:4326, WGS 84): longitude/latitude in **degrees**. Good for storage and
+    web maps.
+-   **Projected** (a UTM zone such as EPSG:32643): **metres** on a flat plane. Needed for
+    distances and areas.
+
+---
+
+## Inspect and transform (live)
+
+```{webr}
+st_crs(cities_sf)$epsg          # current CRS code
+
+cities_utm <- st_transform(cities_sf, 32643)   # to UTM 43N (metres)
+st_coordinates(cities_utm)
+```
+
+The numbers change from degrees to metres after `st_transform()`.
+
+---
+
+## Quiz: what is EPSG:4326?
+
+```{ojs}
+//| echo: false
+viewof q2 = Inputs.radio(
+  ["Geodetic, in degrees", "Projected, in metres", "Always a UTM zone", "An equal-area projection"],
+  { label: "EPSG:4326 (WGS 84) is..." }
+);
+html`${await check_q2(q2)}`
+```
+
+---
+
+## Plot an sf object (live)
+
+```{webr}
+library(ggplot2)
+
+ggplot(cities_sf) +
+  geom_sf(size = 3) +
+  theme_minimal()
+```
+
+`geom_sf()` reads the geometry column directly. The same layer draws points, lines, or
+polygons.
+
+---
+
+## Reading spatial files
+
+In RStudio you read a shapefile or GeoJSON from disk:
+
+```r
+library(sf)
+library(here)
+india <- st_read(here("spatial_files", "India_State_Boundary.shp"))
+st_crs(india)
+```
+
+You do this in **Exercise 1**. We keep file reading in RStudio because the data files are
+large for a browser session.
+
+---
+
+## What runs live, and what does not
+
+-   **Live in the browser (webR):** `sf` core, `st_as_sf`, `st_crs`, `st_transform`, `geom_sf`.
+-   **Run in RStudio (static here):**
+    -   Raster extraction (`exactextractr`, `raster`) in Exercise 3.
+    -   Geocoding (`tidygeocoder`) in Exercise 4.
+    -   Spatial weights and clustering (`spdep`, `rgeoda`, Moran's I, LISA) in **Session-IV**.
+
+These packages are not yet built for WebAssembly, so they stay in the desktop exercises.
+
+---
+
+## Hands-on for this session
+
+-   **Exercise 1** load and plot India shapefiles; check and transform CRS.
+-   **Exercise 2** a medical-college choropleth; joins and `case_when` name harmonisation.
+-   **Exercise 3** raster extraction (population per state).
+-   **Exercise 4** geocoding medical colleges.
+
+Each is an R script you run in RStudio.
+
+## Recap
+
+-   `sf` is tidy data with a geometry column.
+-   Geometry types: point, line, polygon, and their multi forms.
+-   `st_as_sf` builds geometry; `st_crs` reads it; `st_transform` reprojects.
+-   `geom_sf` maps it.
+-   Heavier tools (raster, geocoding, clustering) run in RStudio and in Session-IV.

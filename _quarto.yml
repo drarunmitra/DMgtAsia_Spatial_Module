@@ -9,6 +9,8 @@ project:
     - "!resources/prerequisites.qmd"
     - "!session2a-exploring-data-with-r.qmd"
     - "!session2b-spatial-data-vis.qmd"
+    - "!session2c-intro-sf-package.qmd"
+    - "!session2c-intro-sf-package_UPDATED.qmd"
   resources:
     - resources/
     - exercises/
@@ -53,10 +55,8 @@ website:
             href: session2-2-esda.qmd
       - section: "Session-III · Intro to sf"
         contents:
-          - text: "The sf package"
-            href: session2c-intro-sf-package.qmd
-          - text: "The sf package (updated)"
-            href: session2c-intro-sf-package_UPDATED.qmd
+          - text: "Introduction to sf (live)"
+            href: session3-intro-sf.qmd
           - text: "Exercise 1: Shapefiles"
             href: exercises/hands_on_exercise_1.R
           - text: "Exercise 2: Choropleth"
