@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/SDS4PH/Module 3 - Building Spatial Health Datasets</text>
+    </category>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M3Q01: The sf package in R implements the:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>The sf package in R implements the:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>The sf (Simple Features) package provides an R implementation of the ISO 19125 Simple Features standard. It represents spatial data as data frames with a special geometry column, enabling seamless integration with tidyverse workflows.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-3</text></tag>
+      <tag><text>Bloom-Remember</text></tag>
+      <tag><text>Module-3</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Simple Features standard for representing vector spatial data</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! The sf (Simple Features) package provides an R implementation of the ISO 19125 Simple Features standard. It represents spatial data as data frames with a special geometry column, enabling seamless integration with tidyverse workflows.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Raster data model for satellite imagery</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The sf (Simple Features) package provides an R implementation of the ISO 19125 Simple Features standard. It represents spatial data as data frames with a special geometry column, enabling seamless integration with tidyverse workflows.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Network analysis framework for road data</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The sf (Simple Features) package provides an R implementation of the ISO 19125 Simple Features standard. It represents spatial data as data frames with a special geometry column, enabling seamless integration with tidyverse workflows.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Time-series analysis framework for temporal health data</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The sf (Simple Features) package provides an R implementation of the ISO 19125 Simple Features standard. It represents spatial data as data frames with a special geometry column, enabling seamless integration with tidyverse workflows.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M3Q02: An sf object in R differs from a regular data frame because it:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>An sf object in R differs from a regular data frame because it:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>An sf object is a data.frame with a geometry list-column. This design means ALL dplyr verbs (filter, mutate, group_by, summarize, joins) work directly on sf objects, making spatial analysis seamlessly integrated with data wrangling.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-3</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-3</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Contains a special geometry column (sfc) that stores spatial information alongside regular attribute columns</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! An sf object is a data.frame with a geometry list-column. This design means ALL dplyr verbs (filter, mutate, group_by, summarize, joins) work directly on sf objects, making spatial analysis seamlessly integrated with data wrangling.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Can only store point data, not polygon data</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. An sf object is a data.frame with a geometry list-column. This design means ALL dplyr verbs (filter, mutate, group_by, summarize, joins) work directly on sf objects, making spatial analysis seamlessly integrated with data wrangling.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Cannot be manipulated with dplyr verbs like filter() and mutate()</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. An sf object is a data.frame with a geometry list-column. This design means ALL dplyr verbs (filter, mutate, group_by, summarize, joins) work directly on sf objects, making spatial analysis seamlessly integrated with data wrangling.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Requires a separate file to store the coordinate reference system</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. An sf object is a data.frame with a geometry list-column. This design means ALL dplyr verbs (filter, mutate, group_by, summarize, joins) work directly on sf objects, making spatial analysis seamlessly integrated with data wrangling.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M3Q03: To load an ESRI Shapefile into R as an sf object, you use:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>To load an ESRI Shapefile into R as an sf object, you use:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>st_read() reads spatial vector data from files (shapefiles, GeoJSON, GeoPackage, etc.). st_as_sf() converts existing R objects (e.g., data frames with lat/lon columns) to sf objects. read.csv() cannot handle spatial files.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-3</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-3</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>sf::st_read(“path/to/file.shp”)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! st_read() reads spatial vector data from files (shapefiles, GeoJSON, GeoPackage, etc.). st_as_sf() converts existing R objects (e.g., data frames with lat/lon columns) to sf objects. read.csv() cannot handle spatial files.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>read.csv(“path/to/file.shp”)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. st_read() reads spatial vector data from files (shapefiles, GeoJSON, GeoPackage, etc.). st_as_sf() converts existing R objects (e.g., data frames with lat/lon columns) to sf objects. read.csv() cannot handle spatial files.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>raster::raster(“path/to/file.shp”)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. st_read() reads spatial vector data from files (shapefiles, GeoJSON, GeoPackage, etc.). st_as_sf() converts existing R objects (e.g., data frames with lat/lon columns) to sf objects. read.csv() cannot handle spatial files.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>sf::st_as_sf(“path/to/file.shp”)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. st_read() reads spatial vector data from files (shapefiles, GeoJSON, GeoPackage, etc.). st_as_sf() converts existing R objects (e.g., data frames with lat/lon columns) to sf objects. read.csv() cannot handle spatial files.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M3Q04: To check the coordinate reference system of an sf object called ‘india_sf’, you </text></name>
+    <questiontext format="html"><text><![CDATA[<p>To check the coordinate reference system of an sf object called ‘india_sf’, you use:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>st_crs() returns the CRS of an sf object, including the EPSG code and PROJ string. This is always the first check after loading spatial data to ensure the CRS is correct before analysis.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-3</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-3</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>st_crs(india_sf)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! st_crs() returns the CRS of an sf object, including the EPSG code and PROJ string. This is always the first check after loading spatial data to ensure the CRS is correct before analysis.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>crs(india_sf)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. st_crs() returns the CRS of an sf object, including the EPSG code and PROJ string. This is always the first check after loading spatial data to ensure the CRS is correct before analysis.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>india_sf$crs</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. st_crs() returns the CRS of an sf object, including the EPSG code and PROJ string. This is always the first check after loading spatial data to ensure the CRS is correct before analysis.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>projection(india_sf)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. st_crs() returns the CRS of an sf object, including the EPSG code and PROJ string. This is always the first check after loading spatial data to ensure the CRS is correct before analysis.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M3Q05: To transform an sf object from EPSG:4326 to EPSG:32643, you use:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>To transform an sf object from EPSG:4326 to EPSG:32643, you use:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>st_transform() reprojects spatial data from one CRS to another, performing the mathematical transformation of coordinates. st_set_crs() only LABELS the CRS without transforming coordinates (dangerous if used incorrectly). st_crs() only queries the CRS.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-3</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-3</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>india_sf |&gt; st_transform(32643)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! st_transform() reprojects spatial data from one CRS to another, performing the mathematical transformation of coordinates. st_set_crs() only LABELS the CRS without transforming coordinates (dangerous if used incorrectly). st_crs() only queries the CRS.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>india_sf |&gt; st_crs(32643)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. st_transform() reprojects spatial data from one CRS to another, performing the mathematical transformation of coordinates. st_set_crs() only LABELS the CRS without transforming coordinates (dangerous if used incorrectly). st_crs() only queries the CRS.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>india_sf |&gt; st_set_crs(32643)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. st_transform() reprojects spatial data from one CRS to another, performing the mathematical transformation of coordinates. st_set_crs() only LABELS the CRS without transforming coordinates (dangerous if used incorrectly). st_crs() only queries the CRS.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>india_sf |&gt; reproject(32643)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. st_transform() reprojects spatial data from one CRS to another, performing the mathematical transformation of coordinates. st_set_crs() only LABELS the CRS without transforming coordinates (dangerous if used incorrectly). st_crs() only queries the CRS.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M3Q06: When joining a non-spatial data frame to an sf object using left_join(), why is </text></name>
+    <questiontext format="html"><text><![CDATA[<p>When joining a non-spatial data frame to an sf object using left_join(), why is name harmonization often necessary?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Name harmonization is one of the most time-consuming but critical steps in spatial data science. Indian state names are particularly challenging: Chattisgarh/Chhattisgarh, Pondicherry/Puducherry, Orissa/Odisha, etc. case_when() is the standard tool.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-3</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-3</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Because the same geographic unit may be spelled differently across datasets (e.g., ‘Orissa’ vs ‘Odisha’)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! Name harmonization is one of the most time-consuming but critical steps in spatial data science. Indian state names are particularly challenging: Chattisgarh/Chhattisgarh, Pondicherry/Puducherry, Orissa/Odisha, etc. case_when() is the standard tool.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Because left_join() cannot handle character columns</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Name harmonization is one of the most time-consuming but critical steps in spatial data science. Indian state names are particularly challenging: Chattisgarh/Chhattisgarh, Pondicherry/Puducherry, Orissa/Odisha, etc. case_when() is the standard tool.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Because spatial and non-spatial data cannot share column names</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Name harmonization is one of the most time-consuming but critical steps in spatial data science. Indian state names are particularly challenging: Chattisgarh/Chhattisgarh, Pondicherry/Puducherry, Orissa/Odisha, etc. case_when() is the standard tool.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Because R automatically corrects all spelling differences</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Name harmonization is one of the most time-consuming but critical steps in spatial data science. Indian state names are particularly challenging: Chattisgarh/Chhattisgarh, Pondicherry/Puducherry, Orissa/Odisha, etc. case_when() is the standard tool.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M3Q07: The function exactextractr::exact_extract(raster, polygons, fun = ‘sum’) is used</text></name>
+    <questiontext format="html"><text><![CDATA[<p>The function exactextractr::exact_extract(raster, polygons, fun = ‘sum’) is used to:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>exact_extract() performs zonal statistics: it extracts raster values within each polygon and applies a summary function (sum, mean, max, etc.). This is how we calculate population per state from a gridded population raster.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-3</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-3</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Calculate the sum of raster cell values that fall within each polygon (zonal statistics)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! exact_extract() performs zonal statistics: it extracts raster values within each polygon and applies a summary function (sum, mean, max, etc.). This is how we calculate population per state from a gridded population raster.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Extract the CRS from a raster file</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. exact_extract() performs zonal statistics: it extracts raster values within each polygon and applies a summary function (sum, mean, max, etc.). This is how we calculate population per state from a gridded population raster.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Convert a raster to a vector polygon</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. exact_extract() performs zonal statistics: it extracts raster values within each polygon and applies a summary function (sum, mean, max, etc.). This is how we calculate population per state from a gridded population raster.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Merge multiple raster files together</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. exact_extract() performs zonal statistics: it extracts raster values within each polygon and applies a summary function (sum, mean, max, etc.). This is how we calculate population per state from a gridded population raster.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M3Q08: To geocode addresses (convert text addresses to latitude/longitude coordinates) </text></name>
+    <questiontext format="html"><text><![CDATA[<p>To geocode addresses (convert text addresses to latitude/longitude coordinates) using an open-source method in R, you use:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>tidygeocoder provides a tidy interface to multiple geocoding services. The OSM (OpenStreetMap/Nominatim) method is free and requires no API key. ggmap’s Google method requires a paid API key.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-5</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-3</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>tidygeocoder::geocode(df, address = address_column, method = ‘osm’)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! tidygeocoder provides a tidy interface to multiple geocoding services. The OSM (OpenStreetMap/Nominatim) method is free and requires no API key. ggmap’s Google method requires a paid API key.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>sf::st_geocode(df, address = address_column)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. tidygeocoder provides a tidy interface to multiple geocoding services. The OSM (OpenStreetMap/Nominatim) method is free and requires no API key. ggmap’s Google method requires a paid API key.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>dplyr::mutate(lat = geocode(address))</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. tidygeocoder provides a tidy interface to multiple geocoding services. The OSM (OpenStreetMap/Nominatim) method is free and requires no API key. ggmap’s Google method requires a paid API key.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>ggmap::ggmap(address_column)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. tidygeocoder provides a tidy interface to multiple geocoding services. The OSM (OpenStreetMap/Nominatim) method is free and requires no API key. ggmap’s Google method requires a paid API key.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M3Q09: To convert a data frame with columns ‘long’ and ‘lat’ into an sf POINT object wi</text></name>
+    <questiontext format="html"><text><![CDATA[<p>To convert a data frame with columns ‘long’ and ‘lat’ into an sf POINT object with WGS 84 CRS, you use:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>st_as_sf() with coords = c(‘long’, ‘lat’) converts tabular data to spatial. CRITICAL: the order is c(X, Y) = c(longitude, latitude). Reversing them (lat, long) places points in the wrong location — a very common error.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-3</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-3</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>st_as_sf(df, coords = c(‘long’, ‘lat’), crs = 4326)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! st_as_sf() with coords = c(‘long’, ‘lat’) converts tabular data to spatial. CRITICAL: the order is c(X, Y) = c(longitude, latitude). Reversing them (lat, long) places points in the wrong location — a very common error.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>st_read(df, coords = c(‘long’, ‘lat’))</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. st_as_sf() with coords = c(‘long’, ‘lat’) converts tabular data to spatial. CRITICAL: the order is c(X, Y) = c(longitude, latitude). Reversing them (lat, long) places points in the wrong location — a very common error.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>st_as_sf(df, coords = c(‘lat’, ‘long’), crs = 4326)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. st_as_sf() with coords = c(‘long’, ‘lat’) converts tabular data to spatial. CRITICAL: the order is c(X, Y) = c(longitude, latitude). Reversing them (lat, long) places points in the wrong location — a very common error.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>st_point(c(df$long, df$lat))</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. st_as_sf() with coords = c(‘long’, ‘lat’) converts tabular data to spatial. CRITICAL: the order is c(X, Y) = c(longitude, latitude). Reversing them (lat, long) places points in the wrong location — a very common error.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M3Q10: To create a choropleth map of ‘no_of_colleges’ in ggplot2, the correct geom_sf()</text></name>
+    <questiontext format="html"><text><![CDATA[<p>To create a choropleth map of ‘no_of_colleges’ in ggplot2, the correct geom_sf() call is:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>For choropleths, map the variable to the fill aesthetic inside aes(). The color aesthetic controls the border color of polygons. Using geom_sf() (not geom_polygon()) is essential because it handles sf geometry automatically.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-4</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-3</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>geom_sf(aes(fill = no_of_colleges))</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! For choropleths, map the variable to the fill aesthetic inside aes(). The color aesthetic controls the border color of polygons. Using geom_sf() (not geom_polygon()) is essential because it handles sf geometry automatically.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>geom_sf(color = no_of_colleges)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. For choropleths, map the variable to the fill aesthetic inside aes(). The color aesthetic controls the border color of polygons. Using geom_sf() (not geom_polygon()) is essential because it handles sf geometry automatically.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>geom_sf(aes(x = no_of_colleges))</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. For choropleths, map the variable to the fill aesthetic inside aes(). The color aesthetic controls the border color of polygons. Using geom_sf() (not geom_polygon()) is essential because it handles sf geometry automatically.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>geom_polygon(aes(fill = no_of_colleges))</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. For choropleths, map the variable to the fill aesthetic inside aes(). The color aesthetic controls the border color of polygons. Using geom_sf() (not geom_polygon()) is essential because it handles sf geometry automatically.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M3Q11: The scale_fill_viridis_c() palette is recommended for choropleth maps because it</text></name>
+    <questiontext format="html"><text><![CDATA[<p>The scale_fill_viridis_c() palette is recommended for choropleth maps because it is:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>The viridis family of palettes was designed to be perceptually uniform (equal steps in data = equal steps in perceived color), accessible to people with color vision deficiencies, and readable when printed in black and white.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-4</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-3</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Perceptually uniform, colorblind-friendly, and prints well in grayscale</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! The viridis family of palettes was designed to be perceptually uniform (equal steps in data = equal steps in perceived color), accessible to people with color vision deficiencies, and readable when printed in black and white.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>The only color palette available in ggplot2</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The viridis family of palettes was designed to be perceptually uniform (equal steps in data = equal steps in perceived color), accessible to people with color vision deficiencies, and readable when printed in black and white.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Required by the CDC cartographic guidelines</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The viridis family of palettes was designed to be perceptually uniform (equal steps in data = equal steps in perceived color), accessible to people with color vision deficiencies, and readable when printed in black and white.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Only suitable for categorical data</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The viridis family of palettes was designed to be perceptually uniform (equal steps in data = equal steps in perceived color), accessible to people with color vision deficiencies, and readable when printed in black and white.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M3Q12: To add a scale bar and north arrow to a ggplot2 map, you use functions from the:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>To add a scale bar and north arrow to a ggplot2 map, you use functions from the:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>ggspatial extends ggplot2 with spatial-specific map elements. annotation_scale() adds a scale bar and annotation_north_arrow() adds a north arrow. Both accept location parameters (e.g., ‘bl’ for bottom-left, ‘tr’ for top-right).</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-4</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-3</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>ggspatial package: annotation_scale() and annotation_north_arrow()</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! ggspatial extends ggplot2 with spatial-specific map elements. annotation_scale() adds a scale bar and annotation_north_arrow() adds a north arrow. Both accept location parameters (e.g., ‘bl’ for bottom-left, ‘tr’ for top-right).</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>sf package: st_scale() and st_north()</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. ggspatial extends ggplot2 with spatial-specific map elements. annotation_scale() adds a scale bar and annotation_north_arrow() adds a north arrow. Both accept location parameters (e.g., ‘bl’ for bottom-left, ‘tr’ for top-right).</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>ggplot2 base package: scale_bar() and north_arrow()</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. ggspatial extends ggplot2 with spatial-specific map elements. annotation_scale() adds a scale bar and annotation_north_arrow() adds a north arrow. Both accept location parameters (e.g., ‘bl’ for bottom-left, ‘tr’ for top-right).</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>patchwork package: add_scale() and add_arrow()</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. ggspatial extends ggplot2 with spatial-specific map elements. annotation_scale() adds a scale bar and annotation_north_arrow() adds a north arrow. Both accept location parameters (e.g., ‘bl’ for bottom-left, ‘tr’ for top-right).</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M3Q13: The raster::crop() function clips a raster to the geographic extent (bounding bo</text></name>
+    <questiontext format="html"><text><![CDATA[<p>The raster::crop() function clips a raster to the geographic extent (bounding box) of a spatial object.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>crop() trims the raster to the bounding box of the provided extent or spatial object. This reduces computation time when you only need raster data for a specific region (e.g., cropping a global population raster to India).</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-3</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-3</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>True</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! crop() trims the raster to the bounding box of the provided extent or spatial object. This reduces computation time when you only need raster data for a specific region (e.g., cropping a global population raster to India).</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>False</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. crop() trims the raster to the bounding box of the provided extent or spatial object. This reduces computation time when you only need raster data for a specific region (e.g., cropping a global population raster to India).</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M3Q14: The sf package depends on which external system libraries?</text></name>
+    <questiontext format="html"><text><![CDATA[<p>The sf package depends on which external system libraries?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>sf links to three core geospatial C/C++ libraries: GDAL (reading/writing 200+ spatial formats), GEOS (geometric operations like buffering, intersection), and PROJ (coordinate reference system transformations). These must be installed at the system level.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-3</text></tag>
+      <tag><text>Bloom-Remember</text></tag>
+      <tag><text>Module-3</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>GDAL (data I/O), GEOS (geometry operations), and PROJ (coordinate transformations)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! sf links to three core geospatial C/C++ libraries: GDAL (reading/writing 200+ spatial formats), GEOS (geometric operations like buffering, intersection), and PROJ (coordinate reference system transformations). These must be installed at the system level.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Python, NumPy, and SciPy</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. sf links to three core geospatial C/C++ libraries: GDAL (reading/writing 200+ spatial formats), GEOS (geometric operations like buffering, intersection), and PROJ (coordinate reference system transformations). These must be installed at the system level.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Java, PostgreSQL, and Apache</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. sf links to three core geospatial C/C++ libraries: GDAL (reading/writing 200+ spatial formats), GEOS (geometric operations like buffering, intersection), and PROJ (coordinate reference system transformations). These must be installed at the system level.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>No external dependencies are required</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. sf links to three core geospatial C/C++ libraries: GDAL (reading/writing 200+ spatial formats), GEOS (geometric operations like buffering, intersection), and PROJ (coordinate reference system transformations). These must be installed at the system level.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M3Q15: To display two maps side by side with a shared legend in R, you use the patchwor</text></name>
+    <questiontext format="html"><text><![CDATA[<p>To display two maps side by side with a shared legend in R, you use the patchwork package like this:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>patchwork’s plot_layout(guides = ‘collect’) merges identical legends from multiple plots into a single shared legend. Combine with &amp; scale_fill_*() to ensure both plots use the same color scale with matched limits.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-4</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-3</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>(plot_1 + plot_2) + plot_layout(guides = ‘collect’)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! patchwork’s plot_layout(guides = ‘collect’) merges identical legends from multiple plots into a single shared legend. Combine with &amp; scale_fill_*() to ensure both plots use the same color scale with matched limits.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>par(mfrow = c(1, 2)); plot_1; plot_2</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. patchwork’s plot_layout(guides = ‘collect’) merges identical legends from multiple plots into a single shared legend. Combine with &amp; scale_fill_*() to ensure both plots use the same color scale with matched limits.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>grid.arrange(plot_1, plot_2, ncol = 2)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. patchwork’s plot_layout(guides = ‘collect’) merges identical legends from multiple plots into a single shared legend. Combine with &amp; scale_fill_*() to ensure both plots use the same color scale with matched limits.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>cowplot::plot_grid(plot_1, plot_2)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. patchwork’s plot_layout(guides = ‘collect’) merges identical legends from multiple plots into a single shared legend. Combine with &amp; scale_fill_*() to ensure both plots use the same color scale with matched limits.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+</quiz>

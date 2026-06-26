@@ -1,0 +1,59 @@
+---
+title: "Spatial Epidemiology and Applied Data Science"
+subtitle: "A module of the DMgtAsia course"
+author:
+  - name: "Prof. (Dr.) Biju Soman"
+    affiliation: "AMCHSS, SCTIMST, Trivandrum"
+  - name: "Dr. Arun Mitra"
+    affiliation: "AIIMS Bibinagar"
+date: last-modified
+---
+
+![](dmgt_asia_logo.png){width=160 fig-align="left"}
+
+## Welcome
+
+This module introduces **spatial epidemiology and applied spatial data science** using
+R and the tidyverse. It is the spatial component of the **DMgtAsia** course and progresses
+from foundational GIS concepts to hands-on disease-cluster detection on real Indian public
+health datasets.
+
+The material distils experience from **multiple spatial data science trainings and workshops
+delivered across India**, consolidated and adapted for the DMgtAsia training framework.
+
+## What you will be able to do
+
+- Explain core GIS concepts — CRS/projections, spatial dependence, spatial autocorrelation,
+  Tobler's First Law — and why they matter for public health.
+- Perform spatial exploratory data analysis and apply CDC cartographic guidelines to design
+  defensible public-health maps.
+- Read, transform and join spatial data with `sf`; extract raster values; geocode addresses;
+  and build publication-quality choropleths.
+- Conduct and interpret global and local spatial autocorrelation (Moran's I, LISA) and map
+  SIR/SMR to identify and communicate disease clustering.
+
+## How the module is organised
+
+The module is a four-unit arc. Each unit pairs a short lecture with hands-on R exercises and
+a knowledge-check quiz.
+
+| Unit | Theme | Sessions | Hands-on |
+|------|-------|----------|----------|
+| **A** | Foundations of spatial thinking | Intro to GIS · Concepts in SDS | Reflection |
+| **B** | Spatial EDA & cartography | Exploring data with R · Visualization principles | EDA on WHO TB data |
+| **C** | Building spatial datasets with `sf` | Intro to the `sf` package | Exercises 1–4 |
+| **D** | Spatial analysis & clustering | (lab-led) | Exercises 6–7 · John Snow · SIR/SMR · Capstone |
+
+See the full session list and run order in the navigation bar, or jump to **[Setup](setup.qmd)**
+to prepare your machine first.
+
+## Delivery
+
+- **Self-paced:** 4 weeks, one unit per week.
+- **Intensive workshop:** 2 days — Day 1 Units A–B, Day 2 Units C–D.
+
+## Acknowledgements
+
+Developed at the **Achutha Menon Centre for Health Science Studies, SCTIMST** and
+**AIIMS Bibinagar**. Built on the open `sf`, `spdep`, `rgeoda`, `ggspatial` and `tidyverse`
+ecosystems. Data: NMC, NFHS, WHO, SEDAC GPWv4, and `HistData`.

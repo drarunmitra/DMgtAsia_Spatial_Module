@@ -1,0 +1,227 @@
+---
+title: "Introduction to the SF package"
+
+format: 
+  html: default
+---
+
+
+
+## The `sf` package
+
+::: columns
+::: {.column width="45%"}
+
+![](images/sf_hex.gif)
+
+``` r
+install.packages("sf")
+```
+
+The **sf** package is an R implementation of [Simple Features](https://en.wikipedia.org/wiki/Simple_Features).
+
+This package incorporates:
+
+-   a new spatial data class system in R
+
+-   functions for reading and writing data
+
+-   tools for spatial operations on vectors
+
+
+
+
+
+
+:::
+
+::: {.column width="55%"}
+
+![](images/sf_2.png)
+:::
+:::
+
+
+
+## Geometry Types in `sf`
+
+::: columns
+::: {.column width="50%"}
+![](images/wkt_primitives.png)
+
+![](images/wkt_multipart.png)
+:::
+
+::: {.column width="50%"}
+![](images/sf-classes.png){width="800"}
+:::
+:::
+
+
+## Loading  `sf` package
+
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+library(here)
+```
+
+
+
+```{r}
+#| echo: true
+#| warning: false
+#| message: false
+
+
+library(sf)
+
+fs::dir_tree(here("spatial_files", "kl_pop_centers"))
+
+```
+
+# Load spatial data into R
+
+```{r}
+#| echo: true
+#| warning: false
+#| message: false
+
+shape_file <- here("spatial_files", "kl_pop_centers", "kl_pop_centers.shp")
+
+kl_pop_centers <- st_read(shape_file)
+
+
+```
+
+
+
+
+## View the `sf` object
+
+```{r}
+#| echo: true
+
+kl_pop_centers
+```
+
+## Plot the `sf` object
+
+
+::: columns
+::: {.column width="50%"}
+
+
+```r
+kl_pop_centers %>%
+  ggplot() +
+  geom_sf()
+
+```
+
+:::
+
+::: {.column width="50%"}
+![](images/kl_map.png){width="500"}
+
+:::
+:::
+
+
+## Plot the `sf` object
+
+
+::: columns
+::: {.column width="55%"}
+
+
+```r
+kl_pop_centers %>%
+  ggplot() +
+  geom_sf(aes(color = district))
+
+```
+
+:::
+
+::: {.column width="45%"}
+![](images/kl_district_map.png)
+
+:::
+:::
+
+
+## Concept of the `sf` package
+
+![](images/sf_concept_map.png)
+
+## Dependencies of the `sf` package
+
+![](images/sf_deps.png)
+
+## Methods in `sf`
+
+```{r}
+#| echo: true
+
+methods(class="sf")
+```
+
+
+## Interactive `sf`
+
+::: columns
+::: {.column width="70%"}
+
+```{r out.width="100%", out.height="800"}
+kl_pop_centers %>%
+  mapview::mapview()
+```
+
+:::
+::: {.column width="30%"}
+
+![](images/leaflet.png)
+
+
+- Light weight
+- Interactive
+- Cross Platform
+:::
+:::
+## Where to look for help?
+
+::: columns
+::: {.column width="60%"}
+![](images/sf_cheatsheet.png)
+:::
+
+::: {.column width="40%"}
+![](images/sf_cheatsheet2.png)
+:::
+
+https://posit.co/wp-content/uploads/2022/10/sf.pdf
+:::
+
+
+
+
+
+
+## Challenges and Future Directions
+
+### New Requirements for Spatial Analysis
+
+- Immediate: The time from action to insight is reducing dramatically
+
+
+- Fresh: Primary data needs to be days or months old  not years old
+
+
+- Multi-source: Competitive alternative sources for completeness or validation
+
+
+- Continuous: Analysis can no longer be a point in time
+
+
+- Automated: Possibility to continuously replicate and connect to decision tools
+

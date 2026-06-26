@@ -1,0 +1,813 @@
+---
+title: "Exploring Data with R"
+
+format: 
+  html: default
+---
+
+
+
+## What is Exploratory Data Analysis?
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+- **EDA** is the critical first step.
+
+- **EDA** is a state of mind. 
+
+- **EDA** is exploring your ideas.
+
+- **EDA** has no strict rules.
+
+- **EDA** helps understand your data.
+
+- **EDA** is an iterative cycle.
+
+- **EDA** is a creative process.
+
+::: 
+
+::: {.column width="10%"}
+
+::: 
+
+::: {.column width="30%"}
+
+![](images/EDA.png)
+
+:::
+:::
+
+
+
+::: {.callout-note }
+
+### Definition of EDA
+
+"It  is  mostly  a  **philosophy**  of  data analysis where the researcher examines the data without any pre-conceived ideas  in  order  to  discover what  the  data  can  tell  him  or  her  about the phenomena  being  studied."
+
+:::
+
+
+
+> *"detective work – numerical detective work – or counting detective work – or graphical detective  work"*
+
+- **Tukey,  1977** *Page 1, Exploratory Data Analysis*
+
+
+
+
+## How to do EDA?
+
+- The easiest way to do **EDA** is to use questions as tools to guide your investigation. 
+
+- **EDA** is an important part of any data analysis, even if the questions are known already.
+
+
+>*"There are no routine statistical questions, only questionable statistical routines."*
+
+— **Sir David Cox**
+
+
+>*"Far better an approximate answer to the right question, which is often vague, than an exact answer to the wrong question, which can always be made precise."*
+
+— **John Tukey**
+
+
+### Asking the right questions
+
+Key to asking **_quality_** questions is to generate a large **_quantity_** of questions.
+
+It is difficult to ask revealing questions at the start of the analysis.
+
+But, each new question will expose a new aspect and increase your chance of making a discovery.
+
+### What Questions to ask?
+
+
+- What type of variation occurs within your variables?
+
+- What type of covariation occurs between your variables?
+
+- Whether your data meets your expectations or not. 
+
+- Whether the quality of your data is robust or not.
+
+
+###  The Process of EDA
+
+::: {.columns}
+
+::: {.column width="70%"}
+
+![](images/data_exploration1.png)
+
+::: 
+
+
+
+::: {.column width="30%"}
+
+1. Import
+2. Tidy
+3. Explore
+  - Transform
+  - Visualize
+  - Transform 
+  - Visualise ...
+  - ... 
+
+:::
+:::
+
+
+
+### 6 W's of Spatial EDA / ESDA
+
+::: columns
+::: {.column  width="30%"}
+
+-   What?
+
+-   Where?
+
+-   When?
+
+-   Who?
+
+-   Why?
+
+-   How?
+
+:::
+::: {.column  width="70%"}
+### Questions to ask:
+
+- What type of variation occurs within your variables?
+
+- What type of covariation occurs between your variables?
+
+- Whether your data meets your expectations or not.
+
+- Whether the quality of your data is robust or not.
+
+:::
+:::
+
+
+## Steps for any good data anlysis project
+
+
+::: columns
+::: {.column  width="40%"}
+
+### Preparing Tidy Data
+- Data Cleaning
+- Data Wrangling
+
+### Data Exploration
+- Data Transformation
+- Data Visualization
+
+### Statistical Analysis
+### Prepare Results
+
+### Draw Inferences
+### Report Findings
+
+
+:::
+::: {.column  width="60%"}
+![](images/steps_SDA.png)
+:::
+:::
+
+
+
+
+## Data Wrangling in R
+
+### `dplyr` Package
+
+::: {.columns}
+
+::: {.column width="60%"}
+The `dplyr` is a powerful R-package to manipulate, clean and summarize unstructured data. 
+
+In short, it makes data exploration and data manipulation easy and fast in R. 
+::: 
+
+::: {.column width="40%"}
+
+![](images/dplyr.png)
+::: 
+
+::: 
+
+### Verbs of the `dplyr`
+
+- There are many verbs in `dplyr` that are useful.
+
+![](images/dplyr_fns.JPG)
+
+
+### Using the pipe operator (`|>` or `%>%`)
+
+![](images/pipes_dplyr.png)
+
+
+#### Let us load some data
+
+
+```{r}
+#| include: false
+
+options(tidyverse.quiet = TRUE)
+library(tidyverse)
+library(here)
+library(rio)
+
+filepath <- here('data', "who_tubercolosis_data.csv")
+
+tb <- filepath |> import(setclass = 'tibble')
+
+```
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+```r
+library(tidyverse)
+library(here)
+library(rio)
+
+filepath <- here('data', "who_tubercolosis_data.csv")
+
+tb <- filepath |> import(setclass = 'tibble')
+
+tb
+```
+
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+
+tb
+```
+:::
+:::
+
+#### Take a Quick Look at the data
+::: {.columns}
+
+::: {.column width="40%"}
+
+```r
+tb |> 
+  glimpse()
+```
+
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+
+tb |> glimpse()
+```
+:::
+:::
+
+
+#### Check the first few rows
+
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+```r
+tb |> 
+  head()
+```
+
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+
+tb |> head()
+```
+:::
+:::
+
+
+#### Check the dimensions and the column names
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+```r
+dim(tb) 
+
+names(tb)
+```
+
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+
+tb |> dim()
+
+tb |> names()
+```
+:::
+:::
+
+#### Lets find the unique countries in the bottom 50 rows of the dataset
+
+
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+```r
+# without the pipe
+unique(tail(tb, n = 50)$country)
+
+# with the pipe
+tb |> 
+  tail(50)  |> 
+  distinct(country)
+
+
+```
+
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+
+unique(tail(tb, n = 50)$country)
+
+tb |> 
+  tail(50)  |> 
+  distinct(country)
+```
+:::
+:::
+
+#### `distinct()` and `count()`
+
+The `distinct()` function will return the distinct values of a column, while `count()` provides both the distinct values of a column and then number of times each value shows up. 
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+```r
+tb  |>  
+  distinct(who_region)
+```
+
+```{r}
+#| echo: false
+
+tb  |>  
+  distinct(who_region)
+```
+
+
+:::
+
+::: {.column width="10%"}
+
+::: 
+
+
+::: {.column width="50%"}
+```r
+tb  |>  
+  count(who_region)
+```
+
+```{r}
+#| echo: false
+
+tb  |>  
+  count(who_region)
+```
+
+:::
+:::
+
+
+
+#### `arrange()`
+
+The `arrange()` function does what it sounds like. It takes a data frame or tbl and arranges (or sorts) by column(s) of interest.
+
+The first argument is the data, and subsequent arguments are columns to sort on.
+
+Use the `desc()` function to arrange by descending.
+
+
+::: {.columns}
+
+::: {.column width="30%"}
+
+```r
+tb |> 
+  count(who_region) |> 
+  arrange(n)
+```
+
+```{r}
+#| echo: false
+
+tb |> 
+  count(who_region) |> 
+  arrange(n)
+```
+
+
+:::
+
+::: {.column width="10%"}
+
+::: 
+
+
+::: {.column width="60%"}
+```r
+tb |> 
+  count(who_region) |> 
+  arrange(-n) # use can also use  arrange(desc(n))
+```
+
+```{r}
+#| echo: false
+
+tb |> 
+  count(who_region) |> 
+  arrange(-n)
+```
+
+:::
+:::
+
+
+### Logical Operators in R
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+
+- If you want to satisfy *all* of multiple conditions, you can use the "and" operator, `&`. 
+
+- The "or" operator `|` (the vertical pipe character, shift-backslash) will return a subset that meet *any* of the conditions.
+
+:::
+
+::: {.column width="50%"}
+
+![](images/LogicalOp.png)
+
+:::
+
+:::
+
+### `filter()`
+
+#### Filter 2015 and above
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+```r
+tb |> 
+  filter(year >= 2015)
+```
+
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+
+tb|> 
+  filter(year >= 2015)
+```
+:::
+:::
+
+
+#### Filter India
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+```r
+tb |> 
+  filter(country == "India")
+```
+
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+
+tb|> 
+  filter(country == "India")
+```
+:::
+:::
+
+#### Filter by year and country
+
+::: {.columns}
+
+::: {.column width="40%"}
+
+```r
+tb |> 
+  filter(year >= 2015 & country == "India")
+```
+
+:::
+
+::: {.column width="60%"}
+```{r}
+#| echo: false
+
+tb|> 
+  filter(year >= 2015 & country == "India")
+```
+:::
+:::
+
+### `%in%` function
+
+- To `filter()` a categorical variable for only certain levels, we can use the `%in%` operator.
+
+- Let's see data from India, Nepal, Pakistan and Bangladesh First we will have to figure out how those are spelled in this dataset.
+
+- Open the spreadsheet viewer and find out.
+
+- We'll see a way to find them in code later on in the course.
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+```r
+# Create the Indian Subcontinent Variable
+indian_subcont <- c(
+            "India",
+            "Nepal",
+            "Pakistan",
+            "Bangladesh", 
+            "Afghanistan"
+            )
+
+# Filter using the %in% function
+tb  |>  
+  filter(country %in% indian_subcont) %>%
+  distinct(country)
+  
+```
+
+:::
+
+::: {.column width="40%"}
+```{r}
+#| echo: false
+
+# Create the Indian Subcontinent Variable
+indian_subcont <- c(
+            "India",
+            "Nepal",
+            "Pakistan",
+            "Bangladesh", 
+            "Afghanistan"
+            )
+
+# Filter using the %in% function
+tb  |>  
+  filter(country %in% indian_subcont) %>%
+  distinct(country)
+```
+:::
+:::
+
+
+
+###   `summarize()`
+
+- The `summarize()` function summarizes multiple values to a single value.
+
+- On its own the `summarize()` function doesn't seem to be all that useful.
+
+The dplyr package provides a few convenience functions called `n()` and `n_distinct()` that tell you the number of observations or the number of distinct values of a particular variable.
+
+`summarize()` is the same as `summarise()`
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+```r
+tb |> 
+  summarize(mean_hiv_percent = mean(hiv_percent, na.rm = TRUE),
+            sd_hiv_percent = sd(hiv_percent, na.rm = TRUE))
+```
+
+:::
+
+::: {.column width="40%"}
+```{r}
+#| echo: false
+
+tb|> 
+  summarize(mean_hiv_percent = mean(hiv_percent, na.rm = TRUE),
+            sd_hiv_percent = sd(hiv_percent, na.rm = TRUE))
+```
+:::
+:::
+
+
+### `group_by()`
+
+- We saw that `summarize()` isn't that useful on its own. Neither is `group_by()`. 
+
+- All this does is takes an existing data frame and converts it into a grouped data frame where operations are performed by group.
+
+- The real power comes in where `group_by()` and `summarize()` are used together. First, write the `group_by()` statement. Then pipe the result to a call to `summarize()`.
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+```r
+tb |> 
+  group_by(who_region)  |>  
+  summarize(mean_inc = mean(incidence_100k, na.rm = TRUE),
+            sd_inc = sd(incidence_100k, na.rm = TRUE))
+```
+
+:::
+
+::: {.column width="40%"}
+```{r}
+#| echo: false
+
+tb |> 
+  group_by(who_region)  |>  
+  summarize(mean_inc = mean(incidence_100k, na.rm = TRUE),
+            sd_inc = sd(incidence_100k, na.rm = TRUE))
+```
+:::
+:::
+
+
+### `mutate()`
+- Mutate creates a new variable or modifies an existing one.
+
+![](images/dplyr_mutate.png)
+
+### `if_else()`
+
+Lets create a column called `ind_sub` if the country is in the Indian Subcontinent.
+
+::: {.columns}
+
+::: {.column width="60%"}
+
+```r
+
+tb |> 
+  mutate(indian_sub1 = if_else(country %in% indian_subcont, 
+                              "Indian Subcontinent", "Others")) |> 
+  select(country, indian_sub1) |> 
+  distinct()
+```
+
+:::
+
+::: {.column width="40%"}
+```{r}
+#| echo: false
+#| 
+tb |> 
+  mutate(indian_sub1 = if_else(country %in% indian_subcont, 
+                              "Indian Subcontinent", "Others")) |> 
+  select(country, indian_sub1) |> 
+  distinct()
+```
+:::
+:::
+
+
+### `case_when()`
+
+Alternative of `if_else()`
+
+![](images/case_when.jpg)
+
+### `if_else()` vs `case_when()`
+
+Note that the `if_else()` function may result in slightly shorter code if you only need to code for 2 options. 
+
+For more options, nested `if_else()` statements become hard to read and could result in mismatched parentheses so `case_when()` will be a more elegant solution.
+
+
+### `join()`
+
+- Typically in a data science or data analysis project one would have to work with many sources of data. 
+
+- The researcher must be able to combine multiple datasets to answer the questions he or she is interested in. 
+
+- As with the other `dplyr` verbs, there are different families of verbs that are designed to work with relational data and one of the most commonly used family of verbs are the mutating joins.
+
+
+
+![](images/dplyr_joins.jpg)
+
+
+#### More on `join()`  
+
+- `left_join(x, y)` which combines all columns in data frame `x` with those in data frame `y` but only retains rows from `x`.
+
+- `right_join(x, y)` also keeps all columns but operates in the opposite direction, returning only rows from `y`.
+
+- `full_join(x, y)` combines all columns of `x` with all columns of `y` and retains all rows from both data frames.
+
+- `inner_join(x, y)` combines all columns present in either `x` or `y` but only retains rows that are present in both data frames.
+
+- `anti_join(x, y)` returns the columns from `x` only and retains rows of `x` that are not present in `y`.
+
+- `anti_join(y, x)` returns the columns from `y` only and retains rows of `y` that are not present in `x`.
+
+#### Visual representation of the `left_join()`
+
+
+![](images/dplyr_joins_left.png)
+
+
+
+#### Visual representation of the `right_join()`
+
+
+![](images/dplyr_joins_right.png)
+
+
+#### Visual representation of the `full_join()`
+
+
+![](images/dplyr_joins_full.png)
+
+
+
+### `pivot()`
+
+Most often, when working with our data we may have to reshape our data from long format to wide format and back. We can use the `pivot` family of functions to achieve this task.  
+
+
+![](images/long_wide.png)
+
+
+### Other Useful Functions
+##### `drop_na()`
+
+The `drop_na()` function is extremely useful for when we need to subset a variable to remove missing values.
+
+##### `select()`
+
+While the `filter()` function allows you to return only certain rows matching a condition, the `select()` function returns only certain *columns*. The first argument is the data, and subsequent arguments are the columns you want.
+
+
+# More Resources for `dplyr`
+
+
+
+- Check out the [Data Wrangling Cheatsheet](https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf) that covers dplyr and tidyr functions. 
+
+- Review the [Tibbles](https://r4ds.had.co.nz/tibbles.html) chapter of the excellent, free [**_R for Data Science_ book**](http://r4ds.had.co.nz).
+
+- Check out the [Transformations](https://r4ds.had.co.nz/transform.html) chapter to learn more about the `dplyr` package. Note that this chapter also uses the graphing package `ggplot2` which we have covered yesterday.
+

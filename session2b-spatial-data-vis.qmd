@@ -1,0 +1,61 @@
+---
+title: "Principles of Spatial Data Visualization"
+
+format: 
+  html: default
+---
+
+
+## Spatial Data Visualization
+### Cartographic Principles
+
+
+-   Geography and Geospatial Science Working Group (GeoSWG) recognised the need for best practices in cartography.
+
+    -   Visual contrast
+    -   Legibility
+    -   Figure-Ground Orientation
+    -   Hierarchical Organization
+    -   Balance
+
+<br> These guidelines, help the researchers develop high-quality, consistent map products.
+
+
+
+
+![](images/designprinciples_2-lg.png)
+
+
+![](images/designprinciples_3.jpg)
+
+![](images/designprinciples_4.jpg)
+
+![](images/designprinciples_5.jpg)
+
+![](images/designprinciples_6.jpg)
+
+
+## Cartographic Guidelines for Public Health
+
+::: columns
+::: {.column width="40%"}
+-   CDC, Atlanta
+-   Some important aspects:
+    -   Map Elements
+        -   Title and Borders
+        -   North Arrow / Graticule / Scale
+        -   Inset Maps
+        -   Labels and Legend
+    -   Other Elements
+        -   Data Sources
+        -   Dates
+        -   Projection
+:::
+
+::: {.column width="60%"}
+![](images/map_elements_1.jpg){width="900"}
+
+<https://www.cdc.gov/dhdsp/maps/gisx/resources/cartographic_guidelines.pdf>
+:::
+:::
+

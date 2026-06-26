@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/SDS4PH/Module 1 - Foundations of Spatial Thinking for Health</text>
+    </category>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M1Q01: Tobler’s First Law of Geography states that:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Tobler’s First Law of Geography states that:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Tobler’s First Law (1970) is the foundational principle of spatial analysis. It implies that nearby locations tend to have more similar attribute values than distant locations — the basis for spatial autocorrelation.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-1</text></tag>
+      <tag><text>Bloom-Remember</text></tag>
+      <tag><text>Module-1</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Everything is related to everything else, but near things are more related than distant things</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! Tobler’s First Law (1970) is the foundational principle of spatial analysis. It implies that nearby locations tend to have more similar attribute values than distant locations — the basis for spatial autocorrelation.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Spatial data must always be projected before analysis</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Tobler’s First Law (1970) is the foundational principle of spatial analysis. It implies that nearby locations tend to have more similar attribute values than distant locations — the basis for spatial autocorrelation.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>The Earth is best represented as a flat surface</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Tobler’s First Law (1970) is the foundational principle of spatial analysis. It implies that nearby locations tend to have more similar attribute values than distant locations — the basis for spatial autocorrelation.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Distance decay applies only to infectious diseases</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Tobler’s First Law (1970) is the foundational principle of spatial analysis. It implies that nearby locations tend to have more similar attribute values than distant locations — the basis for spatial autocorrelation.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M1Q02: Spatial autocorrelation refers to:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Spatial autocorrelation refers to:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Spatial autocorrelation measures whether nearby features have similar (positive SA) or dissimilar (negative SA) attribute values. Positive spatial autocorrelation means similar values cluster together.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-1</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-1</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>The presence of systematic spatial variation in a mapped variable</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! Spatial autocorrelation measures whether nearby features have similar (positive SA) or dissimilar (negative SA) attribute values. Positive spatial autocorrelation means similar values cluster together.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>The correlation between two different variables measured at the same location</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Spatial autocorrelation measures whether nearby features have similar (positive SA) or dissimilar (negative SA) attribute values. Positive spatial autocorrelation means similar values cluster together.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>The tendency of GIS software to introduce measurement errors</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Spatial autocorrelation measures whether nearby features have similar (positive SA) or dissimilar (negative SA) attribute values. Positive spatial autocorrelation means similar values cluster together.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>The relationship between map projection and data accuracy</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Spatial autocorrelation measures whether nearby features have similar (positive SA) or dissimilar (negative SA) attribute values. Positive spatial autocorrelation means similar values cluster together.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M1Q03: A positive Moran’s I value close to +1 indicates:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>A positive Moran’s I value close to +1 indicates:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Moran’s I ranges from -1 (perfect dispersion) through 0 (random) to +1 (perfect clustering). A value near +1 means areas with similar values are near each other — high values cluster near high values, and low near low.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-1</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-1</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Strong spatial clustering of similar values</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! Moran’s I ranges from -1 (perfect dispersion) through 0 (random) to +1 (perfect clustering). A value near +1 means areas with similar values are near each other — high values cluster near high values, and low near low.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Strong spatial dispersion (checkerboard pattern)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Moran’s I ranges from -1 (perfect dispersion) through 0 (random) to +1 (perfect clustering). A value near +1 means areas with similar values are near each other — high values cluster near high values, and low near low.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Complete spatial randomness</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Moran’s I ranges from -1 (perfect dispersion) through 0 (random) to +1 (perfect clustering). A value near +1 means areas with similar values are near each other — high values cluster near high values, and low near low.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>No spatial pattern in the data</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Moran’s I ranges from -1 (perfect dispersion) through 0 (random) to +1 (perfect clustering). A value near +1 means areas with similar values are near each other — high values cluster near high values, and low near low.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M1Q04: You need to calculate the area of Indian states in square kilometers. Which CRS </text></name>
+    <questiontext format="html"><text><![CDATA[<p>You need to calculate the area of Indian states in square kilometers. Which CRS type should you use?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Area and distance calculations require a projected CRS that uses linear units (meters, kilometers). EPSG:4326 uses degrees, which would give area in square degrees — meaningless for real-world measurements.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-1</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-1</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>A projected CRS such as UTM Zone 43N (EPSG:32643)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! Area and distance calculations require a projected CRS that uses linear units (meters, kilometers). EPSG:4326 uses degrees, which would give area in square degrees — meaningless for real-world measurements.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>A geodetic CRS such as WGS 84 (EPSG:4326)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Area and distance calculations require a projected CRS that uses linear units (meters, kilometers). EPSG:4326 uses degrees, which would give area in square degrees — meaningless for real-world measurements.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Any CRS will give the same area result</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Area and distance calculations require a projected CRS that uses linear units (meters, kilometers). EPSG:4326 uses degrees, which would give area in square degrees — meaningless for real-world measurements.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>No CRS is needed for area calculations</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Area and distance calculations require a projected CRS that uses linear units (meters, kilometers). EPSG:4326 uses degrees, which would give area in square degrees — meaningless for real-world measurements.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M1Q05: EPSG:4326 (WGS 84) is a:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>EPSG:4326 (WGS 84) is a:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>WGS 84 (EPSG:4326) is the most widely used geodetic CRS. It defines positions on the Earth’s surface using latitude and longitude in degrees. It’s used by GPS and is the default for most spatial data exchange.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-1</text></tag>
+      <tag><text>Bloom-Remember</text></tag>
+      <tag><text>Module-1</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Geodetic (geographic) coordinate reference system using latitude/longitude in degrees</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! WGS 84 (EPSG:4326) is the most widely used geodetic CRS. It defines positions on the Earth’s surface using latitude and longitude in degrees. It’s used by GPS and is the default for most spatial data exchange.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Projected coordinate reference system using meters</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. WGS 84 (EPSG:4326) is the most widely used geodetic CRS. It defines positions on the Earth’s surface using latitude and longitude in degrees. It’s used by GPS and is the default for most spatial data exchange.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Local coordinate system specific to India</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. WGS 84 (EPSG:4326) is the most widely used geodetic CRS. It defines positions on the Earth’s surface using latitude and longitude in degrees. It’s used by GPS and is the default for most spatial data exchange.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Raster-specific coordinate system for satellite imagery</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. WGS 84 (EPSG:4326) is the most widely used geodetic CRS. It defines positions on the Earth’s surface using latitude and longitude in degrees. It’s used by GPS and is the default for most spatial data exchange.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M1Q06: The Mercator projection preserves:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>The Mercator projection preserves:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>No flat map can preserve all properties simultaneously. The Mercator projection is conformal (preserves angles/shapes locally) but greatly distorts areas, especially near the poles. Greenland appears as large as Africa, though Africa is 14 times larger.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-1</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-1</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Angular relationships (shape), but distorts area</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! No flat map can preserve all properties simultaneously. The Mercator projection is conformal (preserves angles/shapes locally) but greatly distorts areas, especially near the poles. Greenland appears as large as Africa, though Africa is 14 times larger.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Area, but distorts shape</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. No flat map can preserve all properties simultaneously. The Mercator projection is conformal (preserves angles/shapes locally) but greatly distorts areas, especially near the poles. Greenland appears as large as Africa, though Africa is 14 times larger.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Distance from any point to any other point</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. No flat map can preserve all properties simultaneously. The Mercator projection is conformal (preserves angles/shapes locally) but greatly distorts areas, especially near the poles. Greenland appears as large as Africa, though Africa is 14 times larger.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Both area and shape simultaneously</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. No flat map can preserve all properties simultaneously. The Mercator projection is conformal (preserves angles/shapes locally) but greatly distorts areas, especially near the poles. Greenland appears as large as Africa, though Africa is 14 times larger.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M1Q07: In the context of healthcare data, which is a limitation of traditional health d</text></name>
+    <questiontext format="html"><text><![CDATA[<p>In the context of healthcare data, which is a limitation of traditional health data sources (census, longitudinal surveys)?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Traditional health data (census, NFHS, DLHS) are carefully designed and high quality, but they are expensive, often aggregated to protect privacy (coarse resolution), and the more detailed they are, the less frequently they are collected.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-1</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-1</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>They are massive enterprises that are costly, coarse in resolution, and slow to update</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! Traditional health data (census, NFHS, DLHS) are carefully designed and high quality, but they are expensive, often aggregated to protect privacy (coarse resolution), and the more detailed they are, the less frequently they are collected.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>They are too detailed and updated too frequently</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Traditional health data (census, NFHS, DLHS) are carefully designed and high quality, but they are expensive, often aggregated to protect privacy (coarse resolution), and the more detailed they are, the less frequently they are collected.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>They cannot be geo-referenced to any location</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Traditional health data (census, NFHS, DLHS) are carefully designed and high quality, but they are expensive, often aggregated to protect privacy (coarse resolution), and the more detailed they are, the less frequently they are collected.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>They only cover urban populations</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Traditional health data (census, NFHS, DLHS) are carefully designed and high quality, but they are expensive, often aggregated to protect privacy (coarse resolution), and the more detailed they are, the less frequently they are collected.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M1Q08: According to the CDC’s cartographic guidelines, which of the following is an ess</text></name>
+    <questiontext format="html"><text><![CDATA[<p>According to the CDC’s cartographic guidelines, which of the following is an essential map element?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>The CDC’s GeoSWG guidelines specify that public health maps should include: title, borders, north arrow/graticule, scale bar, inset maps (if needed), labels, legend, data sources, dates, and projection information.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-1</text></tag>
+      <tag><text>Bloom-Remember</text></tag>
+      <tag><text>Module-1</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>All of the following: title, legend, scale bar, north arrow, data source</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! The CDC’s GeoSWG guidelines specify that public health maps should include: title, borders, north arrow/graticule, scale bar, inset maps (if needed), labels, legend, data sources, dates, and projection information.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Only a title and legend are required</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The CDC’s GeoSWG guidelines specify that public health maps should include: title, borders, north arrow/graticule, scale bar, inset maps (if needed), labels, legend, data sources, dates, and projection information.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Only the data visualization layer is necessary</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The CDC’s GeoSWG guidelines specify that public health maps should include: title, borders, north arrow/graticule, scale bar, inset maps (if needed), labels, legend, data sources, dates, and projection information.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Map elements are optional and depend on journal preference</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The CDC’s GeoSWG guidelines specify that public health maps should include: title, borders, north arrow/graticule, scale bar, inset maps (if needed), labels, legend, data sources, dates, and projection information.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M1Q09: Spatial Data Science differs from general Data Science primarily because it:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Spatial Data Science differs from general Data Science primarily because it:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>SDS moves beyond simply mapping where things happen to understanding the spatial processes that drive patterns. It draws on geography, statistics, and computer science to analyze spatially-referenced data.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-1</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-1</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Focuses on understanding why phenomena happen WHERE they do, not just what happens</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! SDS moves beyond simply mapping where things happen to understanding the spatial processes that drive patterns. It draws on geography, statistics, and computer science to analyze spatially-referenced data.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Only uses satellite imagery as its data source</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. SDS moves beyond simply mapping where things happen to understanding the spatial processes that drive patterns. It draws on geography, statistics, and computer science to analyze spatially-referenced data.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Requires proprietary GIS software like ArcGIS</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. SDS moves beyond simply mapping where things happen to understanding the spatial processes that drive patterns. It draws on geography, statistics, and computer science to analyze spatially-referenced data.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Cannot use machine learning methods</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. SDS moves beyond simply mapping where things happen to understanding the spatial processes that drive patterns. It draws on geography, statistics, and computer science to analyze spatially-referenced data.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M1Q10: Complete Spatial Randomness (CSR) means that the location of an event is indepen</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Complete Spatial Randomness (CSR) means that the location of an event is independent of the locations of all other events.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>CSR is the null hypothesis in spatial analysis. Under CSR, events are equally likely to occur at any location and the position of one event does not influence the position of others. Most public health phenomena violate CSR due to spatial dependence.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-1</text></tag>
+      <tag><text>Bloom-Remember</text></tag>
+      <tag><text>Module-1</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>True</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! CSR is the null hypothesis in spatial analysis. Under CSR, events are equally likely to occur at any location and the position of one event does not influence the position of others. Most public health phenomena violate CSR due to spatial dependence.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>False</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. CSR is the null hypothesis in spatial analysis. Under CSR, events are equally likely to occur at any location and the position of one event does not influence the position of others. Most public health phenomena violate CSR due to spatial dependence.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M1Q11: The statement “natural phenomena are not spatially distributed at random” is the</text></name>
+    <questiontext format="html"><text><![CDATA[<p>The statement “natural phenomena are not spatially distributed at random” is the principle of:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Spatial dependence means nearby locations influence each other and tend to possess similar attributes. Temperature, rainfall, population density, and disease rates all exhibit spatial dependence.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-1</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-1</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Spatial dependence</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! Spatial dependence means nearby locations influence each other and tend to possess similar attributes. Temperature, rainfall, population density, and disease rates all exhibit spatial dependence.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Spatial independence</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Spatial dependence means nearby locations influence each other and tend to possess similar attributes. Temperature, rainfall, population density, and disease rates all exhibit spatial dependence.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Geographic determinism</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Spatial dependence means nearby locations influence each other and tend to possess similar attributes. Temperature, rainfall, population density, and disease rates all exhibit spatial dependence.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Environmental fallacy</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Spatial dependence means nearby locations influence each other and tend to possess similar attributes. Temperature, rainfall, population density, and disease rates all exhibit spatial dependence.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M1Q12: A researcher wants to share spatial data globally using a standard that works wi</text></name>
+    <questiontext format="html"><text><![CDATA[<p>A researcher wants to share spatial data globally using a standard that works with GPS devices. Which CRS should they use?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>WGS 84 (EPSG:4326) is the global standard geodetic CRS used by GPS. It’s ideal for data sharing and storage. For analysis requiring distance/area calculations, transform to an appropriate projected CRS.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-1</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-1</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>WGS 84 (EPSG:4326)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! WGS 84 (EPSG:4326) is the global standard geodetic CRS used by GPS. It’s ideal for data sharing and storage. For analysis requiring distance/area calculations, transform to an appropriate projected CRS.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>UTM Zone 43N (EPSG:32643)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. WGS 84 (EPSG:4326) is the global standard geodetic CRS used by GPS. It’s ideal for data sharing and storage. For analysis requiring distance/area calculations, transform to an appropriate projected CRS.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Mollweide Equal Area projection</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. WGS 84 (EPSG:4326) is the global standard geodetic CRS used by GPS. It’s ideal for data sharing and storage. For analysis requiring distance/area calculations, transform to an appropriate projected CRS.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>India National CRS (Everest 1830)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. WGS 84 (EPSG:4326) is the global standard geodetic CRS used by GPS. It’s ideal for data sharing and storage. For analysis requiring distance/area calculations, transform to an appropriate projected CRS.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <!-- M1Q13: Matching question converted to description -->
+  <question type="description">
+    <name><text>M1Q13: Match each spatial autocorrelation index with its category:</text></name>
+    <questiontext format="html"><text><![CDATA[<p><strong>Match each spatial autocorrelation index with its category:</strong></p>
+<p>Moran’s I → Global measure</p>
+<p>Getis-Ord Gi* → Local measure (hot/cold spots)</p>
+<p>Geary’s C → Global measure</p>
+<p>Local Moran’s I (LISA) → Local measure (cluster types)</p>
+<p><em>Global measures (Moran’s I, Geary’s C) provide a single summary statistic for the entire study area. Local measures (LISA, Getis-Ord) identify WHERE clusters occur, enabling targeted intervention.</em></p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[Global measures (Moran’s I, Geary’s C) provide a single summary statistic for the entire study area. Local measures (LISA, Getis-Ord) identify WHERE clusters occur, enabling targeted intervention.]]></text></generalfeedback>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M1Q14: Why is reproducibility particularly important in spatial data science for public</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Why is reproducibility particularly important in spatial data science for public health?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Public health decisions (resource allocation, intervention targeting) based on spatial analysis must be transparent and verifiable. Using R with version-controlled scripts ensures any researcher can reproduce and validate the analysis.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-1</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-1</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Because policy decisions based on spatial analysis must be transparent, verifiable, and repeatable by others</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! Public health decisions (resource allocation, intervention targeting) based on spatial analysis must be transparent and verifiable. Using R with version-controlled scripts ensures any researcher can reproduce and validate the analysis.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Because GIS software is expensive and only some researchers have access</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Public health decisions (resource allocation, intervention targeting) based on spatial analysis must be transparent and verifiable. Using R with version-controlled scripts ensures any researcher can reproduce and validate the analysis.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Because spatial data never changes over time</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Public health decisions (resource allocation, intervention targeting) based on spatial analysis must be transparent and verifiable. Using R with version-controlled scripts ensures any researcher can reproduce and validate the analysis.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Because reproducibility is only required for clinical trials, not epidemiological studies</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Public health decisions (resource allocation, intervention targeting) based on spatial analysis must be transparent and verifiable. Using R with version-controlled scripts ensures any researcher can reproduce and validate the analysis.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M1Q15: John Snow’s 1854 cholera map of London’s Broad Street is a landmark in:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>John Snow’s 1854 cholera map of London’s Broad Street is a landmark in:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Snow’s map showed the clustering of cholera deaths around the Broad Street pump, providing compelling spatial evidence for waterborne transmission — decades before the cholera bacterium was identified. This is foundational spatial epidemiology.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-1</text></tag>
+      <tag><text>Bloom-Remember</text></tag>
+      <tag><text>Module-1</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Spatial epidemiology — demonstrating how mapping disease cases can reveal transmission sources</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! Snow’s map showed the clustering of cholera deaths around the Broad Street pump, providing compelling spatial evidence for waterborne transmission — decades before the cholera bacterium was identified. This is foundational spatial epidemiology.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Laboratory microbiology — identifying the cholera bacterium</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Snow’s map showed the clustering of cholera deaths around the Broad Street pump, providing compelling spatial evidence for waterborne transmission — decades before the cholera bacterium was identified. This is foundational spatial epidemiology.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Demographic transition theory</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Snow’s map showed the clustering of cholera deaths around the Broad Street pump, providing compelling spatial evidence for waterborne transmission — decades before the cholera bacterium was identified. This is foundational spatial epidemiology.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Development of the germ theory of disease</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Snow’s map showed the clustering of cholera deaths around the Broad Street pump, providing compelling spatial evidence for waterborne transmission — decades before the cholera bacterium was identified. This is foundational spatial epidemiology.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+</quiz>

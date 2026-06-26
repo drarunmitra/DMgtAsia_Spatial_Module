@@ -1,0 +1,467 @@
+---
+title: "Spatial Data Science with R"
+
+format: 
+  html: default
+  revealjs: 
+    output-file: slides-session1a-intro-gis-public-health.html
+---
+
+## GIS and Public Health
+
+::: columns
+::: {.column width="40%"}
+-   Extremely useful in providing a fresh outlook to public health.
+
+-   Provides opportunity to enable overlaying data with its spatial representation
+
+-   Supports better planning and decision-making.
+
+-   The convergence of many new sub-disciplines:
+
+    -   medical geography
+    -   public health informatics
+    -   data science
+:::
+
+::: {.column width="60%"}
+![](images/history_gis_plague_naples.jpg)
+
+::: {style="font-size: 70%;"}
+Map of the plague in the province of Bari, Naples, 1690-1692\
+
+The map shows areas most affected and the boundaries of a military quarantine imposed to prevent its spread to neighboring towns and to other provinces.
+:::
+:::
+:::
+
+::: footer
+Koch T. Mapping the miasma: air, health, and place in early medical mapping. Cartographic Perspectives. 2005 Sep 1(52):4-27.
+:::
+
+
+### Applications of GIS in Public Health
+
+-   disease surveillance
+-   environmental health
+-   infectious diseases
+    -   mathematical modelling
+    -   agent based modelling
+-   population genetics
+-   medical imagining
+-   cancer biology
+
+::: columns
+::: {.column width="50%"}
+![](images/soho-cholera-map.png){width="600"}
+:::
+
+::: {.column width="50%"}
+
+![](images/rayshader2_john_snow.gif){ width="600"}
+
+:::
+:::
+
+While traditional uses of GIS in healthcare still are relevant, newer methods and advancing technology would be monumental for public health research.
+
+## What is Spatial Data Science?
+
+::: columns
+
+::: {.column width="70%"}
+
+
+::: {.callout-note }
+
+## Definition
+
+<br>
+
+Spatial data science (SDS) is a subset of Data Science that focuses on the unique characteristics of spatial data,  <span style="color:red;">moving beyond</span>  simply looking at <span style="color:red;">where</span> things happen <span style="color:red;">to understand why</span> they happen there.
+
+> CARTO  - [https://carto.com/what-is-spatial-data-science](https://carto.com/what-is-spatial-data-science)
+:::
+
+
+:::
+
+::: {.column width="30%"}
+![](images/what-is-sds.png)
+:::
+
+:::
+
+
+Like data science, spatial data science seems to be a field that <span style="color:red;">arises bottom-up</span> in and <span style="color:red;">from many existing scientific disciplines</span> and industrial activities <span style="color:red;">concerned with application of spatial data</span>, rather than being a sub-discipline of an existing scientific discipline. 
+
+> Edzer Pebesma, Roger Bivand   - Spatial Data Science
+With Applications in R 
+
+::: footer
+
+[https://r-spatial.org/book/](https://r-spatial.org/book/)
+
+:::
+
+
+
+
+
+
+### How is it different from Data Science?
+
+![](images/sds_venn.png)
+
+
+
+
+### Why Spatial Data Science for Public Health? 
+
+::: columns
+::: {.column width="50%"}
+![](images/epid_triad.png){ width="300"}
+:::
+
+::: {.column width="50%"}
+
+![](images/spatial_epi_triad1.png){ width="600"}
+
+:::
+:::
+
+
+
+<br>
+
+![](images/julia_agents_1.gif)
+
+
+### Potential of Spatial Data Science for Public Health
+
+- Wealth of Spatial Data
+
+- 70% of all data that is generated data has spatial attributes
+
+- Routine health data can be geo-referenced
+
+- Provide a gateway for researchers and practitioners to examine the role and harness the power of SDS in public health
+
+- Coupled with the emerging field of spatial statistics, the analysis of this location-based data is developing new and novel directions for public health.
+
+
+
+## Core Concepts related to GIS
+
+Spatial data are fundamental to many geographical analyses and spatial data science draws strongly from key geographical concepts
+
+<br>
+
+### First Law of Geography
+
+::: columns
+::: {.column width="70%"}
+
+::: {.callout-note }
+
+### Tobler's First Law
+
+*"Everything is related to everything else, but near things are more related than distant things"*
+
+> Waldo Tobler, 1970
+
+:::
+
+:::
+::: {.column width="25%"}
+![](images/waldo_tobler.jpg)
+:::
+:::
+
+### Spatial Dependence and Complete Spatial Randomness
+<br>
+
+Spatial dependence is *"the propensity for nearby locations to influence each other and to possess similar attributes"*.
+
+::: columns
+::: {.column width="60%"}
+![](images/point_patterns.png){width="900"}
+:::
+
+
+::: {.column width="40%"}
+
+This means natural phenomenon are not spatially distributed at random.
+
+- temparature,
+- rainfall,
+- population density,
+- socio-economic conditions etc.
+
+
+
+:::
+
+:::
+
+
+It can be measured by the indices of Spatial Autocorrelation.
+
+
+### Spatial Autocorrelation
+
+
+Refers to the presence of systematic spatial variation in a mapped variable.
+
+The terms **spatial association** and **spatial dependence** are often used to reflect spatial auto-
+correlation as well.
+
+![](images/spatial_autocorrelation1.png)
+
+
+### Indices to measure Spatial Dependence
+
+::: columns
+::: {.column width="50%"}
+
+- Covariance Functions and Variograms
+
+- Global Spatial Autocorrelation Measures
+  - Moran’s *I* index
+  - General *G*-Statistic
+  - Geary’s *C* index
+
+- Local Indicators of Spatial Association (LISA)
+  - Local Moran’s *I* index
+  - Getis-Ord *G*~*i*~ and *G*~*i*~^∗^ statistics
+
+- Space-Time Correlation Analysis
+  - Bivariate Moran's *I* for STC
+  - Differential Moran's *I*
+  - Emerging Hot Spot Analysis (EHSA)
+
+
+:::
+
+::: {.column width="50%"}
+
+::: fragment
+![](images/global_moran_spatial_autocorrelation.png)
+:::
+
+
+::: fragment
+![](images/morans_scatterplot.png)
+:::
+
+:::
+:::
+
+### Map Projections & coordinate reference system (CRS) 
+
+::: columns
+::: {.column width="40%"}
+
+- Map projections try to transform the earth from its spherical shape (3D) to a planar shape (2D).
+
+- A CRS then defines how the two-dimensional, projected map in your GIS relates to real places on the earth.
+
+- The decision of which depends on the extent of the area, analysis type, and often on the availability of data.
+
+:::
+
+::: {.column width="60%"}
+
+![a) cylindrical projections, b) conical projections or c) planar projections.](images/projection_families.png){width="800"}
+
+
+:::
+:::
+
+::: footer
+[https://docs.qgis.org/3.28/en/docs/gentle_gis_introduction/coordinate_reference_systems.html](https://docs.qgis.org/3.28/en/docs/gentle_gis_introduction/coordinate_reference_systems.html)
+:::
+
+
+### Why is the CRS Important?
+
+
+#### Earth is a GEIOD
+
+![](images/geoid_spheroid.png)
+
+
+#### Different Projection Systems
+
+![The Mercator projection, for example, is used where angular relationships are important, but the relationship of areas are distorted.](images/mercator_projection.png)
+
+
+<br>
+
+
+![The Mollweide Equal Area Cylindrical projection, for example, ensures that all mapped areas have the same proportional relationship to the areas on the Earth.](images/mollweide_equal_area_projection.png)
+
+
+<br>
+
+
+![The Plate Carree Equidistant Cylindrical projection, for example, is used when accurate distance measurement is important.](images/plate_carree_projection.png)
+
+
+<br>
+
+
+![The Robinson projection is a compromise where distortions of area, angular conformity and distance are acceptable.](images/robinson_projection.png)
+
+
+<br>
+
+
+
+![The United Nations Logo uses the Azimuthal Equidistant projection](images/azimuthal_equidistant_projection.png)
+
+<br>
+
+![What four commonly used projections do, as shown on the human head](images/projections_human_head.png)
+
+
+
+
+### CRS in Action
+
+<iframe sandbox="allow-scripts allow-same-origin" src="https://www.thetruesize.com" width="800" height="750"></iframe>
+
+::: footer
+[https://www.thetruesize.com](https://www.thetruesize.com)
+:::
+
+
+## Data Science as a methodological approach
+
+::: {.callout-note }
+
+
+> The key word in <span style="color:red;"> data science</span> is not <span style="color:red;">data</span>, it is <span style="color:red; font-size:160%;">science</span>.
+
+ -- Jeff Leek, JHU Data Science Lab
+
+:::
+
+
+
+### Reproducible Research
+
+::: columns
+::: {.column width="30%"}
+
+:::
+::: {.column width="70%"}
+
+![](images/RR_Spectrum.png){width="900"}
+:::
+:::
+
+
+
+
+## Reproducible Research
+
+::: columns
+::: {.column width="40%"}
+
+<br>
+
+There are four key elements of reproducible research:
+
+- data documentation
+- data publication
+- code publication,
+- output publication.
+
+:::
+::: {.column width="60%"}
+
+![](images/reproducible_research_cycle.png)
+
+:::
+:::
+
+
+## Tools for Spatial Data Science
+
+::: columns
+
+
+::: {.column width="40%"}
+
+- GIS related
+- Data Science related
+- Spatial Data Science related
+
+> R is the best spatial data science tool available for public health !!!
+
+<br>
+R provides a range of powerful packages for geospatial analysis, enabling advanced computations and analytics.
+
+
+
+
+:::
+::: {.column width="60%"}
+
+![](images/sds_tools1.png)
+:::
+:::
+
+## R Spatial Analysis Ecosystem
+
+:::  columns
+::: {.column width="25%"}
+
+![](images/sf_hex2.gif)
+
+<br>
+
+[CRAN Task View -  Spatial Analysis](https://cran.r-project.org/web/views/Spatial.html)
+:::
+::: {.column width="75%"}
+<iframe sandbox="allow-scripts allow-same-origin" src="https://cran.r-project.org/web/views/Spatial.html" width="600" height="750"></iframe>
+:::
+:::
+
+::: footer
+
+[https://cran.r-project.org/web/views/Spatial.html](https://cran.r-project.org/web/views/Spatial.html)
+:::
+
+## R Spatial Learning Resources
+
+:::  columns
+::: {.column width="60%"}
+- Wealth of Resource material
+
+- Powerful tools/packages
+
+- seamlessly handle vector and raster data
+
+- inractive visualization
+
+- end-to-end solution
+
+
+<br>
+![](images/R_books.png)
+
+Newest addition: [Spatial Data Science: With Applications in R](https://r-spatial.org/book/)
+:::
+
+::: {.column width="5%"}
+
+:::
+
+::: {.column width="35%"}
+![](images/SDS_book.jpg){width="500"}
+
+:::
+:::
+

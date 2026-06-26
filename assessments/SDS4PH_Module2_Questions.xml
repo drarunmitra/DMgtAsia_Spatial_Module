@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/SDS4PH/Module 2 - Exploratory Health Data Analysis with R</text>
+    </category>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M2Q01: In the tidyverse, the pipe operator |&gt; is used to:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>In the tidyverse, the pipe operator |&gt; is used to:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>The pipe operator (|&gt; or %&gt;%) chains operations by passing the output of one function as the first argument of the next, making code read left-to-right like a sentence. Example: df |&gt; filter(x &gt; 5) |&gt; summarize(mean(x))</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-2</text></tag>
+      <tag><text>Bloom-Remember</text></tag>
+      <tag><text>Module-2</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Pass the result of the left-hand expression as the first argument to the right-hand function</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! The pipe operator (|&gt; or %&gt;%) chains operations by passing the output of one function as the first argument of the next, making code read left-to-right like a sentence. Example: df |&gt; filter(x &gt; 5) |&gt; summarize(mean(x))</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Assign a value to a variable</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The pipe operator (|&gt; or %&gt;%) chains operations by passing the output of one function as the first argument of the next, making code read left-to-right like a sentence. Example: df |&gt; filter(x &gt; 5) |&gt; summarize(mean(x))</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Filter rows from a data frame</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The pipe operator (|&gt; or %&gt;%) chains operations by passing the output of one function as the first argument of the next, making code read left-to-right like a sentence. Example: df |&gt; filter(x &gt; 5) |&gt; summarize(mean(x))</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Create a logical OR comparison</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The pipe operator (|&gt; or %&gt;%) chains operations by passing the output of one function as the first argument of the next, making code read left-to-right like a sentence. Example: df |&gt; filter(x &gt; 5) |&gt; summarize(mean(x))</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M2Q02: Which dplyr function would you use to create a new column called ‘cfr’ (case fat</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Which dplyr function would you use to create a new column called ‘cfr’ (case fatality ratio) from existing columns ‘deaths’ and ‘cases’?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>mutate() adds new columns or modifies existing ones while preserving all other columns. filter() subsets rows, summarize() collapses to summary statistics, and select() chooses columns.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-2</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-2</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>mutate(cfr = deaths / cases)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! mutate() adds new columns or modifies existing ones while preserving all other columns. filter() subsets rows, summarize() collapses to summary statistics, and select() chooses columns.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>filter(cfr = deaths / cases)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. mutate() adds new columns or modifies existing ones while preserving all other columns. filter() subsets rows, summarize() collapses to summary statistics, and select() chooses columns.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>summarize(cfr = deaths / cases)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. mutate() adds new columns or modifies existing ones while preserving all other columns. filter() subsets rows, summarize() collapses to summary statistics, and select() chooses columns.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>select(cfr = deaths / cases)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. mutate() adds new columns or modifies existing ones while preserving all other columns. filter() subsets rows, summarize() collapses to summary statistics, and select() chooses columns.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M2Q03: What is the difference between summarize() and mutate() in dplyr?</text></name>
+    <questiontext format="html"><text><![CDATA[<p>What is the difference between summarize() and mutate() in dplyr?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>summarize() reduces the data to summary statistics (one row per group, or one row total). mutate() transforms or creates columns while preserving the same number of rows. Both can be used with or without group_by().</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-2</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-2</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>summarize() collapses many rows into a summary row; mutate() adds/modifies columns while keeping all rows</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! summarize() reduces the data to summary statistics (one row per group, or one row total). mutate() transforms or creates columns while preserving the same number of rows. Both can be used with or without group_by().</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>summarize() works on character columns; mutate() works on numeric columns</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. summarize() reduces the data to summary statistics (one row per group, or one row total). mutate() transforms or creates columns while preserving the same number of rows. Both can be used with or without group_by().</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>They are interchangeable and produce the same output</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. summarize() reduces the data to summary statistics (one row per group, or one row total). mutate() transforms or creates columns while preserving the same number of rows. Both can be used with or without group_by().</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>summarize() requires group_by() while mutate() does not</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. summarize() reduces the data to summary statistics (one row per group, or one row total). mutate() transforms or creates columns while preserving the same number of rows. Both can be used with or without group_by().</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M2Q04: You have a TB dataset and want the total number of cases per WHO region, sorted </text></name>
+    <questiontext format="html"><text><![CDATA[<p>You have a TB dataset and want the total number of cases per WHO region, sorted from highest to lowest. Which pipeline is correct?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>The correct pipeline: (1) group_by(who_region) to set groups, (2) summarize(total = sum(cases)) to aggregate, (3) arrange(desc(total)) to sort descending. This is a fundamental dplyr workflow.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-2</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-2</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>df |&gt; group_by(who_region) |&gt; summarize(total = sum(cases)) |&gt; arrange(desc(total))</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! The correct pipeline: (1) group_by(who_region) to set groups, (2) summarize(total = sum(cases)) to aggregate, (3) arrange(desc(total)) to sort descending. This is a fundamental dplyr workflow.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>df |&gt; filter(who_region) |&gt; mutate(total = sum(cases)) |&gt; sort(total)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The correct pipeline: (1) group_by(who_region) to set groups, (2) summarize(total = sum(cases)) to aggregate, (3) arrange(desc(total)) to sort descending. This is a fundamental dplyr workflow.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>df |&gt; select(who_region, cases) |&gt; summarize(total = mean(cases))</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The correct pipeline: (1) group_by(who_region) to set groups, (2) summarize(total = sum(cases)) to aggregate, (3) arrange(desc(total)) to sort descending. This is a fundamental dplyr workflow.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>df |&gt; arrange(who_region) |&gt; group_by(cases) |&gt; count()</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The correct pipeline: (1) group_by(who_region) to set groups, (2) summarize(total = sum(cases)) to aggregate, (3) arrange(desc(total)) to sort descending. This is a fundamental dplyr workflow.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M2Q05: What does the following R code produce?
+df |&gt; count(state, sort = TRUE)</text></name>
+    <questiontext format="html"><text><![CDATA[<p>What does the following R code produce?
+df |&gt; count(state, sort = TRUE)</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>count() is shorthand for group_by() |&gt; summarize(n = n()). With sort = TRUE, it returns the frequency table sorted in descending order. It’s extremely useful for quick data exploration.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-2</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-2</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>A frequency table of the ‘state’ column, sorted from most to least frequent</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! count() is shorthand for group_by() |&gt; summarize(n = n()). With sort = TRUE, it returns the frequency table sorted in descending order. It’s extremely useful for quick data exploration.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>A filtered dataset containing only the state column</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. count() is shorthand for group_by() |&gt; summarize(n = n()). With sort = TRUE, it returns the frequency table sorted in descending order. It’s extremely useful for quick data exploration.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>An error because count() requires two arguments</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. count() is shorthand for group_by() |&gt; summarize(n = n()). With sort = TRUE, it returns the frequency table sorted in descending order. It’s extremely useful for quick data exploration.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>A random sample of states from the dataset</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. count() is shorthand for group_by() |&gt; summarize(n = n()). With sort = TRUE, it returns the frequency table sorted in descending order. It’s extremely useful for quick data exploration.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M2Q06: In dplyr, left_join(x, y, by = ‘state’) will:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>In dplyr, left_join(x, y, by = ‘state’) will:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>left_join() preserves all rows from the left (first) table and adds matching information from the right table. Non-matching rows get NA. This is the most common join in spatial data science — keeping all geographic units even if attribute data is missing.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-2</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-2</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Keep all rows from x and add matching columns from y, with NA for non-matches</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! left_join() preserves all rows from the left (first) table and adds matching information from the right table. Non-matching rows get NA. This is the most common join in spatial data science — keeping all geographic units even if attribute data is missing.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Keep only rows that exist in both x and y</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. left_join() preserves all rows from the left (first) table and adds matching information from the right table. Non-matching rows get NA. This is the most common join in spatial data science — keeping all geographic units even if attribute data is missing.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Keep all rows from y and add matching columns from x</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. left_join() preserves all rows from the left (first) table and adds matching information from the right table. Non-matching rows get NA. This is the most common join in spatial data science — keeping all geographic units even if attribute data is missing.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Stack x and y vertically</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. left_join() preserves all rows from the left (first) table and adds matching information from the right table. Non-matching rows get NA. This is the most common join in spatial data science — keeping all geographic units even if attribute data is missing.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M2Q07: You have wide-format data with columns ‘nfhs4’ and ‘nfhs5’ containing values for</text></name>
+    <questiontext format="html"><text><![CDATA[<p>You have wide-format data with columns ‘nfhs4’ and ‘nfhs5’ containing values for two survey rounds. To create a ggplot comparing both rounds, you should first:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>For comparative visualizations (e.g., side-by-side boxplots with fill = survey), data must be in long format: one row per observation with a column identifying the survey round. pivot_longer() reshapes wide to long.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-2</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-2</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Use pivot_longer(cols = c(nfhs4, nfhs5), names_to = “survey”, values_to = “value”)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! For comparative visualizations (e.g., side-by-side boxplots with fill = survey), data must be in long format: one row per observation with a column identifying the survey round. pivot_longer() reshapes wide to long.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Use pivot_wider() to add more columns</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. For comparative visualizations (e.g., side-by-side boxplots with fill = survey), data must be in long format: one row per observation with a column identifying the survey round. pivot_longer() reshapes wide to long.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Use filter() to select one survey at a time</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. For comparative visualizations (e.g., side-by-side boxplots with fill = survey), data must be in long format: one row per observation with a column identifying the survey round. pivot_longer() reshapes wide to long.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Use mutate() to combine both columns into one</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. For comparative visualizations (e.g., side-by-side boxplots with fill = survey), data must be in long format: one row per observation with a column identifying the survey round. pivot_longer() reshapes wide to long.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M2Q08: Which case_when() expression correctly recodes state names?</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Which case_when() expression correctly recodes state names?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>case_when() requires a TRUE ~ state fallback clause to preserve values that don’t match any condition. Without it, unmatched values become NA. The second option would lose all states except Orissa and Pondicherry.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-2</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-2</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>case_when(state == “Orissa” ~ “Odisha”, state == “Pondicherry” ~ “Puducherry”, TRUE ~ state)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! case_when() requires a TRUE ~ state fallback clause to preserve values that don’t match any condition. Without it, unmatched values become NA. The second option would lose all states except Orissa and Pondicherry.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>case_when(state == “Orissa” ~ “Odisha”, state == “Pondicherry” ~ “Puducherry”)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. case_when() requires a TRUE ~ state fallback clause to preserve values that don’t match any condition. Without it, unmatched values become NA. The second option would lose all states except Orissa and Pondicherry.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>if_else(state == “Orissa”, “Odisha”, “Pondicherry”)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. case_when() requires a TRUE ~ state fallback clause to preserve values that don’t match any condition. Without it, unmatched values become NA. The second option would lose all states except Orissa and Pondicherry.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>case_when(state %in% c(“Orissa”, “Pondicherry”) ~ “Renamed”)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. case_when() requires a TRUE ~ state fallback clause to preserve values that don’t match any condition. Without it, unmatched values become NA. The second option would lose all states except Orissa and Pondicherry.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M2Q09: The function janitor::clean_names() is used to:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>The function janitor::clean_names() is used to:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>clean_names() converts messy column names (e.g., ‘Name And Address Of Medical College’) to clean snake_case format (e.g., ‘name_and_address_of_medical_college’). Essential first step when importing external data.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-2</text></tag>
+      <tag><text>Bloom-Remember</text></tag>
+      <tag><text>Module-2</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Standardize column names to snake_case (lowercase with underscores)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! clean_names() converts messy column names (e.g., ‘Name And Address Of Medical College’) to clean snake_case format (e.g., ‘name_and_address_of_medical_college’). Essential first step when importing external data.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Remove duplicate rows from a dataset</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. clean_names() converts messy column names (e.g., ‘Name And Address Of Medical College’) to clean snake_case format (e.g., ‘name_and_address_of_medical_college’). Essential first step when importing external data.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Clean missing values by imputing means</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. clean_names() converts messy column names (e.g., ‘Name And Address Of Medical College’) to clean snake_case format (e.g., ‘name_and_address_of_medical_college’). Essential first step when importing external data.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Validate data types in each column</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. clean_names() converts messy column names (e.g., ‘Name And Address Of Medical College’) to clean snake_case format (e.g., ‘name_and_address_of_medical_college’). Essential first step when importing external data.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M2Q10: According to John Tukey (1977), Exploratory Data Analysis is best described as:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>According to John Tukey (1977), Exploratory Data Analysis is best described as:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Tukey described EDA as ‘detective work’ — using questions as tools to guide investigation. It is an iterative, creative process that generates hypotheses rather than testing pre-specified ones.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-2</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-2</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>A philosophy of examining data without preconceived ideas to discover what the data can reveal</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! Tukey described EDA as ‘detective work’ — using questions as tools to guide investigation. It is an iterative, creative process that generates hypotheses rather than testing pre-specified ones.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>A strict statistical protocol for hypothesis testing</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Tukey described EDA as ‘detective work’ — using questions as tools to guide investigation. It is an iterative, creative process that generates hypotheses rather than testing pre-specified ones.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>A method for proving causal relationships in observational data</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Tukey described EDA as ‘detective work’ — using questions as tools to guide investigation. It is an iterative, creative process that generates hypotheses rather than testing pre-specified ones.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>A technique specific to spatial data that cannot be applied to tabular data</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Tukey described EDA as ‘detective work’ — using questions as tools to guide investigation. It is an iterative, creative process that generates hypotheses rather than testing pre-specified ones.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M2Q11: To view the structure of a tibble (column names, types, and first few values), w</text></name>
+    <questiontext format="html"><text><![CDATA[<p>To view the structure of a tibble (column names, types, and first few values), which function is most appropriate?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>glimpse() from dplyr/tibble provides a transposed view showing column names, data types, and the first few values of each column. It’s more informative than str() for tibbles and is the recommended first look at imported data.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-2</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-2</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>glimpse()</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! glimpse() from dplyr/tibble provides a transposed view showing column names, data types, and the first few values of each column. It’s more informative than str() for tibbles and is the recommended first look at imported data.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>summary()</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. glimpse() from dplyr/tibble provides a transposed view showing column names, data types, and the first few values of each column. It’s more informative than str() for tibbles and is the recommended first look at imported data.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>plot()</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. glimpse() from dplyr/tibble provides a transposed view showing column names, data types, and the first few values of each column. It’s more informative than str() for tibbles and is the recommended first look at imported data.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>table()</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. glimpse() from dplyr/tibble provides a transposed view showing column names, data types, and the first few values of each column. It’s more informative than str() for tibbles and is the recommended first look at imported data.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M2Q12: The 6 W’s of Spatial EDA include: What, Where, When, Who, Why, and How. The ‘Whe</text></name>
+    <questiontext format="html"><text><![CDATA[<p>The 6 W’s of Spatial EDA include: What, Where, When, Who, Why, and How. The ‘Where’ dimension specifically asks:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>In Spatial EDA, ‘Where’ examines the geographic distribution of the variable: Are there clusters? Is there spatial heterogeneity? Do urban/rural patterns differ? This is what distinguishes Spatial EDA from standard EDA.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-2</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-2</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>What is the geographic distribution and spatial pattern of the health variable?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! In Spatial EDA, ‘Where’ examines the geographic distribution of the variable: Are there clusters? Is there spatial heterogeneity? Do urban/rural patterns differ? This is what distinguishes Spatial EDA from standard EDA.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Where can I download the dataset?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. In Spatial EDA, ‘Where’ examines the geographic distribution of the variable: Are there clusters? Is there spatial heterogeneity? Do urban/rural patterns differ? This is what distinguishes Spatial EDA from standard EDA.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Where in the code should I place the analysis function?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. In Spatial EDA, ‘Where’ examines the geographic distribution of the variable: Are there clusters? Is there spatial heterogeneity? Do urban/rural patterns differ? This is what distinguishes Spatial EDA from standard EDA.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Where was the research published?</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. In Spatial EDA, ‘Where’ examines the geographic distribution of the variable: Are there clusters? Is there spatial heterogeneity? Do urban/rural patterns differ? This is what distinguishes Spatial EDA from standard EDA.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M2Q13: The %in% operator in R checks whether each element of the left vector exists any</text></name>
+    <questiontext format="html"><text><![CDATA[<p>The %in% operator in R checks whether each element of the left vector exists anywhere in the right vector.</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>x %in% y returns a logical vector of the same length as x, with TRUE for elements that match any value in y. It’s essential for checking name matches between datasets (e.g., verifying state names exist in both spatial and attribute data).</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-2</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-2</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>True</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! x %in% y returns a logical vector of the same length as x, with TRUE for elements that match any value in y. It’s essential for checking name matches between datasets (e.g., verifying state names exist in both spatial and attribute data).</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>False</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. x %in% y returns a logical vector of the same length as x, with TRUE for elements that match any value in y. It’s essential for checking name matches between datasets (e.g., verifying state names exist in both spatial and attribute data).</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M2Q14: You want to create a boxplot comparing TB incidence across WHO regions with diff</text></name>
+    <questiontext format="html"><text><![CDATA[<p>You want to create a boxplot comparing TB incidence across WHO regions with different colors per region. Which ggplot2 code is correct?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>In ggplot2, aesthetic mappings (aes()) connect data variables to visual properties. x maps to the category axis, y to the value axis, and fill maps color by group. Aesthetics that vary by data must go inside aes().</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-2</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-2</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>ggplot(aes(x = who_region, y = incidence_100k, fill = who_region)) + geom_boxplot()</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! In ggplot2, aesthetic mappings (aes()) connect data variables to visual properties. x maps to the category axis, y to the value axis, and fill maps color by group. Aesthetics that vary by data must go inside aes().</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>ggplot(aes(x = incidence_100k)) + geom_boxplot(color = who_region)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. In ggplot2, aesthetic mappings (aes()) connect data variables to visual properties. x maps to the category axis, y to the value axis, and fill maps color by group. Aesthetics that vary by data must go inside aes().</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>ggplot() + geom_boxplot(x = who_region, y = incidence_100k)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. In ggplot2, aesthetic mappings (aes()) connect data variables to visual properties. x maps to the category axis, y to the value axis, and fill maps color by group. Aesthetics that vary by data must go inside aes().</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>ggplot(aes(fill = incidence_100k)) + geom_boxplot(x = who_region)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. In ggplot2, aesthetic mappings (aes()) connect data variables to visual properties. x maps to the category axis, y to the value axis, and fill maps color by group. Aesthetics that vary by data must go inside aes().</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M2Q15: According to CDC cartographic guidelines, the principle of ‘visual contrast’ in </text></name>
+    <questiontext format="html"><text><![CDATA[<p>According to CDC cartographic guidelines, the principle of ‘visual contrast’ in map design means:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Visual contrast ensures readers can easily distinguish different features, classes, and labels. This involves choosing appropriate color schemes, line weights, and text sizes so that the map is immediately readable.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-4</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-2</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Map features should be clearly distinguishable from each other and from the background</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! Visual contrast ensures readers can easily distinguish different features, classes, and labels. This involves choosing appropriate color schemes, line weights, and text sizes so that the map is immediately readable.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Maps should always use black and white only</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Visual contrast ensures readers can easily distinguish different features, classes, and labels. This involves choosing appropriate color schemes, line weights, and text sizes so that the map is immediately readable.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>High-value areas must always be shown in red</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Visual contrast ensures readers can easily distinguish different features, classes, and labels. This involves choosing appropriate color schemes, line weights, and text sizes so that the map is immediately readable.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>The legend should use the same color as the map background</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Visual contrast ensures readers can easily distinguish different features, classes, and labels. This involves choosing appropriate color schemes, line weights, and text sizes so that the map is immediately readable.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+</quiz>

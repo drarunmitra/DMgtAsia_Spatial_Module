@@ -1,0 +1,21 @@
+# Quarto / R build artifacts
+/.quarto/
+/_freeze/
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# OS
+.DS_Store
+
+# Rendered site is built by `quarto render` (served from /docs via Pages).
+# Uncomment to keep docs/ out of version control and rely on the CI action instead:
+# /docs/
+
+# Redundant nested archive (the extracted spatial_files/ is the source of truth)
+spatial_files/India_State_Boundary.zip
+
+# Exercise outputs
+/plots/*.png
+/capstone/outputs/

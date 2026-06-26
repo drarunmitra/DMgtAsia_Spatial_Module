@@ -1,0 +1,312 @@
+---
+title: "GIS4PublicHealth - Workshop"
+subtitle: |
+  Prequisites for Day 3 & Day 4 
+  Summer School Open Stack - GISE Hub, IIT Bombay
+  27th - 28th, July 2024
+format:
+    pdf: default
+    html: 
+      self-contained: true
+      grid: 
+        margin-width: 350px
+execute: 
+  echo: fenced
+reference-location: margin
+citation-location: margin
+
+---
+
+## Prerequisites
+
+::: column-margin
+
+\medskip
+\medskip
+
+![](/images/GIS4Epi-logo.png){width="50%"}
+:::
+
+::: column-page-right
+::: justify
+
+**Congratulations!** on being accepted to the **Spatial Data Science for Public Health** Workshop! We are thrilled to welcome you on board and hope that you are excited to take on this exciting journey.
+
+:::
+:::
+
+\medskip
+
+<br>
+<br>
+<br>
+
+
+This document is aimed as being a primer to the workshop and contains some prerequisites and preliminary information that is necessary before you embark on this workshop. It is required that you go through this document and complete the necessary steps before you join us for the workshop.
+
+
+## Before We Get Started...
+
+As the name of the workshop suggests, we will be using R[^1] and RStudio[^2]. You have access to both of these for free. R is the statistical programming language, and RStudio is the software that will let you interface with R easily. You can install R and RStudio on your personal laptop. Yes, you need a laptop which is in good working condition with at least 8GB of RAM *(preferably 16GB)* for this workshop.
+
+[^1]: [CRAN - https://cran.r-project.org/](https://cran.r-project.org/)
+
+[^2]: [RStudio - https://www.rstudio.com/](https://www.rstudio.com/products/rstudio/download/)
+
+::: column-page-right
+
+### What is R?
+
+::: justify
+-   Open source (free!) statistical programming language/software
+-   It can be used for:
+    -   Working with data - cleaning, wrangling and transforming
+    -   Conducting analyses including advanced statistical methods
+    -   Creating high-quality tables & figures
+    -   Communicate research with R Markdown
+-   It is constantly growing!
+-   Has a strong online support community
+-   Since it's one programming language, it is versatile enough to take you from raw data to publishable research using free, reproducible code!
+
+:::
+:::
+
+
+::: column-page-right
+### What is RStudio?
+
+::: {style="text-align:justify"}
+RStudio is a free, open source IDE (integrated development environment) for R. (You must install R before you can install RStudio.) Its interface is organized so that the user can clearly view graphs, tables, R code, and output all at the same time. It also offers an Import-Wizard-like feature that allows users to import CSV, Excel, SPSS (\*.sav), and Stata (\*.dta) files into R without having to write the code to do so.
+:::
+:::
+
+{{< pagebreak >}}
+
+## Installation
+
+### Step 1: Get R
+
+::: column-margin
+![](/images/Rlogo.JPG){width="50%"}
+
+If it installs correctly, you should be able to find the icon among your applications.
+:::
+
+::: justify
+1.  Go here: <https://cran.rstudio.com/>
+
+2.  Choose the correct "Download R for..." option from the top (probably Windows or macOS), then:
+
+
+a.  For Windows users, choose "Install R for the first time" (next to the base subdirectory) and then "Download R 4.4.0 for Windows"
+
+b.  For macOS users, select the appropriate version for your operating system (e.g. the latest release is version 4.4.0, will look something like R-4.4.0-arm64.pkg), then choose to Save or Open
+
+c.  Once downloaded, save, open once downloaded, agree to license, and install like you would any other software.
+:::
+
+### Step 2: Get RStudio
+
+::: column-margin
+![](/images/RStudiologo.png){width="50%"}
+
+If it installs correctly, you should be able to find the RStudio icon among your applications.
+:::
+
+
+RStudio is a user-friendly interface for working with R. That means you **must have R already installed** for RStudio to work. Make sure you've successfully installed R in Step 1, then...
+
+1.  Go to <https://posit.co/download/rstudio-desktop//> to download RStudio Desktop (Open Source License). You'll know you're clicking the right one because it says "FREE" right above the download button.
+
+
+2.  Click download, which takes you just down the page to where you can select the correct version under Installers for Supported Platforms (almost everyone will choose one of the first two options, RStudio for Windows or macOS).
+
+3.  Click on the correct installer version, save, open once downloaded, agree to license and install like you would any other software. The version should be atleast **RStudio Desktop 2023.06**
+
+*Note:* If you have older versions of R/RStudio installed, we recommend updating to the newest versions.
+
+
+::: column-page-right
+### Step 3: Open RStudio
+
+1.  Once you have R then RStudio installed, you can find and click on the RStudio icon to open.
+
+2.  When you open RStudio, you should get a workspace that looks something like the screen shown in Figure 3.
+
+3.  If this is what you see when you open RStudio, then you have R and RStudio installed correctly, and you can move on to Step 4.
+
+Now that you have installed RStudio, We recommend that you get guided tour of the RStudio interface at <https://www.youtube.com/watch?v=FKl4V1lGkmU>
+:::
+
+::: column-page-inset
+![Screenshot of RStudio IDE](/images/rstudio_ide.png){fig-align="center" width="100%"}
+:::
+
+{{< pagebreak >}}
+
+### Step 4: Install `tidyverse`
+
+
+To install the tidyverse, type the following (exactly) in the console pane, then press 'Enter'. We recommend just typing instead of copy and paste.
+
+
+
+``` r
+install.packages("tidyverse")
+```
+
+::: column-margin
+
+::: justify
+
+**Tidyverse** is a collection of essential R packages for data science. The packages under the tidyverse umbrella help us in performing and interacting with the data.
+
+<br>
+
+https://www.tidyverse.org/packages/
+
+<br>
+
+![](/images/hex-tidyverse.png){width="100"}
+:::
+:::
+
+![Installing the `tidyverse` package](/images/tidyverse_install_1.png){fig-align="center" width="100%"}
+
+
+::: column-page-right
+After you press 'Enter,' you should see a whole bunch of text starting to appear in the Console Window (as shown in Figure 4). That's good -- it's just a record of what's being downloaded/installed. This process can go on for a few minutes (the tidyverse has a lot of different components). It will look something like this in the end.
+:::
+
+{{< pagebreak >}}
+
+### Step 5: Load `tidyverse`
+
+::: column-page-right
+
+::: justify
+Once it's installed, you can ensure that everything worked by loading the `tidyverse` package. To load the `tidyverse` package you've just installed, type the following into the Console in RStudio, then press 'Enter':
+:::
+
+``` r
+library("tidyverse")
+```
+
+::: justify
+If everything is installed correctly, you should see the same output as in Figure 5 once you load the package:
+:::
+
+:::
+
+::: column-page-inset
+
+![Output of calling the `tidyverse` package into the R Environment](/images/tidyverse_load_1.png){fig-align="center" width="90%"}
+
+:::
+
+
+
+# R Programming Basics
+
+::: column-margin
+The commonly used data types in R are:
+
+-   numeric
+-   integer
+-   double
+-   character
+-   logical
+-   date
+:::
+
+
+- Data Types
+    - Variables can contain values of specific types within R. 
+
+- Data Structures
+    -   Variables can store more than just a single value, they can store a multitude of different data structures.
+
+        -   Vectors
+            -   A vector is the most common and basic data structure in R, and is pretty much the workhorse of R.
+            -   All values in a vector must be of the same data type.
+        -   Factors
+            -   A factor is a special type of vector that is used to store categorical data. Each unique category is referred to as a factor level (i.e. category = level).
+            -   Factors are built on top of integer vectors such that each factor level is assigned an integer value, creating value-label pairs.
+        -   Matrix
+            -   A matrix in R is a collection of vectors of same length and identical datatype.
+            -   Vectors can be combined as columns in the matrix or by row, to create a 2-dimensional structure.
+        -   Data Frames
+            -   A data.frame is the de facto data structure for most tabular data and what we use for statistics and plotting.
+            -   A data.frame is similar to a matrix in that it's a collection of vectors of of the same length and each vector represents a column.
+            -   However, in a dataframe each vector can be of a different data type (e.g., characters, integers, factors).
+        -   Lists
+            -   Lists are a data structure in R that can be perhaps a bit daunting at first, but soon become amazingly useful.
+            -   A list is a data structure that can hold any number of any types of other data structures.
+-   Assignment Operator
+    -   To do useful and interesting things in R, we need to assign values to variables using the assignment operator, \<-
+    -   The assignment operator (\<-) assigns values on the right to variables on the left.
+    -   For example, we can use the assignment operator to assign the value of 3 to x by executing:
+
+::: column-margin
+In RStudio, typing Alt + - (push Alt at the same time as the - key) will write `<-` in a single keystroke.
+:::
+
+```{r echo=TRUE,  eval=T}
+x <- 3
+```
+
+We can now perform operations on `x`. We can add 5 to `x` and assign it to a new variable `y`
+
+```{r echo=TRUE,  eval=T}
+y <- x + 5
+```
+
+We can just type to name of the variable to return it.
+
+```{r echo=TRUE,  eval=T}
+x
+```
+
+```{r echo=TRUE,  eval=T}
+y
+```
+
+::: column-margin
+In order to understand these concepts better, it is expected that you go through a primer on the basics of programming in R <https://posit.cloud/learn/recipes>.
+
+<br>
+
+This tutorial demystifies programming with R. Here, you'll learn how to run functions and build objects.
+:::
+
+- Variables
+  -   A variable is a symbolic name for (or reference to) information.
+  -   Variables are where information can be maintained and referenced.
+  -   We give a variable a name and assign a value to it.
+  -   In the example above, we created a variable called `x`. Inside we put a value, 3.
+
+
+# File Types in R
+
+::: column-page-right
+
+The typical file types associated with R are:
+
+-   `*.R` - An R script.
+-   `*.Rmd` - An R Markdown file.
+-   `*.qmd` - A Quarto Document.
+-   `*.rds` - A file containing a \[single\] R object; can be created using `write_rds()`, and loaded using `read_rds()`.
+-   `*.rdata` - A file containing one or more R objects or workspaces; can be created using `save()`, and loaded using `load()`.
+-   `*.Rproj` - An R project file
+
+# Mandatory Reading
+
+1.  Introduction \| R for Data Science. <https://r4ds.hadley.nz/intro>
+
+2.  Guide for Reproducible Research \| The Turing Way <https://the-turing-way.netlify.app/reproducible-research/reproducible-research>
+
+:::
+
+[**Congratulations** for making through the first step of your journey. **Now, the learning begins...**]{style="color:blue;"}
+
+

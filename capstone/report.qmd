@@ -1,0 +1,134 @@
+---
+title: "District Infant Mortality in the EAG States: An Exploratory Analysis"
+subtitle: "Annual Health Survey, 2010-11 to 2012-13 (ecological, district-level)"
+author: "YOUR NAME"
+date: today
+format:
+  html:
+    toc: true
+    theme: cosmo
+    code-fold: true
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+library(dplyr); library(broom); library(knitr); library(here)
+long  <- readRDS(here::here("outputs", "df_ahs_long.rds")) |> tibble::as_tibble()
+d12   <- long |> filter(round == "2012-13") |> mutate(state = factor(state))
+model <- readRDS(here::here("outputs", "imr-model.rds"))
+est   <- tidy(model, conf.int = TRUE)
+g     <- broom::glance(model)
+getc  <- function(t) est[est$term == t, ]   # pull one coefficient row
+```
+
+## Background
+
+Infant mortality remains high and unevenly distributed across the Empowered
+Action Group (EAG) states. This exploratory, **ecological** analysis describes how
+district-level infant mortality (IMR) relates to other district vital indicators
+in the Annual Health Survey (AHS). Inference is about **districts, not
+individuals**.
+
+## Methods
+
+The data are AHS district-level rates for `r nrow(d12)` districts across
+`r dplyr::n_distinct(d12$state)` states, latest round (2012-13). Each row is one
+district. IMR (infant deaths per 1000 live births) was modelled with **multiple
+linear regression** on the crude birth rate, crude death rate, sex ratio at birth,
+and state (fixed effect). The neonatal and under-five mortality rates were
+**excluded as predictors** because, by definition, under-five mortality includes
+infant mortality includes neonatal mortality; using them would be structural
+circularity, not association. Estimates are reported with 95% confidence
+intervals. Collinearity (VIF), residual normality, and influential points were
+checked.
+
+## Results
+
+```{r}
+#| label: key-numbers
+n_d  <- nrow(d12)
+r2   <- round(g$r.squared, 2)
+imr_med <- round(median(d12$infant_mortality_rate_imr), 0)
+imr_min <- round(min(d12$infant_mortality_rate_imr), 0)
+imr_max <- round(max(d12$infant_mortality_rate_imr), 0)
+```
+
+Across `r n_d` districts in 2012-13, median IMR was `r imr_med` per 1000 live
+births (range `r imr_min`-`r imr_max`). The model explained `r r2` of the
+between-district variation in IMR (Table 1).
+
+```{r}
+#| label: tbl-model
+#| tbl-cap: "Multiple linear regression: district IMR on vital indicators and state (2012-13). Estimates are mean IMR change per unit, with 95% CIs."
+est |>
+  mutate(term = recode(term,
+    "(Intercept)" = "Intercept",
+    "crude_birth_rate_cbr" = "Crude birth rate (per unit)",
+    "crude_death_rate_cdr" = "Crude death rate (per unit)",
+    "sex_ratio_at_birth_srb" = "Sex ratio at birth (per unit)"),
+    term = sub("^state", "State: ", term)) |>
+  transmute(Term = term,
+            Estimate = round(estimate, 2),
+            `95% CI` = sprintf("%.2f to %.2f", conf.low, conf.high),
+            `p` = ifelse(p.value < 0.001, "<0.001", sprintf("%.3f", p.value))) |>
+  kable()
+```
+
+```{r}
+#| label: fig-dots
+#| fig-cap: "District infant mortality by state, 2012-13. Each point is a district; the bar marks the state median."
+knitr::include_graphics(here::here("outputs", "figures", "imr-by-state-dots-2012-13.png"))
+```
+
+```{r}
+#| label: fig-trend
+#| fig-cap: "Mean district IMR by state across the three AHS rounds (unweighted mean of district rates)."
+knitr::include_graphics(here::here("outputs", "figures", "mean-imr-trend-by-state.png"))
+```
+
+Higher district mortality and fertility were each associated with higher infant
+mortality: a one-unit higher crude death rate was associated with a
+`r round(getc("crude_death_rate_cdr")$estimate, 1)`-point higher IMR
+(95% CI `r round(getc("crude_death_rate_cdr")$conf.low, 1)` to
+`r round(getc("crude_death_rate_cdr")$conf.high, 1)`), and a one-unit higher crude
+birth rate with a `r round(getc("crude_birth_rate_cbr")$estimate, 2)`-point higher
+IMR (95% CI `r round(getc("crude_birth_rate_cbr")$conf.low, 2)` to
+`r round(getc("crude_birth_rate_cbr")$conf.high, 2)`). Sex ratio at birth was
+**not** associated with IMR after adjustment (estimate
+`r round(getc("sex_ratio_at_birth_srb")$estimate, 3)`; 95% CI
+`r round(getc("sex_ratio_at_birth_srb")$conf.low, 3)` to
+`r round(getc("sex_ratio_at_birth_srb")$conf.high, 3)`). Substantial differences
+between states persisted after adjustment (Table 1), with Uttar Pradesh and Madhya
+Pradesh districts highest relative to Bihar.
+
+## Interpretation
+
+These district-level patterns are **associations, not causes**. Districts with
+higher general mortality and higher fertility tended to have higher infant
+mortality, consistent with shared underlying determinants (poverty, health-system
+access). The persistence of state effects after adjustment suggests state-level
+factors not captured by these three indicators. No individual-level inference is
+warranted from these aggregate rates.
+
+## Limitations
+
+Ecological design (district aggregates), so the ecological fallacy precludes
+individual inference. The cross-sectional model uses only the 2012-13 round;
+pooling rounds would require accounting for repeated measures within districts.
+Residuals showed mild departure from normality (Shapiro-Wilk p = 0.03) and 12
+districts were influential (Cook's D > 4/n), so estimates should be read as
+descriptive. State means shown in the trend figure are **unweighted**; a
+population-weighted state rate would differ. The sex-ratio convention
+(females per 1000 males) is **pending confirmation** against the AHS bulletin.
+
+## Reproducibility
+
+```{r}
+#| label: session
+#| echo: true
+sessioninfo::session_info()
+```

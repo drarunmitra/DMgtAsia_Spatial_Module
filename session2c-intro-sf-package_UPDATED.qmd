@@ -1,0 +1,232 @@
+---
+title: "Introduction to the <br> `sf` Package"
+author: "Dr. Arun Mitra"
+format: dashboard
+execute: 
+  eval: false
+  echo: true
+embed-resources: true
+---
+
+## Introduction
+
+- **Objective**: Learn the basics of the `sf` package in R for spatial data analysis.
+- **Why `sf`?**: Simplifies handling, analysis, and visualization of spatial data in R.
+
+## Overview of Spatial Data in R
+
+- **Spatial Data**: Data associated with locations in a geometric space.
+- **Types**: 
+  - Point data
+  - Line data
+  - Polygon data
+- **Applications**: Environmental monitoring, urban planning, epidemiology.
+
+## The `sf` Package {.smaller}
+
+::: columns
+::: {.column width="60%"}
+The **sf** package is an R implementation of [Simple Features](https://en.wikipedia.org/wiki/Simple_Features).
+
+This package incorporates:
+
+-   A new spatial data class system in R
+-   Functions for reading and writing data
+-   Tools for spatial operations on vectors
+:::
+
+::: {.column width="40%"}
+
+::: {.content-hidden when-format="pdf"}
+
+![`sf` package](/images/sf_hex.gif)
+
+:::
+
+::: {.content-hidden unless-format="pdf"}
+
+![sf package gif](/images/sf_hex.png)
+
+:::
+
+```r
+install.packages("sf")
+```
+:::
+:::
+
+## Why the `sf` Package?
+
+- **Integration**: Seamlessly integrates with the tidyverse.
+- **Efficiency**: More efficient and user-friendly than previous spatial packages.
+- **Standards**: Adheres to international standards for spatial data.
+  
+![sf package usage](/images/sf_horst.jpg)
+
+## Geometry Types in `sf`
+
+::: columns
+::: {.column width="50%"}
+![WKT Primitives](/images/wkt_primitives.png)
+![WKT Multipart](/images/wkt_multipart.png)
+:::
+
+::: {.column width="50%"}
+![sf Classes](/images/sf-classes.png)
+:::
+:::
+
+## Loading Spatial Data into R using `sf`
+
+```r
+library(sf)
+path_to_shape_file <- "path/to/shapefile.shp"
+spatial_data <- st_read(path_to_shape_file)
+```
+
+## Viewing the `sf` Object
+
+```r
+print(spatial_data)
+```
+
+## Plotting the `sf` Object
+
+::: columns
+::: {.column width="50%"}
+```r
+ggplot(spatial_data) +
+  geom_sf()
+```
+:::
+
+::: {.column width="50%"}
+```r
+ggplot(spatial_data) +
+  geom_sf(aes(color = some_attribute))
+```
+:::
+:::
+
+## Concept of the `sf` Package
+
+- **Spatial Data Frame**: Combines attributes and geometry.
+- **Key Functions**:
+  - `st_read()`: Read spatial data.
+  - `st_write()`: Write spatial data.
+  - `st_transform()`: Transform coordinate systems.
+  
+![sf Concept Map](/images/sf_concept_map.png)
+
+## Dependencies of the `sf` Package
+
+![sf Dependencies](/images/sf_deps.png)
+
+- **Key Dependencies**:
+  - GDAL: Geospatial Data Abstraction Library
+  - PROJ: Cartographic Projections Library
+  - GEOS: Geometry Engine
+
+## Methods in `sf`
+
+```r
+methods(class="sf")
+```
+
+- **Common Methods**:
+  - `st_union()`: Union of geometries.
+  - `st_intersection()`: Intersection of geometries.
+  - `st_buffer()`: Buffer around geometries.
+
+## Interactive Mapping with `sf`
+
+```r
+library(mapview)
+mapview(spatial_data)
+```
+
+## Practical Exercise: Loading and Plotting Data
+
+1. **Load Data**:
+   - Use `st_read()` to load spatial data.
+   - Example shapefile: `"path/to/shapefile.shp"`
+   
+2. **View Data**:
+   - Print the `sf` object.
+   
+3. **Plot Data**:
+   - Use `ggplot2` to create a basic map.
+   
+```r
+library(sf)
+spatial_data <- st_read("path/to/shapefile.shp")
+print(spatial_data)
+ggplot(spatial_data) + geom_sf()
+```
+
+## Practical Exercise: Advanced Plotting
+
+1. **Color by Attribute**:
+   - Use `aes()` to map colors to an attribute.
+   
+2. **Interactive Map**:
+   - Use `mapview` for interactive mapping.
+   
+```r
+ggplot(spatial_data) + geom_sf(aes(color = attribute))
+library(mapview)
+mapview(spatial_data)
+```
+
+## Spatial Operations with `sf`
+
+- **Buffering**: Create buffer zones around geometries.
+  
+```r
+buffered <- st_buffer(spatial_data, dist = 100)
+ggplot(buffered) + geom_sf()
+```
+
+- **Intersection**: Find intersecting areas between geometries.
+
+```r
+intersection <- st_intersection(spatial_data, another_spatial_layer)
+ggplot(intersection) + geom_sf()
+```
+
+## Spatial Joins with `sf`
+
+- **Spatial Join**: Combine attributes from different spatial datasets based on their spatial relationship.
+  
+```r
+joined_data <- st_join(spatial_data, another_spatial_layer)
+ggplot(joined_data) + geom_sf()
+```
+
+## Coordinate Transformations with `sf`
+
+- **Transform Coordinates**: Change the coordinate reference system (CRS) of spatial data.
+  
+```r
+transformed_data <- st_transform(spatial_data, crs = 4326)
+ggplot(transformed_data) + geom_sf()
+```
+
+## Where to Look for Help?
+
+::: columns
+::: {.column width="60%"}
+![sf Cheatsheet 1](/images/sf_cheatsheet.png)
+:::
+
+::: {.column width="40%"}
+![sf Cheatsheet 2](/images/sf_cheatsheet2.png)
+:::
+:::
+
+- **Resource**: [sf Cheatsheet](https://posit.co/wp-content/uploads/2022/10/sf.pdf)
+
+## Questions
+
+- **Any doubts or questions?**
+- **Hands-on practice time!**

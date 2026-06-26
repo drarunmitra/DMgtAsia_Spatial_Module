@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="category">
+    <category>
+      <text>$course$/SDS4PH/Module 4 - Spatial Epidemiological Analysis</text>
+    </category>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M4Q01: In spatial analysis, Queen contiguity defines two polygons as neighbors if they:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>In spatial analysis, Queen contiguity defines two polygons as neighbors if they:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Queen contiguity (named after the chess queen’s movement) considers polygons as neighbors if they share any boundary point — including corners. Rook contiguity is more restrictive, requiring a shared edge. Queen is more commonly used in public health analyses.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-5</text></tag>
+      <tag><text>Bloom-Remember</text></tag>
+      <tag><text>Module-4</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Share any boundary point (edge or vertex)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! Queen contiguity (named after the chess queen’s movement) considers polygons as neighbors if they share any boundary point — including corners. Rook contiguity is more restrictive, requiring a shared edge. Queen is more commonly used in public health analyses.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Share only a common edge (not just a corner)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Queen contiguity (named after the chess queen’s movement) considers polygons as neighbors if they share any boundary point — including corners. Rook contiguity is more restrictive, requiring a shared edge. Queen is more commonly used in public health analyses.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Are within a specified distance of each other</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Queen contiguity (named after the chess queen’s movement) considers polygons as neighbors if they share any boundary point — including corners. Rook contiguity is more restrictive, requiring a shared edge. Queen is more commonly used in public health analyses.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Have the same attribute value</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Queen contiguity (named after the chess queen’s movement) considers polygons as neighbors if they share any boundary point — including corners. Rook contiguity is more restrictive, requiring a shared edge. Queen is more commonly used in public health analyses.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M4Q02: The function spdep::poly2nb() creates a:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>The function spdep::poly2nb() creates a:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>poly2nb() constructs a neighbors list from polygon geometries. Each polygon gets a list of its neighbors’ indices. This neighbor structure is the foundation for spatial weights, which are required for all spatial autocorrelation analyses.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-5</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-4</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Neighbor list identifying which polygons are adjacent to each other</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! poly2nb() constructs a neighbors list from polygon geometries. Each polygon gets a list of its neighbors’ indices. This neighbor structure is the foundation for spatial weights, which are required for all spatial autocorrelation analyses.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>New set of polygon boundaries from point data</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. poly2nb() constructs a neighbors list from polygon geometries. Each polygon gets a list of its neighbors’ indices. This neighbor structure is the foundation for spatial weights, which are required for all spatial autocorrelation analyses.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Statistical model for spatial regression</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. poly2nb() constructs a neighbors list from polygon geometries. Each polygon gets a list of its neighbors’ indices. This neighbor structure is the foundation for spatial weights, which are required for all spatial autocorrelation analyses.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Raster representation of polygon data</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. poly2nb() constructs a neighbors list from polygon geometries. Each polygon gets a list of its neighbors’ indices. This neighbor structure is the foundation for spatial weights, which are required for all spatial autocorrelation analyses.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M4Q03: Spatial weights (created by nb2listw()) are used to:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>Spatial weights (created by nb2listw()) are used to:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Spatial weights formalize the spatial relationships defined by the neighbor list. With style = ‘W’ (row-standardized), each neighbor contributes equally to the weighted average. These weights are essential for computing spatial lag, Moran’s I, and LISA.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-5</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-4</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Quantify the strength of spatial relationships between neighboring features for computing spatial statistics</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! Spatial weights formalize the spatial relationships defined by the neighbor list. With style = ‘W’ (row-standardized), each neighbor contributes equally to the weighted average. These weights are essential for computing spatial lag, Moran’s I, and LISA.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Weight the map colors in a choropleth</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Spatial weights formalize the spatial relationships defined by the neighbor list. With style = ‘W’ (row-standardized), each neighbor contributes equally to the weighted average. These weights are essential for computing spatial lag, Moran’s I, and LISA.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Reduce the file size of spatial datasets</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Spatial weights formalize the spatial relationships defined by the neighbor list. With style = ‘W’ (row-standardized), each neighbor contributes equally to the weighted average. These weights are essential for computing spatial lag, Moran’s I, and LISA.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Convert geographic coordinates to projected coordinates</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Spatial weights formalize the spatial relationships defined by the neighbor list. With style = ‘W’ (row-standardized), each neighbor contributes equally to the weighted average. These weights are essential for computing spatial lag, Moran’s I, and LISA.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M4Q04: The spatial lag of a variable is:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>The spatial lag of a variable is:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>The spatial lag at location i is the weighted average of the variable’s values at i’s neighbors. It represents ‘what the neighborhood looks like’ and is plotted against the original value in Moran’s scatter plot to visualize spatial autocorrelation.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-5</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-4</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>The weighted average of that variable’s values in neighboring areas</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! The spatial lag at location i is the weighted average of the variable’s values at i’s neighbors. It represents ‘what the neighborhood looks like’ and is plotted against the original value in Moran’s scatter plot to visualize spatial autocorrelation.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>The time delay between disease onset in adjacent districts</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The spatial lag at location i is the weighted average of the variable’s values at i’s neighbors. It represents ‘what the neighborhood looks like’ and is plotted against the original value in Moran’s scatter plot to visualize spatial autocorrelation.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>The difference between observed and expected values</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The spatial lag at location i is the weighted average of the variable’s values at i’s neighbors. It represents ‘what the neighborhood looks like’ and is plotted against the original value in Moran’s scatter plot to visualize spatial autocorrelation.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>The residual from a spatial regression model</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The spatial lag at location i is the weighted average of the variable’s values at i’s neighbors. It represents ‘what the neighborhood looks like’ and is plotted against the original value in Moran’s scatter plot to visualize spatial autocorrelation.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M4Q05: In a Moran’s scatter plot, the upper-right quadrant (high value, high spatial la</text></name>
+    <questiontext format="html"><text><![CDATA[<p>In a Moran’s scatter plot, the upper-right quadrant (high value, high spatial lag) represents:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>The Moran’s scatter plot has 4 quadrants: upper-right = HH (hot spots), lower-left = LL (cold spots), lower-right = HL (spatial outlier), upper-left = LH (spatial outlier). The slope of the regression line through this plot is Moran’s I.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-5</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-4</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>High-High (HH) clusters: areas with high values surrounded by high values</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! The Moran’s scatter plot has 4 quadrants: upper-right = HH (hot spots), lower-left = LL (cold spots), lower-right = HL (spatial outlier), upper-left = LH (spatial outlier). The slope of the regression line through this plot is Moran’s I.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Low-Low (LL) clusters: areas with low values surrounded by low values</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The Moran’s scatter plot has 4 quadrants: upper-right = HH (hot spots), lower-left = LL (cold spots), lower-right = HL (spatial outlier), upper-left = LH (spatial outlier). The slope of the regression line through this plot is Moran’s I.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>High-Low (HL) outliers: high values surrounded by low values</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The Moran’s scatter plot has 4 quadrants: upper-right = HH (hot spots), lower-left = LL (cold spots), lower-right = HL (spatial outlier), upper-left = LH (spatial outlier). The slope of the regression line through this plot is Moran’s I.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Low-High (LH) outliers: low values surrounded by high values</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. The Moran’s scatter plot has 4 quadrants: upper-right = HH (hot spots), lower-left = LL (cold spots), lower-right = HL (spatial outlier), upper-left = LH (spatial outlier). The slope of the regression line through this plot is Moran’s I.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M4Q06: A Monte Carlo Moran’s I test with nsim = 9999 and p-value = 0.0001 indicates tha</text></name>
+    <questiontext format="html"><text><![CDATA[<p>A Monte Carlo Moran’s I test with nsim = 9999 and p-value = 0.0001 indicates that:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Monte Carlo simulation randomly permutes the data 9,999 times and computes Moran’s I for each permutation. A p-value of 0.0001 means the observed Moran’s I is more extreme than 99.99% of random permutations — very strong evidence against spatial randomness.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-5</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-4</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>The observed spatial pattern is extremely unlikely under complete spatial randomness — strong evidence of spatial clustering</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! Monte Carlo simulation randomly permutes the data 9,999 times and computes Moran’s I for each permutation. A p-value of 0.0001 means the observed Moran’s I is more extreme than 99.99% of random permutations — very strong evidence against spatial randomness.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>There is no spatial autocorrelation in the data</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Monte Carlo simulation randomly permutes the data 9,999 times and computes Moran’s I for each permutation. A p-value of 0.0001 means the observed Moran’s I is more extreme than 99.99% of random permutations — very strong evidence against spatial randomness.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>The analysis used too many simulations and should be rerun</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Monte Carlo simulation randomly permutes the data 9,999 times and computes Moran’s I for each permutation. A p-value of 0.0001 means the observed Moran’s I is more extreme than 99.99% of random permutations — very strong evidence against spatial randomness.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Exactly 0.01% of the study area shows clustering</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Monte Carlo simulation randomly permutes the data 9,999 times and computes Moran’s I for each permutation. A p-value of 0.0001 means the observed Moran’s I is more extreme than 99.99% of random permutations — very strong evidence against spatial randomness.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M4Q07: The difference between Global Moran’s I and Local Moran’s I (LISA) is:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>The difference between Global Moran’s I and Local Moran’s I (LISA) is:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Global Moran’s I answers: ‘Is there spatial clustering overall?’ Local Moran’s I (LISA) answers: ‘WHERE are the clusters, and what TYPE are they (HH, LL, HL, LH)?’ For public health interventions, local analysis is essential to identify target areas.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-5</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-4</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Global gives ONE summary statistic for the entire study area; Local gives a statistic for EACH spatial unit, identifying WHERE clusters occur</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! Global Moran’s I answers: ‘Is there spatial clustering overall?’ Local Moran’s I (LISA) answers: ‘WHERE are the clusters, and what TYPE are they (HH, LL, HL, LH)?’ For public health interventions, local analysis is essential to identify target areas.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Global uses Queen contiguity while Local uses Rook contiguity</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Global Moran’s I answers: ‘Is there spatial clustering overall?’ Local Moran’s I (LISA) answers: ‘WHERE are the clusters, and what TYPE are they (HH, LL, HL, LH)?’ For public health interventions, local analysis is essential to identify target areas.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Global is for point data and Local is for polygon data</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Global Moran’s I answers: ‘Is there spatial clustering overall?’ Local Moran’s I (LISA) answers: ‘WHERE are the clusters, and what TYPE are they (HH, LL, HL, LH)?’ For public health interventions, local analysis is essential to identify target areas.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>They always produce the same result</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Global Moran’s I answers: ‘Is there spatial clustering overall?’ Local Moran’s I (LISA) answers: ‘WHERE are the clusters, and what TYPE are they (HH, LL, HL, LH)?’ For public health interventions, local analysis is essential to identify target areas.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M4Q08: In the rgeoda package, which function computes Local Moran’s I statistics?</text></name>
+    <questiontext format="html"><text><![CDATA[<p>In the rgeoda package, which function computes Local Moran’s I statistics?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>rgeoda::local_moran() computes LISA statistics for each spatial unit. moran.test() from spdep computes the GLOBAL Moran’s I. lisa_clusters() extracts cluster labels AFTER local_moran() has been computed.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-5</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-4</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>local_moran(weights, sf_object[“variable”])</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! rgeoda::local_moran() computes LISA statistics for each spatial unit. moran.test() from spdep computes the GLOBAL Moran’s I. lisa_clusters() extracts cluster labels AFTER local_moran() has been computed.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>moran.test(sf_object$variable, weights)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. rgeoda::local_moran() computes LISA statistics for each spatial unit. moran.test() from spdep computes the GLOBAL Moran’s I. lisa_clusters() extracts cluster labels AFTER local_moran() has been computed.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>lisa_clusters(sf_object, variable)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. rgeoda::local_moran() computes LISA statistics for each spatial unit. moran.test() from spdep computes the GLOBAL Moran’s I. lisa_clusters() extracts cluster labels AFTER local_moran() has been computed.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>queen_weights(sf_object) |&gt; moran()</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. rgeoda::local_moran() computes LISA statistics for each spatial unit. moran.test() from spdep computes the GLOBAL Moran’s I. lisa_clusters() extracts cluster labels AFTER local_moran() has been computed.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M4Q09: In a LISA cluster map, a district classified as ‘Low-High’ (LH) represents:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>In a LISA cluster map, a district classified as ‘Low-High’ (LH) represents:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>LH spatial outliers are interesting for public health — they represent areas that are ‘bucking the trend’ of their neighborhood. For malnutrition mapping, an LH district might have a successful local intervention worth studying.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-5</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-4</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>A district with a low value of the health indicator surrounded by districts with high values (a spatial outlier)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! LH spatial outliers are interesting for public health — they represent areas that are ‘bucking the trend’ of their neighborhood. For malnutrition mapping, an LH district might have a successful local intervention worth studying.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>A district where values are decreasing from low to high over time</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. LH spatial outliers are interesting for public health — they represent areas that are ‘bucking the trend’ of their neighborhood. For malnutrition mapping, an LH district might have a successful local intervention worth studying.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>A district with low population and high disease incidence</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. LH spatial outliers are interesting for public health — they represent areas that are ‘bucking the trend’ of their neighborhood. For malnutrition mapping, an LH district might have a successful local intervention worth studying.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>A district where the LISA statistic is not significant</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. LH spatial outliers are interesting for public health — they represent areas that are ‘bucking the trend’ of their neighborhood. For malnutrition mapping, an LH district might have a successful local intervention worth studying.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M4Q10: The Standardized Incidence Ratio (SIR) is calculated as:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>The Standardized Incidence Ratio (SIR) is calculated as:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>SIR = Observed / Expected. An SIR &gt; 1 indicates more cases than expected (excess burden), SIR = 1 means the observed rate matches the reference, and SIR &lt; 1 indicates fewer cases than expected. It standardizes for population size.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-6</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-4</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Observed number of cases ÷ Expected number of cases (based on a reference population rate)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! SIR = Observed / Expected. An SIR &gt; 1 indicates more cases than expected (excess burden), SIR = 1 means the observed rate matches the reference, and SIR &lt; 1 indicates fewer cases than expected. It standardizes for population size.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Number of cases ÷ Total population × 1000</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. SIR = Observed / Expected. An SIR &gt; 1 indicates more cases than expected (excess burden), SIR = 1 means the observed rate matches the reference, and SIR &lt; 1 indicates fewer cases than expected. It standardizes for population size.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Number of deaths ÷ Number of cases</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. SIR = Observed / Expected. An SIR &gt; 1 indicates more cases than expected (excess burden), SIR = 1 means the observed rate matches the reference, and SIR &lt; 1 indicates fewer cases than expected. It standardizes for population size.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Expected cases ÷ Observed cases</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. SIR = Observed / Expected. An SIR &gt; 1 indicates more cases than expected (excess burden), SIR = 1 means the observed rate matches the reference, and SIR &lt; 1 indicates fewer cases than expected. It standardizes for population size.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M4Q11: An SMR (Standardized Mortality Ratio) of 1.5 for a district means:</text></name>
+    <questiontext format="html"><text><![CDATA[<p>An SMR (Standardized Mortality Ratio) of 1.5 for a district means:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>SMR = 1.5 means Observed/Expected = 1.5, so observed deaths are 1.5 times (or 50% more than) what would be expected if the district had the same rate as the reference population. Values &gt; 1 signal excess mortality.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-6</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-4</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>The district has 50% more deaths than expected based on the reference population rate</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! SMR = 1.5 means Observed/Expected = 1.5, so observed deaths are 1.5 times (or 50% more than) what would be expected if the district had the same rate as the reference population. Values &gt; 1 signal excess mortality.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>The district has 1.5 deaths total</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. SMR = 1.5 means Observed/Expected = 1.5, so observed deaths are 1.5 times (or 50% more than) what would be expected if the district had the same rate as the reference population. Values &gt; 1 signal excess mortality.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>The mortality rate is 1.5 per 1000 population</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. SMR = 1.5 means Observed/Expected = 1.5, so observed deaths are 1.5 times (or 50% more than) what would be expected if the district had the same rate as the reference population. Values &gt; 1 signal excess mortality.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>The district’s mortality is 50% lower than expected</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. SMR = 1.5 means Observed/Expected = 1.5, so observed deaths are 1.5 times (or 50% more than) what would be expected if the district had the same rate as the reference population. Values &gt; 1 signal excess mortality.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M4Q12: You find that Global Moran’s I = 0.68 (p &lt; 0.001) for stunting in Indian distric</text></name>
+    <questiontext format="html"><text><![CDATA[<p>You find that Global Moran’s I = 0.68 (p &lt; 0.001) for stunting in Indian districts. This means:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>Moran’s I = 0.68 is strongly positive (range: -1 to +1). Combined with p &lt; 0.001, this confirms that stunting rates are spatially clustered: high-stunting districts tend to be near other high-stunting districts, forming spatial hotspots.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-5</text></tag>
+      <tag><text>Bloom-Analyze</text></tag>
+      <tag><text>Module-4</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>There is strong positive spatial autocorrelation — districts with similar stunting rates tend to cluster geographically</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! Moran’s I = 0.68 is strongly positive (range: -1 to +1). Combined with p &lt; 0.001, this confirms that stunting rates are spatially clustered: high-stunting districts tend to be near other high-stunting districts, forming spatial hotspots.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>68% of districts have high stunting rates</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Moran’s I = 0.68 is strongly positive (range: -1 to +1). Combined with p &lt; 0.001, this confirms that stunting rates are spatially clustered: high-stunting districts tend to be near other high-stunting districts, forming spatial hotspots.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>The stunting rate has decreased by 68% over time</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Moran’s I = 0.68 is strongly positive (range: -1 to +1). Combined with p &lt; 0.001, this confirms that stunting rates are spatially clustered: high-stunting districts tend to be near other high-stunting districts, forming spatial hotspots.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>There is negative spatial autocorrelation — high-stunting districts are surrounded by low-stunting districts</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. Moran’s I = 0.68 is strongly positive (range: -1 to +1). Combined with p &lt; 0.001, this confirms that stunting rates are spatially clustered: high-stunting districts tend to be near other high-stunting districts, forming spatial hotspots.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M4Q13: In a LISA analysis of malnutrition, you identify a cluster of High-High (HH) dis</text></name>
+    <questiontext format="html"><text><![CDATA[<p>In a LISA analysis of malnutrition, you identify a cluster of High-High (HH) districts in central India. As a public health researcher, you would recommend:</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>HH clusters represent geographic areas of concentrated burden requiring targeted intervention. The spatial clustering suggests shared underlying determinants (social, environmental, infrastructural) that should be investigated and addressed collectively.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-5</text></tag>
+      <tag><text>Bloom-Analyze</text></tag>
+      <tag><text>Module-4</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>Targeted nutritional interventions in these districts, investigating shared determinants (poverty, food insecurity, healthcare access) that explain the spatial cluster</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! HH clusters represent geographic areas of concentrated burden requiring targeted intervention. The spatial clustering suggests shared underlying determinants (social, environmental, infrastructural) that should be investigated and addressed collectively.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Ignoring the cluster because spatial analysis cannot inform interventions</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. HH clusters represent geographic areas of concentrated burden requiring targeted intervention. The spatial clustering suggests shared underlying determinants (social, environmental, infrastructural) that should be investigated and addressed collectively.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Treating each district independently since spatial patterns are coincidental</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. HH clusters represent geographic areas of concentrated burden requiring targeted intervention. The spatial clustering suggests shared underlying determinants (social, environmental, infrastructural) that should be investigated and addressed collectively.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>Collecting more data before taking any action</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. HH clusters represent geographic areas of concentrated burden requiring targeted intervention. The spatial clustering suggests shared underlying determinants (social, environmental, infrastructural) that should be investigated and addressed collectively.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M4Q14: In LISA analysis, a district classified as ‘Not Significant’ means there is no e</text></name>
+    <questiontext format="html"><text><![CDATA[<p>In LISA analysis, a district classified as ‘Not Significant’ means there is no evidence of local spatial clustering at that location (at the chosen significance level).</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>LISA classifies each unit into HH, HL, LH, LL, or Not Significant based on the local Moran’s I statistic AND its p-value. ‘Not Significant’ means the local pattern is consistent with spatial randomness at the given α level (e.g., 0.05).</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-5</text></tag>
+      <tag><text>Bloom-Understand</text></tag>
+      <tag><text>Module-4</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>True</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! LISA classifies each unit into HH, HL, LH, LL, or Not Significant based on the local Moran’s I statistic AND its p-value. ‘Not Significant’ means the local pattern is consistent with spatial randomness at the given α level (e.g., 0.05).</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>False</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. LISA classifies each unit into HH, HL, LH, LL, or Not Significant based on the local Moran’s I statistic AND its p-value. ‘Not Significant’ means the local pattern is consistent with spatial randomness at the given α level (e.g., 0.05).</p>]]></text></feedback>
+    </answer>
+  </question>
+
+  <question type="multichoice">
+    <name><text>M4Q15: In the spdep package, which function performs the Monte Carlo significance test </text></name>
+    <questiontext format="html"><text><![CDATA[<p>In the spdep package, which function performs the Monte Carlo significance test for Global Moran’s I?</p>]]></text></questiontext>
+    <generalfeedback format="html"><text><![CDATA[<p>moran.mc() performs Monte Carlo simulation, randomly permuting values nsim times to generate a null distribution. moran.test() uses the analytical (asymptotic) approach. moran.plot() creates the Moran scatter plot but doesn’t test significance.</p>]]></text></generalfeedback>
+    <defaultgrade>1</defaultgrade>
+    <penalty>0.3333333</penalty>
+    <hidden>0</hidden>
+    <single>true</single>
+    <shuffleanswers>true</shuffleanswers>
+    <answernumbering>abc</answernumbering>
+    <tags>
+      <tag><text>CLO-5</text></tag>
+      <tag><text>Bloom-Apply</text></tag>
+      <tag><text>Module-4</text></tag>
+    </tags>
+    <answer fraction="100" format="html">
+      <text><![CDATA[<p>moran.mc(variable, listw, nsim = 9999)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Correct! moran.mc() performs Monte Carlo simulation, randomly permuting values nsim times to generate a null distribution. moran.test() uses the analytical (asymptotic) approach. moran.plot() creates the Moran scatter plot but doesn’t test significance.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>moran.test(variable, listw)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. moran.mc() performs Monte Carlo simulation, randomly permuting values nsim times to generate a null distribution. moran.test() uses the analytical (asymptotic) approach. moran.plot() creates the Moran scatter plot but doesn’t test significance.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>local_moran(weights, variable)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. moran.mc() performs Monte Carlo simulation, randomly permuting values nsim times to generate a null distribution. moran.test() uses the analytical (asymptotic) approach. moran.plot() creates the Moran scatter plot but doesn’t test significance.</p>]]></text></feedback>
+    </answer>
+    <answer fraction="0" format="html">
+      <text><![CDATA[<p>moran.plot(variable, listw)</p>]]></text>
+      <feedback format="html"><text><![CDATA[<p>Incorrect. moran.mc() performs Monte Carlo simulation, randomly permuting values nsim times to generate a null distribution. moran.test() uses the analytical (asymptotic) approach. moran.plot() creates the Moran scatter plot but doesn’t test significance.</p>]]></text></feedback>
+    </answer>
+  </question>
+
+</quiz>
