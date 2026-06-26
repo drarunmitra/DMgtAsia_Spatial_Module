@@ -1,11 +1,17 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "*.qmd"
+    - "exercises/*.qmd"
+    - "exercises/*.Rmd"
+    - "!capstone/report.qmd"
+    - "!resources/prerequisites.qmd"
   resources:
-    - resources/GIS-basics.pdf
+    - resources/
     - exercises/
     - data/
-    - spatial_files/
+    # spatial_files/ (117 MB) is NOT served via Pages — clone the repo to run exercises
 
 website:
   title: "DMgtAsia · Spatial Epidemiology"

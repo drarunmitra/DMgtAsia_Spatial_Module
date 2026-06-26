@@ -47,7 +47,7 @@ Let us now convert this `data.frame` into an `sf` object using the `st_as_sf()` 
 
 ```{r}
 snow_deaths_sf <- snow_deaths |> 
-  st_as_sf(., coords = c('x', 'y'), crs = 4326)
+  st_as_sf(coords = c('x', 'y'), crs = 4326)
 
 ```
 
@@ -105,7 +105,7 @@ We may have to convert the lat long coordinates into lines.
 
 ```{r}
 snow_streets_sf <- snow_streets |> 
-  st_as_sf(., coords = c('x', 'y'), crs = 4326) |> 
+  st_as_sf(coords = c('x', 'y'), crs = 4326) |> 
   group_by(street) |> 
   summarize(n = mean(n)) |> 
   st_cast('LINESTRING')
@@ -149,7 +149,7 @@ We can now add a new layer of water pumps on the above map.
 
 ```{r eval=TRUE, include=TRUE}
 snow_pumps_sf <- HistData::Snow.pumps |> 
-  st_as_sf(., coords = c('x', 'y'), crs = 4326)
+  st_as_sf(coords = c('x', 'y'), crs = 4326)
 
 ggplot() +
   geom_sf(data = snow_streets_sf) +
