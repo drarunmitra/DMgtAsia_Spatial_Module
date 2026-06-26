@@ -2,7 +2,10 @@
 title: "Introduction to GIS for Public Health"
 
 format:
+  html:
+    toc: true
   revealjs:
+    output-file: slides-session1a-intro-gis-public-health_v2.html
     theme: [default, dmgt.scss]
     logo: dmgt_asia_logo.png
     footer: "DMgtAsia · Spatial Epidemiology"
@@ -18,6 +21,10 @@ format:
     highlight-style: github
     incremental: false
     embed-resources: false
+other-links:
+  - text: "View as slides"
+    href: slides-session1a-intro-gis-public-health_v2.html
+    icon: easel2
 ---
 
 # Introduction

@@ -15,7 +15,7 @@ project:
 
 website:
   title: "DMgtAsia · Spatial Epidemiology"
-  description: "Spatial Epidemiology and Applied Data Science — a module of the DMgtAsia course"
+  description: "Spatial Epidemiology and Applied Data Science, a module of the DMgtAsia course"
   favicon: dmgt_asia_logo.png
   navbar:
     background: primary
@@ -23,51 +23,6 @@ website:
     left:
       - href: index.qmd
         text: Home
-
-      - text: "Session-I · Foundations"
-        menu:
-          - text: "Introduction to GIS for Public Health"
-            href: session1a-intro-gis-public-health_v2.qmd
-          - text: "Concepts in Spatial Data Science"
-            href: session1b-concepts-spatial-data-science.qmd
-
-      - text: "Session-II · ESDA"
-        menu:
-          - text: "Exploring Data with R"
-            href: session2a-exploring-data-with-r.qmd
-          - text: "Principles of Spatial Data Visualization"
-            href: session2b-spatial-data-vis.qmd
-
-      - text: "Session-III · Intro to sf"
-        menu:
-          - text: "Introduction to the sf package"
-            href: session2c-intro-sf-package.qmd
-          - text: "Introduction to sf (updated)"
-            href: session2c-intro-sf-package_UPDATED.qmd
-          - text: "---"
-          - text: "Exercise 1 — Load & plot India shapefiles"
-            href: exercises/hands_on_exercise_1.R
-          - text: "Exercise 2 — Medical-college choropleth"
-            href: exercises/hands_on_exercise_2.R
-          - text: "Exercise 3 — Raster extraction (population)"
-            href: exercises/hands_on_exercise_3.R
-          - text: "Exercise 4 — Geocoding"
-            href: exercises/hands_on_exercise_4.R
-
-      - text: "Session-IV · Spatial Data Analysis & Clustering"
-        menu:
-          - text: "Exercise 6 — NFHS malnutrition maps"
-            href: exercises/hands_on_exercise_6.R
-          - text: "Exercise 7 — Spatial clustering (Moran's I / LISA)"
-            href: exercises/hands_on_exercise_7.R
-          - text: "John Snow's cholera map"
-            href: exercises/john_snow_map_excercise.qmd
-          - text: "SIR / SMR — Kerala COVID-19"
-            href: exercises/SIR_SMR_assignment.Rmd
-          - text: "---"
-          - text: "Capstone — reproducible spatial pipeline"
-            href: capstone.qmd
-
       - href: setup.qmd
         text: Setup
       - href: about.qmd
@@ -75,6 +30,57 @@ website:
     right:
       - icon: github
         href: https://github.com/drarunmitra/DMgtAsia_Spatial_Module
+  sidebar:
+    style: docked
+    search: true
+    collapse-level: 1
+    contents:
+      - text: Home
+        href: index.qmd
+      - section: "Session-I · Foundations"
+        contents:
+          - text: "Intro to GIS for Public Health"
+            href: session1a-intro-gis-public-health_v2.qmd
+          - text: "Concepts in Spatial Data Science"
+            href: session1b-concepts-spatial-data-science.qmd
+      - section: "Session-II · ESDA"
+        contents:
+          - text: "Exploring Data with R"
+            href: session2a-exploring-data-with-r.qmd
+          - text: "Spatial Data Visualization"
+            href: session2b-spatial-data-vis.qmd
+      - section: "Session-III · Intro to sf"
+        contents:
+          - text: "The sf package"
+            href: session2c-intro-sf-package.qmd
+          - text: "The sf package (updated)"
+            href: session2c-intro-sf-package_UPDATED.qmd
+          - text: "Exercise 1: Shapefiles"
+            href: exercises/hands_on_exercise_1.R
+          - text: "Exercise 2: Choropleth"
+            href: exercises/hands_on_exercise_2.R
+          - text: "Exercise 3: Raster extraction"
+            href: exercises/hands_on_exercise_3.R
+          - text: "Exercise 4: Geocoding"
+            href: exercises/hands_on_exercise_4.R
+      - section: "Session-IV · Analysis & Clustering"
+        contents:
+          - text: "Exercise 6: NFHS malnutrition maps"
+            href: exercises/hands_on_exercise_6.R
+          - text: "Exercise 7: Spatial clustering (LISA)"
+            href: exercises/hands_on_exercise_7.R
+          - text: "John Snow's cholera map"
+            href: exercises/john_snow_map_excercise.qmd
+          - text: "SIR / SMR: Kerala COVID-19"
+            href: exercises/SIR_SMR_assignment.Rmd
+          - text: "Capstone"
+            href: capstone.qmd
+      - section: "Reference"
+        contents:
+          - text: Setup
+            href: setup.qmd
+          - text: About
+            href: about.qmd
   page-footer:
     left: "DMgtAsia · Spatial Epidemiology Module"
     right: "SCTIMST, Trivandrum · AIIMS Bibinagar"

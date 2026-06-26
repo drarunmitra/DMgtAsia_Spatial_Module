@@ -2,7 +2,10 @@
 title: "Principles of Spatial Data Visualization"
 
 format:
+  html:
+    toc: true
   revealjs:
+    output-file: slides-session2b-spatial-data-vis.html
     theme: [default, dmgt.scss]
     logo: dmgt_asia_logo.png
     footer: "DMgtAsia · Spatial Epidemiology"
@@ -18,6 +21,10 @@ format:
     highlight-style: github
     incremental: false
     embed-resources: false
+other-links:
+  - text: "View as slides"
+    href: slides-session2b-spatial-data-vis.html
+    icon: easel2
 ---
 
 
