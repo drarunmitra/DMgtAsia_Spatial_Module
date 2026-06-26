@@ -18,7 +18,7 @@ website:
   description: "Spatial Epidemiology and Applied Data Science, a module of the DMgtAsia course"
   favicon: dmgt_asia_logo.png
   navbar:
-    background: primary
+    background: light
     logo: dmgt_asia_logo.png
     left:
       - href: index.qmd
@@ -87,8 +87,7 @@ website:
 
 format:
   html:
-    theme: cosmo
-    css: styles.css
+    theme: dmgt-web.scss
     toc: true
 
 execute:

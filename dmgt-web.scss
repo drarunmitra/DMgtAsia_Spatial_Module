@@ -1,0 +1,74 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+$font-family-sans-serif: "Inter", system-ui, -apple-system, sans-serif;
+$font-family-monospace:  "JetBrains Mono", monospace;
+
+// DMgtAsia monochrome palette
+$white:    #ffffff;
+$gray-100: #f4f4f4;
+$gray-200: #e6e6e6;
+$gray-300: #dddddd;
+$gray-500: #888888;
+$gray-700: #444444;
+$black:    #111111;
+
+$body-color:       #1f1f1f;
+$body-bg:          #ffffff;
+$primary:          #111111;
+$secondary:        #6c6c6c;
+$link-color:       #111111;
+$link-hover-color: #555555;
+$border-color:     #e0e0e0;
+
+$code-color:       #1f1f1f;
+$code-bg:          #f4f4f4;
+
+// navbar (light, so the black/white logo sits cleanly)
+$navbar-bg:               #ffffff;
+$navbar-light-bg:         #ffffff;
+$navbar-light-color:      rgba(17, 17, 17, 0.7);
+$navbar-light-hover-color:#111111;
+$navbar-light-active-color:#111111;
+
+/*-- scss:rules --*/
+body { -webkit-font-smoothing: antialiased; }
+
+.navbar { border-bottom: 1px solid $gray-200; }
+.navbar-brand img { max-height: 30px; }
+
+h1, h2, h3, h4, h5 { color: $black; font-weight: 600; letter-spacing: -0.2px; }
+h2 { border-bottom: 1px solid $gray-200; padding-bottom: 0.25rem; }
+
+main a { text-decoration: underline; text-underline-offset: 2px; }
+main a:hover { color: $link-hover-color; }
+
+// left sidebar
+.sidebar-navigation .sidebar-item .sidebar-link { color: $gray-700; }
+.sidebar-navigation .sidebar-item .sidebar-link.active {
+  color: $black !important; font-weight: 600;
+  border-left: 2px solid $black; padding-left: 0.5rem;
+}
+.sidebar-navigation .sidebar-section > .sidebar-item .sidebar-link { font-weight: 600; color: $black; }
+
+// right TOC + "View as slides" other-links
+nav#TOC a.active, .sidebar nav[role="doc-toc"] a.active { color: $black !important; font-weight: 600; }
+.quarto-other-links-text-target, .toc-actions a { color: $black; }
+
+// tables
+table thead th { border-bottom: 2px solid $black; }
+.table > :not(caption) > * > * { border-bottom-color: $gray-200; }
+
+// code
+pre { background: $code-bg; border: 1px solid $gray-200; border-radius: 6px; }
+
+// buttons
+.btn-primary { background: $black; border-color: $black; }
+.btn-primary:hover { background: $gray-700; border-color: $gray-700; }
+
+// footer
+.nav-footer { border-top: 1px solid $gray-200; color: $secondary; }
+
+// keep content figures from running too wide
+.quarto-title-block .description { color: $secondary; }

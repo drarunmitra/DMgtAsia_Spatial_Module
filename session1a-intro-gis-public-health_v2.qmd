@@ -35,6 +35,10 @@ other-links:
 -   The need for participatory decision making in public health
 -   The transparency of open data science approach
 
+---
+
+## Areas of Research Methods
+
 The third upcoming area of research methods
 
 -   Observational
@@ -69,7 +73,7 @@ A valuable tool for public health policy advocacy
 
 ### The Process of Geospatial Data Science
 
-![](images/real_world_bs.png){fig-align="center" width="90%" height="90%"}
+![](images/real_world_bs.png){fig-align="center" width="62%"}
 
 ---
 
@@ -117,6 +121,10 @@ Traditionally data in healthcare are:
 -   Detailed and informative ("rich profile and portraits")
 -   High quality
 
+---
+
+## Healthcare Data: Limitations
+
 However, they are:
 
 -   Massive enterprises (very costly)
@@ -149,9 +157,10 @@ However, they are:
 # (Geo)-Spatial Visualization
 
 ## Spatial Visualization
+
+::: {.content-visible unless-format="revealjs"}
 ::: grid
 ::: g-col-6
-
 ![](images/l03_monalisa_data.png){fig-align="center" height="425"}
 :::
 
@@ -161,6 +170,7 @@ However, they are:
 :::
 
 By encoding information visually, they allow to present large amounts of numbers in a meaningful way.
+:::
 
 
 ::: {.content-visible when-format="revealjs"}

@@ -109,8 +109,12 @@ $code-block-font-size:             0.72em;
 .reveal code span.op,
 .reveal code span.sc { color: c("graphite") !important; }
 
-/* ---------- figures: keep inside the slide ---------- */
-.reveal .slides img { max-height: 62vh; width: auto; }
+/* ---------- figures: keep inside the slide (room for title + caption) ---------- */
+.reveal .slides img { max-height: 52vh; width: auto; }
+.reveal .slides .column img,
+.reveal .slides .columns img { max-height: 56vh; }
+/* shrink list text a touch so denser slides fit without scrolling */
+.reveal .slides section li { line-height: 1.25; }
 
 /* ---------- headings rhythm ---------- */
 .reveal h1, .reveal h2 { letter-spacing: -0.5px; }
