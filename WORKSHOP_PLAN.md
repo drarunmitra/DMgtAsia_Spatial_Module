@@ -16,23 +16,26 @@ Repo: <https://github.com/drarunmitra/DMgtAsia_Spatial_Module>
 - ✅ Slides (Units A–C), exercises (Ex 1–4, 6, 7, John Snow, SIR/SMR), capstone pipeline, datasets, readings, and 4 Moodle quiz banks — all committed.
 - ✅ GitHub repo created + pushed; CI publish workflow added (`.github/workflows/publish.yml`).
 
-## 2. Publish to GitHub Pages (next action)
+## 2. Publishing — two-repo setup (done)
 
-Two paths — pick one:
+The website is **separated from the runnable R Project** across two repos:
 
-**A. CI (recommended, hands-off).** The committed workflow renders on every push to `main`
-and deploys to a `gh-pages` branch.
-1. Push to `main` (already wired).
-2. Repo → **Settings → Pages → Source: Deploy from a branch → `gh-pages` / root**.
-3. Site goes live at `https://drarunmitra.github.io/DMgtAsia_Spatial_Module/`.
-   *(First run installs `sf` from source — ~10–15 min; subsequent runs cache.)*
+| Repo | Role | Pages |
+|------|------|-------|
+| **`DMgtAsia_Spatial_Module`** (this one) | clone-and-run **R Project**: source `.qmd`, exercises, `spatial_files/`, data — no rendered HTML | off |
+| **`DMgtAsia_Spatial_Module_site`** | rendered static site (`docs/`) | on → live |
 
-**B. Local render (full control).**
+**Live site:** <https://drarunmitra.github.io/DMgtAsia_Spatial_Module_site/>
+
+The site is **rendered locally** (no CI, no source-compiling `sf` on GitHub — pushes are
+instant) and `docs/` is its own git checkout of the website repo.
+
+**To update the site after editing content:**
 ```bash
-quarto render        # builds ./docs (needs the install_required_packages.R env)
-git add docs && git commit -m "Render site" && git push
+./publish.sh        # quarto render + commit/push to the website repo
 ```
-Then Settings → Pages → Source: `main` / `docs`.
+`freeze: auto` means only chunks you changed re-run. Why local-render beats CI here: the
+slides are static once built, so GitHub never needs to run R.
 
 ## 3. Tailor for DMgtAsia (branding pass)
 
