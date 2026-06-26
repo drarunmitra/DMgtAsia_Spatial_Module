@@ -60,6 +60,8 @@ Koch T. Mapping the miasma: air, health, and place in early medical mapping. Car
 :::
 
 
+---
+
 ### Applications of GIS in Public Health
 
 -   disease surveillance
@@ -70,6 +72,10 @@ Koch T. Mapping the miasma: air, health, and place in early medical mapping. Car
 -   population genetics
 -   medical imagining
 -   cancer biology
+
+---
+
+## Applications of GIS in Public Health (cont.)
 
 ::: columns
 ::: {.column width="50%"}
@@ -129,14 +135,16 @@ With Applications in R
 
 
 
+---
+
 ### How is it different from Data Science?
 
 ![](images/sds_venn.png)
 
 
+---
 
-
-### Why Spatial Data Science for Public Health? 
+### Why Spatial Data Science for Public Health?
 
 ::: columns
 ::: {.column width="50%"}
@@ -151,11 +159,14 @@ With Applications in R
 :::
 
 
+---
 
-<br>
+## Why Spatial Data Science for Public Health? (cont.)
 
 ![](images/julia_agents_1.gif)
 
+
+---
 
 ### Potential of Spatial Data Science for Public Health
 
@@ -198,6 +209,8 @@ Spatial data are fundamental to many geographical analyses and spatial data scie
 :::
 :::
 
+---
+
 ### Spatial Dependence and Complete Spatial Randomness
 <br>
 
@@ -228,6 +241,8 @@ This means natural phenomenon are not spatially distributed at random.
 It can be measured by the indices of Spatial Autocorrelation.
 
 
+---
+
 ### Spatial Autocorrelation
 
 
@@ -238,6 +253,8 @@ correlation as well.
 
 ![](images/spatial_autocorrelation1.png)
 
+
+---
 
 ### Indices to measure Spatial Dependence
 
@@ -277,7 +294,9 @@ correlation as well.
 :::
 :::
 
-### Map Projections & coordinate reference system (CRS) 
+---
+
+### Map Projections & coordinate reference system (CRS)
 
 ::: columns
 ::: {.column width="40%"}
@@ -303,6 +322,8 @@ correlation as well.
 :::
 
 
+---
+
 ### Why is the CRS Important?
 
 
@@ -316,36 +337,42 @@ correlation as well.
 ![The Mercator projection, for example, is used where angular relationships are important, but the relationship of areas are distorted.](images/mercator_projection.png)
 
 
-<br>
+---
 
+## Projection Systems (cont.)
 
 ![The Mollweide Equal Area Cylindrical projection, for example, ensures that all mapped areas have the same proportional relationship to the areas on the Earth.](images/mollweide_equal_area_projection.png)
 
 
-<br>
+---
 
+## Projection Systems (cont.)
 
 ![The Plate Carree Equidistant Cylindrical projection, for example, is used when accurate distance measurement is important.](images/plate_carree_projection.png)
 
 
-<br>
+---
 
+## Projection Systems (cont.)
 
 ![The Robinson projection is a compromise where distortions of area, angular conformity and distance are acceptable.](images/robinson_projection.png)
 
 
-<br>
+---
 
-
+## Projection Systems (cont.)
 
 ![The United Nations Logo uses the Azimuthal Equidistant projection](images/azimuthal_equidistant_projection.png)
 
-<br>
+
+---
+
+## Projection Systems (cont.)
 
 ![What four commonly used projections do, as shown on the human head](images/projections_human_head.png)
 
 
-
+---
 
 ### CRS in Action
 
@@ -368,6 +395,7 @@ correlation as well.
 :::
 
 
+---
 
 ### Reproducible Research
 

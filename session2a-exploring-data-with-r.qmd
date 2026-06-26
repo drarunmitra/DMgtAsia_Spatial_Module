@@ -64,6 +64,10 @@ other-links:
 
 
 
+---
+
+## What is Exploratory Data Analysis? (cont.)
+
 ::: {.callout-note }
 
 ### Definition of EDA
@@ -98,6 +102,8 @@ other-links:
 — **John Tukey**
 
 
+---
+
 ### Asking the right questions
 
 Key to asking **_quality_** questions is to generate a large **_quantity_** of questions.
@@ -117,6 +123,8 @@ But, each new question will expose a new aspect and increase your chance of maki
 
 - Whether the quality of your data is robust or not.
 
+
+---
 
 ###  The Process of EDA
 
@@ -145,6 +153,8 @@ But, each new question will expose a new aspect and increase your chance of maki
 :::
 
 
+
+---
 
 ### 6 W's of Spatial EDA / ESDA
 
@@ -228,6 +238,8 @@ In short, it makes data exploration and data manipulation easy and fast in R.
 
 ::: 
 
+---
+
 ### Verbs of the `dplyr`
 
 - There are many verbs in `dplyr` that are useful.
@@ -235,10 +247,14 @@ In short, it makes data exploration and data manipulation easy and fast in R.
 ![](images/dplyr_fns.JPG)
 
 
+---
+
 ### Using the pipe operator (`|>` or `%>%`)
 
 ![](images/pipes_dplyr.png)
 
+
+---
 
 #### Let us load some data
 
@@ -284,6 +300,8 @@ tb
 :::
 :::
 
+---
+
 #### Take a Quick Look at the data
 ::: {.columns}
 
@@ -305,6 +323,8 @@ tb |> glimpse()
 :::
 :::
 
+
+---
 
 #### Check the first few rows
 
@@ -330,6 +350,8 @@ tb |> head()
 :::
 
 
+---
+
 #### Check the dimensions and the column names
 
 ::: {.columns}
@@ -354,6 +376,8 @@ tb |> names()
 ```
 :::
 :::
+
+---
 
 #### Lets find the unique countries in the bottom 50 rows of the dataset
 
@@ -389,6 +413,8 @@ tb |>
 ```
 :::
 :::
+
+---
 
 #### `distinct()` and `count()`
 
@@ -435,6 +461,8 @@ tb  |>
 :::
 
 
+
+---
 
 #### `arrange()`
 
@@ -490,6 +518,8 @@ tb |>
 :::
 
 
+---
+
 ### Logical Operators in R
 
 ::: {.columns}
@@ -510,6 +540,8 @@ tb |>
 :::
 
 :::
+
+---
 
 ### `filter()`
 
@@ -537,6 +569,8 @@ tb|>
 :::
 
 
+---
+
 #### Filter India
 
 ::: {.columns}
@@ -560,6 +594,8 @@ tb|>
 :::
 :::
 
+---
+
 #### Filter by year and country
 
 ::: {.columns}
@@ -582,6 +618,8 @@ tb|>
 ```
 :::
 :::
+
+---
 
 ### `%in%` function
 
@@ -639,6 +677,8 @@ tb  |>
 
 
 
+---
+
 ###   `summarize()`
 
 - The `summarize()` function summarizes multiple values to a single value.
@@ -672,6 +712,8 @@ tb|>
 :::
 :::
 
+
+---
 
 ### `group_by()`
 
@@ -707,10 +749,14 @@ tb |>
 :::
 
 
+---
+
 ### `mutate()`
 - Mutate creates a new variable or modifies an existing one.
 
 ![](images/dplyr_mutate.png)
+
+---
 
 ### `if_else()`
 
@@ -745,11 +791,15 @@ tb |>
 :::
 
 
+---
+
 ### `case_when()`
 
 Alternative of `if_else()`
 
 ![](images/case_when.jpg)
+
+---
 
 ### `if_else()` vs `case_when()`
 
@@ -757,6 +807,8 @@ Note that the `if_else()` function may result in slightly shorter code if you on
 
 For more options, nested `if_else()` statements become hard to read and could result in mismatched parentheses so `case_when()` will be a more elegant solution.
 
+
+---
 
 ### `join()`
 
@@ -770,6 +822,8 @@ For more options, nested `if_else()` statements become hard to read and could re
 
 ![](images/dplyr_joins.jpg)
 
+
+---
 
 #### More on `join()`  
 
@@ -785,6 +839,8 @@ For more options, nested `if_else()` statements become hard to read and could re
 
 - `anti_join(y, x)` returns the columns from `y` only and retains rows of `y` that are not present in `x`.
 
+---
+
 #### Visual representation of the `left_join()`
 
 
@@ -792,11 +848,15 @@ For more options, nested `if_else()` statements become hard to read and could re
 
 
 
+---
+
 #### Visual representation of the `right_join()`
 
 
 ![](images/dplyr_joins_right.png)
 
+
+---
 
 #### Visual representation of the `full_join()`
 
@@ -805,6 +865,8 @@ For more options, nested `if_else()` statements become hard to read and could re
 
 
 
+---
+
 ### `pivot()`
 
 Most often, when working with our data we may have to reshape our data from long format to wide format and back. We can use the `pivot` family of functions to achieve this task.  
@@ -812,6 +874,8 @@ Most often, when working with our data we may have to reshape our data from long
 
 ![](images/long_wide.png)
 
+
+---
 
 ### Other Useful Functions
 ##### `drop_na()`

@@ -75,7 +75,7 @@ This package incorporates:
 :::
 
 ::: {.column width="50%"}
-![](images/sf-classes.png){width="800"}
+![](images/sf-classes.png){width="60%"}
 :::
 :::
 
@@ -241,6 +241,11 @@ https://posit.co/wp-content/uploads/2022/10/sf.pdf
 
 - Multi-source: Competitive alternative sources for completeness or validation
 
+---
+
+## Challenges and Future Directions (cont.)
+
+### New Requirements for Spatial Analysis
 
 - Continuous: Analysis can no longer be a point in time
 

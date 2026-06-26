@@ -7,6 +7,8 @@ project:
     - "exercises/*.Rmd"
     - "!capstone/report.qmd"
     - "!resources/prerequisites.qmd"
+    - "!session2a-exploring-data-with-r.qmd"
+    - "!session2b-spatial-data-vis.qmd"
   resources:
     - resources/
     - exercises/
@@ -45,10 +47,8 @@ website:
             href: session1b-concepts-spatial-data-science.qmd
       - section: "Session-II · ESDA"
         contents:
-          - text: "Exploring Data with R"
-            href: session2a-exploring-data-with-r.qmd
-          - text: "Spatial Data Visualization"
-            href: session2b-spatial-data-vis.qmd
+          - text: "Spatial Visualization & ESDA"
+            href: session2-spatial-viz-esda.qmd
       - section: "Session-III · Intro to sf"
         contents:
           - text: "The sf package"

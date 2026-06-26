@@ -1,0 +1,326 @@
+---
+title: "Spatial Visualization & Exploratory Spatial Data Analysis"
+subtitle: "DMgtAsia · Session-II"
+format:
+  html:
+    toc: true
+  revealjs:
+    output-file: slides-session2-spatial-viz-esda.html
+    theme: [default, dmgt.scss]
+    logo: dmgt_asia_logo.png
+    footer: "DMgtAsia · Spatial Epidemiology"
+    width: 1280
+    height: 720
+    slide-number: c/t
+    show-slide-number: all
+    progress: true
+    transition: fade
+    scrollable: true
+    code-line-numbers: true
+    code-overflow: wrap
+    highlight-style: github
+    incremental: false
+    embed-resources: false
+engine: knitr
+webr:
+  show-startup-message: false
+filters:
+  - webr
+other-links:
+  - text: "View as slides"
+    href: slides-session2-spatial-viz-esda.html
+    icon: easel2
+---
+
+# Part 1 · Spatial Data Visualization & Cartographic Principles
+
+## Why the map comes first
+
+-   In spatial analysis, the map is the primary instrument.
+-   A good map encodes a variable so the eye can read pattern, outliers, and gaps.
+-   Before any statistic, we *look*.
+
+::: aside
+The map is to spatial analysis what the histogram is to ordinary EDA.
+:::
+
+---
+
+## Cartographic Principles
+
+GeoSWG best practices for public health cartography:
+
+-   Visual contrast
+-   Legibility
+-   Figure-Ground Orientation
+-   Hierarchical Organization
+-   Balance
+
+These keep map products high-quality and consistent across a team.
+
+---
+
+## Design Principles in Practice
+
+![](images/designprinciples_2-lg.png)
+
+---
+
+## Good vs Poor Design
+
+::: {layout-ncol="2"}
+![](images/designprinciples_3.jpg)
+
+![](images/designprinciples_4.jpg)
+
+![](images/designprinciples_5.jpg)
+
+![](images/designprinciples_6.jpg)
+:::
+
+---
+
+## Cartographic Guidelines for Public Health
+
+::: columns
+::: {.column width="42%"}
+-   Source: CDC, Atlanta
+-   Map elements:
+    -   Title and borders
+    -   North arrow / graticule / scale
+    -   Inset maps
+    -   Labels and legend
+-   Other elements:
+    -   Data sources, dates, projection
+:::
+
+::: {.column width="58%"}
+![](images/map_elements_1.jpg){width="100%"}
+
+<https://www.cdc.gov/dhdsp/maps/gisx/resources/cartographic_guidelines.pdf>
+:::
+:::
+
+---
+
+## The Choropleth
+
+> A thematic map in which values of a variable are encoded with a colour gradient.
+
+-   The spatial counterpart of the histogram.
+-   Three choices decide whether it informs or misleads:
+    -   **What** you map: rates, not raw counts
+    -   **How** you classify: the breaks (quantile, equal-interval, Jenks)
+    -   **Which** colours: sequential vs diverging, colour-blind safe
+
+---
+
+## Rates, not counts
+
+-   Counts mostly track population size, so a count map is often just a population map.
+-   Map **rates** (per 1000, per 100k) or proportions to compare places fairly.
+-   Small-population areas give unstable rates: a single case swings them. Note this when you read the map.
+
+---
+
+## Colour, classification, accessibility
+
+-   **Sequential** palette for low-to-high; **diverging** for departure from a midpoint.
+-   Use colour-blind-safe palettes (`viridis`) and keep classes few (4 to 6).
+-   The same data with different breaks tells different stories: always state the scheme.
+
+---
+
+## A map is spatial data
+
+```{r}
+#| label: districts-map
+#| echo: true
+#| message: false
+#| warning: false
+#| fig-align: center
+#| out-width: "62%"
+library(sf)
+library(tidyverse)
+library(here)
+
+districts <- read_rds(here("spatial_files", "india_district_sf.rds"))
+
+ggplot(districts) +
+  geom_sf(linewidth = 0.05, fill = "grey95", colour = "grey40") +
+  theme_void()
+```
+
+District polygons read with `sf`. Geometry plus attributes is all we need to start mapping.
+
+---
+
+## Building a choropleth (pattern to reuse)
+
+```{r}
+#| eval: false
+#| echo: true
+districts |>                                  # an sf object
+  left_join(indicator_df, by = "district") |> # attach the variable
+  ggplot() +
+  geom_sf(aes(fill = stunting), colour = "white", linewidth = 0.1) +
+  scale_fill_viridis_c(option = "magma", direction = -1) +
+  theme_void()
+```
+
+You build exactly this in **Exercise 6** (NFHS stunting). The same recipe drives the maps in
+the rest of the module.
+
+# Part 2 · Exploratory Spatial Data Analysis (ESDA)
+
+## What is ESDA?
+
+-   The spatial extension of Tukey's exploratory data analysis.
+-   Describe and visualise spatial distributions, find atypical locations, and reveal patterns
+    of spatial association and heterogeneity (Anselin, 1999).
+-   It is **hypothesis-generating, not hypothesis-testing**.
+
+::: aside
+ESDA sits at the front of the workflow, before any spatial model.
+:::
+
+---
+
+## Why spatial data needs its own EDA
+
+Ordinary EDA assumes observations are independent. Spatial data usually are not.
+
+-   **Spatial dependence:** near things are more related than distant things
+    (Tobler's First Law, 1970).
+-   **Spatial heterogeneity:** distributions and relationships change across space.
+
+---
+
+## Two cautions
+
+-   **Modifiable Areal Unit Problem (MAUP):** results depend on how areas are bounded and
+    aggregated.
+-   **Ecological fallacy:** an area-level pattern need not hold for individuals within the
+    area.
+
+Name both when you present a map.
+
+---
+
+## Exploratory vs Confirmatory
+
+-   **ESDA (now):** descriptive, visual, generates hypotheses about *where* and *how* values
+    cluster or differ.
+-   **Confirmatory (later):** spatial regression / econometrics tests those hypotheses
+    (Anselin, 1988; Haining, 2003).
+
+Keep the two stages separate.
+
+---
+
+## A short history
+
+-   **Tukey (1977):** exploratory data analysis as visual, hypothesis-free description.
+-   **Openshaw et al. (1987):** the Geographical Analysis Machine, automated cluster search.
+-   **Interactive graphics:** REGARD, MANET, maps linked to plots (Bailey & Gatrell, 1995).
+-   **Software:** SpaceStat, then **GeoDa** (Anselin et al., 2006), and **`spdep`** in R.
+
+---
+
+## Core ESDA: three ways of looking
+
+1.  **Map** the spatial distribution (the choropleth from Part 1).
+2.  **Link** plots to the map: brush a box plot or scatter plot and the same areas highlight.
+3.  **Spot** atypical locations: a value unlike its neighbours is a spatial outlier.
+
+These lead to one question: *is there spatial pattern at all?*
+
+---
+
+## Neighbours and the spatial lag
+
+-   To make a method spatial, encode geography as a **spatial weights matrix** `W`:
+    who is a neighbour, and how strongly.
+-   The **spatial lag** of a variable is the (weighted) average of its neighbours.
+-   Plotting a value against its spatial lag is the first quantitative ESDA step.
+
+---
+
+## Global autocorrelation, by hand
+
+Change the values and re-run. Watch Moran's I move from independence (near 0) toward
+clustering (toward +1).
+
+```{webr-r}
+# Four regions in a row: 1-2-3-4
+y <- c(2, 3, 8, 9)                       # try c(2, 9, 3, 8) for a "checkerboard"
+
+W <- matrix(c(0,1,0,0,
+              1,0,1,0,
+              0,1,0,1,
+              0,0,1,0), nrow = 4, byrow = TRUE)   # who neighbours whom
+Wr <- W / rowSums(W)                     # row-standardised weights
+
+z   <- y - mean(y)                       # centre the values
+lag <- as.vector(Wr %*% y)               # spatial lag = neighbour average
+lag
+
+moran_I <- sum(z * (Wr %*% z)) / sum(z^2)
+moran_I                                  # global Moran's I
+```
+
+::: aside
+Live in the browser via webR. No install, no server. The same cell embeds in Moodle as an iframe.
+:::
+
+---
+
+## Reading global Moran's I
+
+-   `I > 0`: similar values sit together (clustering of highs and of lows).
+-   `I ≈ 0`: no spatial pattern (spatial randomness).
+-   `I < 0`: neighbours are dissimilar (a checkerboard).
+
+It answers *yes/no, is there pattern*. It does **not** say *where*.
+
+---
+
+## ESDA in public health
+
+-   Map disease rates, flag candidate hot spots, and form hypotheses about drivers before
+    modelling (Delmelle & Kanaroglou, 2013).
+-   Central to surveillance: which areas may be at risk?
+-   Extends to space and time (for example, dengue across districts of Punjab, India).
+-   Connects directly to NFHS and notification data at district / facility level.
+
+---
+
+## What comes next (later session)
+
+-   From one **global** number to **local** indicators that say *where* the clusters are:
+    local Moran's I and the LISA map, and Getis-Ord hot spots (Anselin, 1995).
+-   That is the Spatial Data Analysis & Clustering session. We stop here, at the exploratory
+    stage.
+
+---
+
+## Key references {.smaller}
+
+-   Tukey, J.W. (1977). *Exploratory Data Analysis*. Addison-Wesley.
+-   Tobler, W. (1970). A computer movie simulating urban growth. *Economic Geography* 46.
+-   Anselin, L. (1988). *Spatial Econometrics*. Kluwer.
+-   Anselin, L. (1999). Interactive techniques and ESDA. In *Geographical Information Systems*.
+-   Bailey, T.C. & Gatrell, A.C. (1995). *Interactive Spatial Data Analysis*. Longman.
+-   Haining, R. (2003). *Spatial Data Analysis: Theory and Practice*. Cambridge.
+-   Anselin, Syabri & Kho (2006). GeoDa. *Geographical Analysis* 38.
+
+# Recap
+
+## Recap
+
+-   The map is the first instrument: design it with care (contrast, hierarchy, honest rates,
+    safe colour).
+-   ESDA spatialises EDA and is hypothesis-generating.
+-   Spatial data is special: dependence and heterogeneity; mind MAUP and the ecological fallacy.
+-   Look three ways (map, link, spot outliers), then ask global Moran's I: is there pattern?
+-   *Where* the clusters are comes next, with LISA.
