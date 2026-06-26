@@ -47,8 +47,10 @@ website:
             href: session1b-concepts-spatial-data-science.qmd
       - section: "Session-II · ESDA"
         contents:
-          - text: "Spatial Visualization & ESDA"
-            href: session2-spatial-viz-esda.qmd
+          - text: "Spatial Data Visualization & Cartography"
+            href: session2-1-spatial-visualization.qmd
+          - text: "Exploratory Spatial Data Analysis"
+            href: session2-2-esda.qmd
       - section: "Session-III · Intro to sf"
         contents:
           - text: "The sf package"
