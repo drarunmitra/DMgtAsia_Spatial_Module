@@ -28,30 +28,6 @@ other-links:
     icon: easel2
 ---
 
-```{webr}
-#| edit: false
-#| output: false
-#| autorun: true
-#| define:
-#|   - check_q1
-#|   - check_q2
-# Quiz feedback helpers (base R; run on load)
-check_q1 <- function(ans) {
-  if (identical(ans, "st_as_sf()")) {
-    "<strong>Correct.</strong> <code>st_as_sf()</code> turns a data frame with coordinate columns into an sf object."
-  } else {
-    "<em>Not quite.</em> Which function turns lon/lat columns into geometry?"
-  }
-}
-check_q2 <- function(ans) {
-  if (identical(ans, "Geodetic, in degrees")) {
-    "<strong>Correct.</strong> EPSG:4326 (WGS 84) is geodetic: longitude/latitude in degrees."
-  } else {
-    "<em>Try again.</em> 4326 is the familiar lon/lat system."
-  }
-}
-```
-
 ## The Simple Features standard
 
 -   `sf` implements **Simple Features**, the ISO standard for representing geometry.
@@ -104,7 +80,7 @@ viewof q1 = Inputs.radio(
   ["st_read()", "st_as_sf()", "st_transform()", "st_crs()"],
   { label: "Which function converts a data frame with lon/lat columns into an sf object?" }
 );
-html`${await check_q1(q1)}`
+html`${q1 == null ? "" : q1 === "st_as_sf()" ? "<strong>Correct.</strong> st_as_sf() turns a data frame with coordinate columns into an sf object." : "<em>Not quite.</em> Which function turns lon/lat columns into geometry?"}`
 ```
 
 ---
@@ -140,7 +116,7 @@ viewof q2 = Inputs.radio(
   ["Geodetic, in degrees", "Projected, in metres", "Always a UTM zone", "An equal-area projection"],
   { label: "EPSG:4326 (WGS 84) is..." }
 );
-html`${await check_q2(q2)}`
+html`${q2 == null ? "" : q2 === "Geodetic, in degrees" ? "<strong>Correct.</strong> EPSG:4326 (WGS 84) is geodetic: longitude/latitude in degrees." : "<em>Try again.</em> 4326 is the familiar lon/lat system."}`
 ```
 
 ---
