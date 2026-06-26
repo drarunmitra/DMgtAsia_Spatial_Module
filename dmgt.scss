@@ -1,0 +1,117 @@
+/*-- scss:defaults --*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap');
+
+// DMgtAsia — pure monochrome palette (matches the black & white logo)
+$colors: (
+  "ink":     #111111,
+  "graphite":#333333,
+  "muted":   #888888,
+  "line":    #DDDDDD,
+  "smoke":   #F4F4F4,
+  "paper":   #FFFFFF
+);
+@function c($name) { @return map-get($colors, $name); }
+
+// reveal.js core variables
+$body-bg:                          c("paper");
+$body-color:                       c("graphite");
+$link-color:                       c("ink");
+$selection-bg:                     c("line");
+$presentation-heading-color:       c("ink");
+$presentation-heading-font:        'Inter', sans-serif;
+$presentation-heading-font-weight: 700;
+$font-family-sans-serif:           'Inter', sans-serif;
+$font-family-monospace:            'JetBrains Mono', monospace;
+$presentation-font-size-root:      34px;
+$code-block-font-size:             0.72em;
+
+/*-- scss:rules --*/
+/* ---------- utility colour classes ---------- */
+@each $name, $color in $colors {
+  .text-#{$name} { color: $color !important; }
+  .bg-#{$name}   { background-color: $color !important; }
+}
+
+/* ---------- title slide ---------- */
+#title-slide .title {
+  font-size: 2.3em; font-weight: 800; color: c("ink"); line-height: 1.03;
+}
+#title-slide .subtitle { color: c("muted"); font-weight: 500; }
+#title-slide .author,
+#title-slide .quarto-title-authors {
+  color: c("graphite"); font-family: $font-family-monospace;
+  font-size: 0.5em; letter-spacing: 0.04em;
+}
+/* monochrome motif: a tapering rule under the title block */
+#title-slide::after {
+  content: ""; position: absolute; left: 0; bottom: 16%; height: 4px; width: 46%;
+  background: linear-gradient(90deg, c("ink") 0%, c("ink") 62%, c("muted") 80%, transparent 100%);
+}
+
+/* ---------- section divider (.section / dark) ---------- */
+.reveal section.divider:is(.slide-background),
+.reveal .divider:is(.slide-background) { background: c("ink"); }
+.reveal section.divider, .reveal section.divider h1,
+.reveal section.divider h2, .reveal section.divider p { color: c("paper"); }
+
+/* ---------- big idea (inverted) ---------- */
+.big-idea:is(.slide-background) { background: c("ink"); }
+.reveal section.big-idea, .reveal section.big-idea h1,
+.reveal section.big-idea h2, .reveal section.big-idea p { color: c("paper"); }
+.reveal section.big-idea .accent { color: c("line"); border-bottom: 2px solid c("paper"); }
+
+/* ---------- bullets (square, ink) ---------- */
+.reveal .slides section ul { list-style: none; margin-left: 0; }
+.reveal .slides section ul li { position: relative; padding-left: 1.2em; }
+.reveal .slides section ul li::before {
+  content: ""; position: absolute; left: 0; top: 0.55em;
+  width: 0.5em; height: 0.5em; background: c("ink");
+}
+.reveal strong { color: c("ink"); font-weight: 700; }
+.reveal a { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---------- callouts (greyscale, differentiated by shade) ---------- */
+.reveal .callout { border-radius: 10px; border-left-width: 6px; background: c("smoke"); }
+.reveal .callout.callout-note      { border-left-color: c("ink"); }
+.reveal .callout.callout-tip       { border-left-color: c("graphite"); }
+.reveal .callout.callout-warning   { border-left-color: c("muted"); background: #ECECEC; }
+.reveal .callout.callout-important { border-left-color: c("ink"); background: #E8E8E8; }
+.reveal .callout .callout-title { color: c("ink"); }
+
+/* ---------- tables ---------- */
+.reveal table { border-collapse: collapse; }
+.reveal table thead th {
+  border-bottom: 2px solid c("ink"); color: c("ink");
+  text-transform: uppercase; font-size: 0.62em; letter-spacing: 0.05em;
+}
+.reveal table td { border-bottom: 1px solid c("line"); }
+.reveal table tbody tr:hover td { background: c("smoke"); }
+
+/* ---------- logo & footer ---------- */
+.reveal .slide-logo { max-height: 54px; }
+.reveal .footer { color: c("muted"); font-size: 0.5em; }
+.reveal .progress { color: c("muted"); }
+.reveal .progress span { background: c("ink"); }
+.reveal .slide-number { color: c("muted"); }
+
+/* ---------- code: monochrome syntax, readable by weight/italic ---------- */
+.reveal pre code { max-height: 64vh; background: c("smoke"); border-radius: 8px; }
+.reveal code span.co { color: c("muted") !important; font-style: italic; }      /* comments */
+.reveal code span.kw,
+.reveal code span.cf { color: c("ink") !important; font-weight: 700; }          /* keywords */
+.reveal code span.fu { color: c("ink") !important; }                            /* functions */
+.reveal code span.st,
+.reveal code span.ch { color: c("graphite") !important; }                       /* strings */
+.reveal code span.dv,
+.reveal code span.fl,
+.reveal code span.bn { color: c("graphite") !important; font-weight: 700; }     /* numbers */
+.reveal code span.op,
+.reveal code span.sc { color: c("graphite") !important; }
+
+/* ---------- figures: keep inside the slide ---------- */
+.reveal .slides img { max-height: 62vh; width: auto; }
+
+/* ---------- headings rhythm ---------- */
+.reveal h1, .reveal h2 { letter-spacing: -0.5px; }
+.reveal h2 { border-bottom: 1px solid c("line"); padding-bottom: 0.15em; }
