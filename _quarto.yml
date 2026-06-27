@@ -15,6 +15,7 @@ project:
     - resources/
     - exercises/
     - data/
+    - coi-serviceworker.js
     # spatial_files/ (117 MB) is NOT served via Pages — clone the repo to run exercises
 
 website:

@@ -22,6 +22,9 @@ webr:
     - sf
     - ggplot2
 engine: knitr
+include-in-header:
+  - text: |
+      <script src="coi-serviceworker.js"></script>
 other-links:
   - text: "View as slides"
     href: slides-session3-intro-sf.html
