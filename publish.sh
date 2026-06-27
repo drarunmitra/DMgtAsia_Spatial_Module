@@ -15,7 +15,10 @@ cd "$(dirname "$0")"
 
 SITE_REMOTE="https://github.com/drarunmitra/DMgtAsia_Spatial_Module_site.git"
 
-echo "→ Rendering (freeze: auto — only changed chunks re-run)…"
+echo "→ Clean render (clear output + project cache, keep _freeze)…"
+# Force a fresh pandoc render of every page so metadata-only changes (e.g. header
+# includes) always propagate. _freeze is kept, so R chunks are not re-executed.
+rm -rf docs .quarto
 quarto render
 
 cd docs
